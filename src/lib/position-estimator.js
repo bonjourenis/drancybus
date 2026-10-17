@@ -9,12 +9,19 @@
  *
  * Two anchors are possible:
  *  - the configured stop, from stop monitoring (estimateVehiclePosition);
- *  - the vehicle's nearest upcoming call, from the estimated timetable
- *    (estimateFromTimetable). That anchor is usually only a few minutes
- *    away, and the gap between the next two calls gives a measured speed,
- *    so the walk-back error is much smaller.
+ *  - an upcoming call from the estimated timetable that lies upstream of the
+ *    configured stop (estimateFromTimetable). It is closer to the vehicle,
+ *    and the time between it and the configured stop gives a measured speed.
+ *    The bus timetable feed is noisy (stops of the other direction, times
+ *    that contradict route order), so a call is only trusted when it is
+ *    upstream on the directed trace and implies a plausible speed.
  */
 import { AVERAGE_SPEED_M_PER_MIN, MAX_SNAP_DISTANCE_M, SPEED_BOUNDS_M_PER_MIN } from './constants';
+
+// Stop references come in two kinds that must not be cross-matched by number:
+// platforms (STIF:StopPoint:Q:…, IDFM:<n>) and stations
+// (STIF:StopArea:SP:…, IDFM:monomodalStopPlace:<n>).
+const refKind = (ref) => (/StopArea|monomodalStopPlace/.test(String(ref ?? '')) ? 'area' : 'point');
 import { haversineDistance, normalizeText, numericId } from './geo';
 
 const preparedCache = new WeakMap();
@@ -41,13 +48,14 @@ export function prepareLine(lineRecord) {
     });
 
   const stops = lineRecord.stops ?? [];
-  const stopsByNumericId = new Map();
+  const stopsByNumericId = new Map(); // `${kind}:${number}` -> stop
   const stopsByName = new Map();
   for (const stop of stops) {
     const id = numericId(stop.id);
-    if (id && !stopsByNumericId.has(id)) stopsByNumericId.set(id, stop);
-    const key = normalizeText(stop.name);
-    if (key && !stopsByName.has(key)) stopsByName.set(key, stop);
+    const key = id ? `${refKind(stop.id)}:${id}` : null;
+    if (key && !stopsByNumericId.has(key)) stopsByNumericId.set(key, stop);
+    const nameKey = normalizeText(stop.name);
+    if (nameKey && !stopsByName.has(nameKey)) stopsByName.set(nameKey, stop);
   }
 
   return { segments, stops, stopsByNumericId, stopsByName };
@@ -69,7 +77,8 @@ export function getPreparedLine(lineRecord) {
  */
 export function resolveStop(prepared, { ref, name, fallback = null } = {}) {
   if (ref) {
-    const stop = prepared.stopsByNumericId.get(numericId(ref));
+    const id = numericId(ref);
+    const stop = id ? prepared.stopsByNumericId.get(`${refKind(ref)}:${id}`) : null;
     if (stop) return { lat: stop.lat, lng: stop.lng, name: stop.name };
   }
 
@@ -86,6 +95,14 @@ export function resolveStop(prepared, { ref, name, fallback = null } = {}) {
   }
 
   return fallback;
+}
+
+/**
+ * Closest trace vertex to `point` on a prepared segment:
+ * { index, distance (m from the point), distAlong (m from segment start) }.
+ */
+export function projectOnSegment(segment, point) {
+  return nearestVertex(segment, point);
 }
 
 function nearestVertex(segment, point) {
@@ -134,16 +151,25 @@ export function pointAtDistance(segment, target) {
   };
 }
 
+// Segments whose snapping error is within this margin of the best one are
+// considered equally good fits.
+const SNAP_TIE_MARGIN_M = 50;
+
 /**
  * The trace segment on which `fromStop` comes before `toStop`, with both
- * stops close enough to the trace. Picks the best fit when several match.
+ * stops close enough to the trace.
+ *
+ * A line's trace holds several variants (full route, short turns starting
+ * mid-line). Among segments that fit about equally well, the one with the
+ * most route before `fromStop` wins: walking a vehicle back from a stop on a
+ * short-turn variant would pin it to that variant's first stop.
  * @returns {{segment, from, to, error}|null}
  */
 export function findDirectedSegment(prepared, fromStop, toStop, type = 'bus') {
   if (!prepared || !fromStop || !toStop) return null;
 
   const maxSnap = MAX_SNAP_DISTANCE_M[type] ?? MAX_SNAP_DISTANCE_M.bus;
-  let best = null;
+  const candidates = [];
 
   for (const segment of prepared.segments) {
     const from = nearestVertex(segment, fromStop);
@@ -152,11 +178,20 @@ export function findDirectedSegment(prepared, fromStop, toStop, type = 'bus') {
     if (to.distance > maxSnap) continue;
     if (to.distAlong <= from.distAlong) continue; // wrong direction on this trace
 
-    const error = from.distance + to.distance;
-    if (!best || error < best.error) best = { segment, from, to, error };
+    candidates.push({ segment, from, to, error: from.distance + to.distance });
   }
 
-  return best;
+  if (candidates.length === 0) return null;
+
+  const bestError = Math.min(...candidates.map((candidate) => candidate.error));
+  return candidates
+    .filter((candidate) => candidate.error <= bestError + SNAP_TIE_MARGIN_M)
+    .reduce((best, candidate) =>
+      candidate.from.distAlong > best.from.distAlong ||
+      (candidate.from.distAlong === best.from.distAlong && candidate.error < best.error)
+        ? candidate
+        : best
+    );
 }
 
 /**
@@ -184,75 +219,89 @@ export function estimateVehiclePosition(
   if (!directed) return null;
 
   const speed = speedMetersPerMinute ?? AVERAGE_SPEED_M_PER_MIN[type] ?? AVERAGE_SPEED_M_PER_MIN.bus;
-  const target = Math.max(0, directed.from.distAlong - minutesUntil * speed);
+  const rawTarget = directed.from.distAlong - minutesUntil * speed;
+  const target = Math.max(0, rawTarget);
   const point = pointAtDistance(directed.segment, target);
 
-  return { ...point, method: 'route', distanceToStop: Math.round(directed.from.distAlong - target) };
+  return {
+    ...point,
+    method: 'route',
+    distanceToStop: Math.round(directed.from.distAlong - target),
+    // The walk-back ran past the start of the route: the vehicle is at its
+    // terminus or still finishing its previous trip.
+    atTerminus: rawTarget <= 0,
+  };
 }
 
 /**
- * Speed implied by the trace distance between two consecutive calls and the
- * time between them, in metres per minute. Null when it cannot be measured
- * or is implausible.
- */
-export function measureSpeed(prepared, fromStop, toStop, minutes, type = 'bus') {
-  if (!(minutes > 0.25)) return null;
-  const directed = findDirectedSegment(prepared, fromStop, toStop, type);
-  if (!directed) return null;
-
-  const distance = directed.to.distAlong - directed.from.distAlong;
-  if (distance < 50) return null;
-
-  const speed = distance / minutes;
-  return speed >= SPEED_BOUNDS_M_PER_MIN.min && speed <= SPEED_BOUNDS_M_PER_MIN.max ? speed : null;
-}
-
-/**
- * Position a vehicle from its estimated-timetable journey: anchor on the
- * nearest upcoming call, measure the speed from the gap to the following
- * call, and walk back from the anchor.
+ * Position a vehicle from its estimated-timetable journey.
+ *
+ * Candidates are upcoming calls expected before the vehicle reaches the
+ * monitored stop. A candidate is kept only when it lies upstream of the
+ * monitored stop on the directed trace (monitored stop -> destination) and
+ * the speed implied between it and the monitored stop is plausible for the
+ * mode. The earliest kept call, the one closest to the vehicle, becomes the
+ * anchor, and the vehicle is walked back from it at that measured speed.
  *
  * @param {Object} input
- * @param {Object} input.journey          from parseEstimatedTimetable()
- * @param {{lat,lng}|null} [input.destinationStop]
+ * @param {Object} input.journey             from parseEstimatedTimetable()
+ * @param {{lat,lng}} input.monitoredStop    the configured stop
+ * @param {number} input.minutesUntil        minutes until the monitored stop (stop monitoring)
+ * @param {{lat,lng}|null} input.destinationStop
  * @param {Date} [input.now]
  * @param {string} [input.type]
  * @param {Object|null} prepared
  * @returns {{lat, lng, method, anchorStopName, minutesToAnchor, speedMetersPerMinute}|null}
  */
-export function estimateFromTimetable({ journey, destinationStop = null, now = new Date(), type = 'bus' }, prepared) {
-  if (!journey || !prepared) return null;
+export function estimateFromTimetable(
+  { journey, monitoredStop, minutesUntil, destinationStop, now = new Date(), type = 'bus' },
+  prepared
+) {
+  if (!journey || !prepared || !monitoredStop || !(minutesUntil > 0)) return null;
 
+  const directed = findDirectedSegment(prepared, monitoredStop, destinationStop, type);
+  if (!directed) return null;
+
+  const maxSnap = MAX_SNAP_DISTANCE_M[type] ?? MAX_SNAP_DISTANCE_M.bus;
+  const bounds = SPEED_BOUNDS_M_PER_MIN[type] ?? SPEED_BOUNDS_M_PER_MIN.bus;
   const nowMs = now.getTime();
-  const upcoming = [];
+  const monitoredAlong = directed.from.distAlong;
+
+  let anchor = null;
   for (const call of journey.calls ?? []) {
-    const timeMs = Date.parse(call.time);
-    if (!Number.isFinite(timeMs) || timeMs <= nowMs) continue;
+    const minutesToCall = (Date.parse(call.time) - nowMs) / 60000;
+    if (!(minutesToCall > 0) || minutesToCall >= minutesUntil) continue;
+
     const stop = resolveStop(prepared, { ref: call.stopRef });
     if (!stop) continue;
-    upcoming.push({ stop, timeMs });
-  }
-  if (upcoming.length === 0) return null;
-  upcoming.sort((a, b) => a.timeMs - b.timeMs);
 
-  const [first, second] = upcoming;
-  const minutesToAnchor = (first.timeMs - nowMs) / 60000;
-  const speed = second
-    ? measureSpeed(prepared, first.stop, second.stop, (second.timeMs - first.timeMs) / 60000, type)
-    : null;
+    const projected = nearestVertex(directed.segment, stop);
+    if (projected.distance > maxSnap) continue;
 
-  const base = { monitoredStop: first.stop, minutesUntil: minutesToAnchor, type, speedMetersPerMinute: speed };
-  let position = destinationStop ? estimateVehiclePosition({ ...base, destinationStop }, prepared) : null;
-  if (!position && second) {
-    position = estimateVehiclePosition({ ...base, destinationStop: second.stop }, prepared);
+    const metresToMonitored = monitoredAlong - projected.distAlong;
+    if (metresToMonitored < 30) continue; // at or past the monitored stop
+
+    const speed = metresToMonitored / (minutesUntil - minutesToCall);
+    if (speed < bounds.min || speed > bounds.max) continue;
+
+    if (!anchor || minutesToCall < anchor.minutesToCall) {
+      anchor = { stop, minutesToCall, along: projected.distAlong, speed };
+    }
   }
-  if (!position) return null;
+
+  if (!anchor) return null;
+
+  const rawTarget = anchor.along - anchor.minutesToCall * anchor.speed;
+  const target = Math.max(0, rawTarget);
+  const point = pointAtDistance(directed.segment, target);
 
   return {
-    ...position,
-    method: position.method === 'at-stop' ? 'at-stop' : 'timetable',
-    anchorStopName: first.stop.name ?? null,
-    minutesToAnchor: Math.round(minutesToAnchor * 10) / 10,
-    speedMetersPerMinute: speed ? Math.round(speed) : null,
+    ...point,
+    method: 'timetable',
+    atTerminus: rawTarget <= 0,
+    anchorStopName: anchor.stop.name ?? null,
+    minutesToAnchor: Math.round(anchor.minutesToCall * 10) / 10,
+    speedMetersPerMinute: Math.round(anchor.speed),
+    distanceToStop: Math.round(monitoredAlong - target),
   };
 }

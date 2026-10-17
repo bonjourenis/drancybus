@@ -40,11 +40,21 @@ export function matchesDirection(departure, lineConfig) {
 }
 
 /**
+ * The stop's line entry this departure matches (right line, direction rules
+ * pass), or null.
+ */
+export function findMatchingLineConfig(departure, stopConfig) {
+  return (
+    (stopConfig.lines ?? []).find(
+      (line) => line.lineId === departure.lineRef && matchesDirection(departure, line)
+    ) ?? null
+  );
+}
+
+/**
  * True when the departure belongs to one of the stop's configured lines and
  * passes that line's direction rules.
  */
 export function matchesStopConfig(departure, stopConfig) {
-  return (stopConfig.lines ?? []).some(
-    (line) => line.lineId === departure.lineRef && matchesDirection(departure, line)
-  );
+  return findMatchingLineConfig(departure, stopConfig) !== null;
 }

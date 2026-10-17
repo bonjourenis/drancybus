@@ -1,0 +1,1855 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-17T18:25:59.813Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:c1c67bdb-9bb1-403e-a3c2-a5c4285e7e9e:LOC:",
+   "StopMonitoringDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-17T18:25:59.837Z",
+     "Version": "2.0",
+     "Status": "true",
+     "MonitoredStopVisit": [
+      {
+       "RecordedAtTime": "2026-10-17T18:07:20.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268455472:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4401:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:12:42.000Z",
+         "DepartureStatus": "",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T18:07:00.000Z",
+         "ArrivalStatus": "delayed"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:11:41.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268455473:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4437:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "A"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:15096:"
+        },
+        "DestinationName": [
+         {
+          "value": "Gare de Villepin"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "GARE DE VILLEPINTE"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:20:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T18:20:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:24:18.590Z",
+       "ItemIdentifier": "506KRPFO:Item::SIRI335209899:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C00223:"
+        },
+        "OperatorRef": {
+         "value": "506KRPFO:Operator::506KRPFO:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "506KRPFO:DataFrame::27:LOC"
+         },
+         "DatedVehicleJourneyRef": "506KRPFO:VehicleJourney::1923467:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Retour"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Pablo Picasso"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [
+         {
+          "value": "L9301P2"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [],
+         "ExpectedArrivalTime": "2026-10-17T18:32:36.000Z",
+         "DepartureStatus": "",
+         "Order": 11,
+         "AimedArrivalTime": "2026-10-17T18:26:00.000Z",
+         "ArrivalStatus": "delayed"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:24:00.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268456346:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4411:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:32:44.000Z",
+         "DepartureStatus": "",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T18:21:00.000Z",
+         "ArrivalStatus": "delayed"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T17:54:41.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268456347:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4442:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "A"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:15096:"
+        },
+        "DestinationName": [
+         {
+          "value": "Gare de Villepin"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "GARE DE VILLEPINTE"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:35:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T18:35:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:24:40.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268456170:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4419:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:35:39.000Z",
+         "DepartureStatus": "",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T18:36:00.000Z",
+         "ArrivalStatus": "noReport"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:20:31.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268457266:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4428:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:51:00.000Z",
+         "DepartureStatus": "",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T18:51:00.000Z",
+         "ArrivalStatus": "noReport"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:09:01.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268455717:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4433:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:57:35.000Z",
+         "DepartureStatus": "",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T19:06:00.000Z",
+         "ArrivalStatus": "early"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:24:18.590Z",
+       "ItemIdentifier": "506KRPFO:Item::SIRI335209900:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C00223:"
+        },
+        "OperatorRef": {
+         "value": "506KRPFO:Operator::506KRPFO:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "506KRPFO:DataFrame::27:LOC"
+         },
+         "DatedVehicleJourneyRef": "506KRPFO:VehicleJourney::1923468:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Aller"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:494986:"
+        },
+        "DestinationName": [
+         {
+          "value": "Gare de Roissypole Aéroport CDG 1 (D1)"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [
+         {
+          "value": "L9301P1"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [],
+         "ExpectedDepartureTime": "2026-10-17T19:00:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T19:00:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:25:01.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268457267:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01583:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::4460:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "A"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:15096:"
+        },
+        "DestinationName": [
+         {
+          "value": "Gare de Villepin"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "GARE DE VILLEPINTE"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T19:05:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T19:05:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:18:17.967Z",
+       "ItemIdentifier": "506KRPFO:Item::SIRI335209824:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:427840:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C00223:"
+        },
+        "OperatorRef": {
+         "value": "506KRPFO:Operator::506KRPFO:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "506KRPFO:DataFrame::27:LOC"
+         },
+         "DatedVehicleJourneyRef": "506KRPFO:VehicleJourney::1923469:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Retour"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427840:"
+        },
+        "DestinationName": [
+         {
+          "value": "Pablo Picasso"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [
+         {
+          "value": "L9301P2"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [],
+         "ExpectedArrivalTime": "2026-10-17T19:28:00.000Z",
+         "DepartureStatus": "",
+         "Order": 11,
+         "AimedArrivalTime": "2026-10-17T19:28:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:18:47.915Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.56.PALS.IDFM.C01171.A.EXP.50233791.18:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22685:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.56.A.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Montfermeil-Les Bosquets"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427606:"
+        },
+        "DestinationName": [
+         {
+          "value": "Les Bosquets"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:39:54.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Les Bosquets"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:20:41.558Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.57.PALS.IDFM.C01171.A.EXP.50233791.18:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22685:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.57.A.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Montfermeil-Les Bosquets"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427606:"
+        },
+        "DestinationName": [
+         {
+          "value": "Les Bosquets"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T19:02:10.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Les Bosquets"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:23:47.344Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.57.PALS.IDFM.C01171.R.EXP.50233803.49:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:37418:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.57.R.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:470572:"
+        },
+        "DestinationName": [
+         {
+          "value": "Le Bourget <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:31:12.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:24:17.693Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.58.PALS.IDFM.C01171.R.EXP.50233803.49:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:37418:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.58.R.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:470572:"
+        },
+        "DestinationName": [
+         {
+          "value": "Le Bourget <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:50:40.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:14:52.022Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.75.PALS.IDFM.C01173.A.EXP.50233429.7:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:29910:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01173:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.75.A.C01173:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Bobigny-Pablo Picasso"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:29906:"
+        },
+        "DestinationName": [
+         {
+          "value": "Musée de l'Air Et de l'Espace"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:28:12.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Musee de l'Air"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:14:52.022Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.76.PALS.IDFM.C01173.A.EXP.50233429.7:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:29910:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01173:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.76.A.C01173:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Bobigny-Pablo Picasso"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:29906:"
+        },
+        "DestinationName": [
+         {
+          "value": "Musée de l'Air Et de l'Espace"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:38:48.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Musee de l'Air"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:09:21.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268471958:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01588:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::6426:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427667:"
+        },
+        "DestinationName": [
+         {
+          "value": "ZA du Pont Yblon"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "ZA DU PONT YBLON"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:09:11.000Z",
+         "DepartureStatus": "delayed",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T18:07:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:18:11.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268471797:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01588:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::6419:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "A"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:22335:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T18:41:40.000Z",
+         "DepartureStatus": "",
+         "Order": 38,
+         "AimedArrivalTime": "2026-10-17T18:29:00.000Z",
+         "ArrivalStatus": "delayed"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:23:14.366Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.82.PALS.IDFM.C01234.A.EXP.50233266.644:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01234:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.82.A.C01234:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Mairie de Livry-Gargan"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:37662:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robert Schuman"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mairie de Livry"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:41:56.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Robert Schuman"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:25:29.225Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.83.PALS.IDFM.C01234.A.EXP.50233266.644:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01234:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.83.A.C01234:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Mairie de Livry-Gargan"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:37662:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robert Schuman"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robert Schuman"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:49:26.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Robert Schuman"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:12:51.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268472231:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01588:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::6427:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "A"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:22335:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny Pablo Pi"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "BOBIGNY PABLO PICASSO"
+          }
+         ],
+         "ExpectedArrivalTime": "2026-10-17T19:00:44.000Z",
+         "DepartureStatus": "",
+         "Order": 38,
+         "AimedArrivalTime": "2026-10-17T18:57:00.000Z",
+         "ArrivalStatus": "delayed"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T17:57:21.000Z",
+       "ItemIdentifier": "NSSD:Item::NSSD_268472232:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22335:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01588:"
+        },
+        "OperatorRef": {
+         "value": "NSSD:Operator::NSSD:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "NSSD:DataFrame::9-17:LOC"
+         },
+         "DatedVehicleJourneyRef": "NSSD:VehicleJourney::6445:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "R"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:427667:"
+        },
+        "DestinationName": [
+         {
+          "value": "ZA du Pont Yblon"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny Pablo Pi"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "ZA DU PONT YBLON"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T19:07:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 1,
+         "AimedDepartureTime": "2026-10-17T19:07:00.000Z",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": []
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:23:24.866Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.52.PALS.IDFM.C01272.R.EXP.50233555.22:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:460860:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01272:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.52.R.C01272:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Gare de Val de Fontenay-RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:492810:"
+        },
+        "DestinationName": [
+         {
+          "value": "Gare de Val de Fontenay"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Val de Fontenay"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T20:00:00.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Val de Fontenay"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:10:43.795Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.38.PALS.IDFM.C01286.R.EXP.50142564.112:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:26442:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01286:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::100:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.38.R.C01286:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Mairie de Montreuil"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:26377:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mairie de Montreuil"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Montreuil METRO"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:35:00.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": "",
+         "CallNote": [
+          {
+           "value": "BUS ESTIME DANS"
+          }
+         ]
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Montreuil METRO"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:15:12.211Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.39.PALS.IDFM.C01286.R.EXP.50142564.112:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:26442:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01286:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::100:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.39.R.C01286:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Mairie de Montreuil"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:26377:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mairie de Montreuil"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Montreuil METRO"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:55:00.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Montreuil METRO"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:23:58.684Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.78.PALS.IDFM.C01234.R.EXP.50233325.682:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22684:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01234:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.78.R.C01234:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Fort d'Aubervilliers"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:492177:"
+        },
+        "DestinationName": [
+         {
+          "value": "Fort d'Aubervilliers"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Fort d'Auber"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:31:57.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Fort d'Auber"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:19:28.546Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.79.PALS.IDFM.C01234.R.EXP.50233325.682:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22684:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01234:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.79.R.C01234:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Fort d'Aubervilliers"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:492177:"
+        },
+        "DestinationName": [
+         {
+          "value": "Fort d'Aubervilliers"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Fort d'Auber"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:33:10.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Fort d'Auber"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T17:52:53.035Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.49.PALS.IDFM.C01243.A.EXP.50233499.398:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22535:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01243:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.49.A.C01243:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Gare d'Aulnay sous Bois RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:28317:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aulnay-Sous-Bois <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Gare d'Aulnay"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:45:00.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Gare d'Aulnay"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T18:13:22.294Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.50.PALS.IDFM.C01243.A.EXP.50233499.398:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:22535:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01243:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.50.A.C01243:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Gare d'Aulnay sous Bois RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:28317:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aulnay-Sous-Bois <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Gare d'Aulnay"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T19:14:00.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Aller"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Gare d'Aulnay"
+         }
+        ]
+       }
+      }
+     ],
+     "StopLineNotice": [],
+     "ServiceException": []
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,2870 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-17T18:25:59.787Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:636e4abe-bfc8-4938-8cf3-7a092a437970:LOC:",
+   "EstimatedTimetableDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-17T18:25:59.818Z",
+     "Version": "2.0",
+     "Status": "true",
+     "EstimatedJourneyVersionFrame": [
+      {
+       "EstimatedVehicleJourney": [
+        {
+         "RecordedAtTime": "2026-10-17T18:22:21.488Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.73.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19127:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:39:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:21.353Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.80.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37645:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:32.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39582:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:57.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7944:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7960:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:51.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:21.353Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.74.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27690:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18827:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:26.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19127:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:53:12.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29913:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:47.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:413092:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:28.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.76.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37484:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27686:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:08.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19609:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:45.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29910:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:48.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39580:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:45.375Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.75.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19609:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:17.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29910:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:12.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19098:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:40.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:23:51.861Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.82.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:494124:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:06.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:19:52.042Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.79.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7956:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:40.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39584:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:27.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:51.739Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.78.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7957:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29097:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:28.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19023:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:48.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27684:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19527:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:12.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:51.739Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.81.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7948:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7958:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29098:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:48:08.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7962:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:31.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39583:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:07.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:470622:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:47.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7959:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:41:15.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.83.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19124:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27682:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:47.396Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.80.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39584:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:56:03.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29098:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:23.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7956:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39583:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:45.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7959:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:01.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:31.272Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.86.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427364:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:56:12.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.73.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29907:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:51.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:21.423Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.84.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427603:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:20466:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:41.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29911:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:41.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28476:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.70.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29908:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:51.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.81.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7960:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:14.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39582:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37645:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:55.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:21.353Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.77.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36525:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:31.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36526:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28477:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:14:53.515Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.86.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29912:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:26.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37430:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.76.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27691:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:50:21.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39579:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37429:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:53.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27057:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:24.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36525:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28477:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29906:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:19:29.798Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.85.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37430:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:35.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:20466:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:47:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.74.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29907:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:49.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19098:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:17.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:51.729Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.79.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7957:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:34:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29097:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:26.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7944:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19023:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27684:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:23:21.432Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.71.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29908:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:41:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:51.739Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.84.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27683:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:39.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19124:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27682:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:41.822Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.83.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29911:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:47:21.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:494124:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:53:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28476:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:39:06.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427603:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:22.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:51.739Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.75.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27691:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29906:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27057:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39579:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:46.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27690:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18827:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:54:01.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37429:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29913:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:21.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:413092:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:16:52.821Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.87.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:29912:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:16:50.638Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.85.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427364:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27683:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:57.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:25:21.353Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.78.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36526:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:51.739Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.77.A.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Bobigny-Pablo Picasso"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:29906:"
+         },
+         "DestinationName": [
+          {
+           "value": "Musée de l'Air Et de l'Espace"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Musee de l'Air"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39580:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:41:15.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37484:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27686:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:54.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19527:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:24.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Musee de l'Air"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:24:56.899Z",
+         "LineRef": {
+          "value": "STIF:Line::C01173:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.82.R.C01173:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "148"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:22684:"
+         },
+         "DestinationName": [
+          {
+           "value": "Bobigny - Pablo Picasso"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7948:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7962:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:43.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7958:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:01.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:470622:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:54:11.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Pablo Picasso"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

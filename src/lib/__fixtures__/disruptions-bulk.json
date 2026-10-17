@@ -1,0 +1,641 @@
+{
+ "disruptions": [
+  {
+   "id": "3be3f87d-2657-4664-9c46-1cdd70b4fbaf",
+   "applicationPeriods": [
+    {
+     "begin": "20261019T040000",
+     "end": "20261023T030000"
+    }
+   ],
+   "lastUpdate": "20261017T161022",
+   "cause": "TRAVAUX",
+   "severity": "BLOQUANTE",
+   "title": "Bus 248 : Travaux - Arrêt(s) non desservi(s)",
+   "message": "<p>La ligne 248 sera déviée : les arrêts situés entre Barbusse - Croizat et Place Joffre ne seront plus desservis en direction de Gare de Drancy <RER>. Quand : à partir du lundi 19 octobre 2026, jusqu'au vendredi 23 octobre 2026. Raison : travaux.</p>",
+   "shortMessage": "Arrêt(s) non desservi(s)"
+  },
+  {
+   "id": "5d94f811-c850-4094-b36d-0e7d3e3d9349",
+   "applicationPeriods": [
+    {
+     "begin": "20261017T182039",
+     "end": "20261018T043000"
+    }
+   ],
+   "lastUpdate": "20261017T182409",
+   "cause": "PERTURBATION",
+   "severity": "BLOQUANTE",
+   "tags": [
+    "Actualité"
+   ],
+   "title": "Oberkampf : Mesures de sécurité - Station fermée (sans correspondances)",
+   "message": "<p>Les accès à la station Oberkampf sont fermés, les trains ne marquent pas l'arrêt  en raison de mesures de sécurité</p>",
+   "shortMessage": "Station fermée (sans correspondances)"
+  },
+  {
+   "id": "8eb6e9b3-9dc7-4488-98de-8ad11109c866",
+   "applicationPeriods": [
+    {
+     "begin": "20261017T120000",
+     "end": "20261018T043000"
+    }
+   ],
+   "lastUpdate": "20261017T120345",
+   "cause": "PERTURBATION",
+   "severity": "BLOQUANTE",
+   "tags": [
+    "Actualité"
+   ],
+   "title": "Métro 5 : Manifestation - Arrêt non desservi",
+   "message": "<p>Le 17 octobre, l'arrêt n'est pas desservi à Bastille en raison d'une manifestation. La réouverture se fera sur ordre de la Préfecture de Police.</p>",
+   "shortMessage": "Arrêt non desservi"
+  },
+  {
+   "id": "f7579cab-3ba0-40f1-8c3c-ceb43aca06f6",
+   "applicationPeriods": [
+    {
+     "begin": "20261017T140052",
+     "end": "20261018T043000"
+    }
+   ],
+   "lastUpdate": "20261017T140209",
+   "cause": "PERTURBATION",
+   "severity": "BLOQUANTE",
+   "tags": [
+    "Actualité"
+   ],
+   "title": "République : Mesures de sécurité - Station fermée (sans correspondances)",
+   "message": "<p>Les accès à la station République sont fermés, les trains ne marquent pas l'arrêt  en raison de mesures de sécurité</p>",
+   "shortMessage": "Station fermée (sans correspondances)"
+  },
+  {
+   "id": "1d92b943-2390-421c-b6ad-37a1e4e6e164",
+   "applicationPeriods": [
+    {
+     "begin": "20261017T200308",
+     "end": "20261018T043000"
+    }
+   ],
+   "lastUpdate": "20261017T200624",
+   "cause": "PERTURBATION",
+   "severity": "BLOQUANTE",
+   "tags": [
+    "Actualité"
+   ],
+   "title": "Jacques Bonsergent : Dégagement de fumée - Station fermée (sans correspondances)",
+   "message": "<p>Les accès à la station Jacques Bonsergent sont fermés, les trains ne marquent pas l'arrêt  en raison d'un dégagement de fumée</p>",
+   "shortMessage": "Station fermée (sans correspondances)"
+  },
+  {
+   "id": "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55",
+   "applicationPeriods": [
+    {
+     "begin": "20261013T000000",
+     "end": "20261013T030000"
+    },
+    {
+     "begin": "20261014T000000",
+     "end": "20261014T030000"
+    },
+    {
+     "begin": "20261015T000000",
+     "end": "20261015T030000"
+    },
+    {
+     "begin": "20261016T000000",
+     "end": "20261016T030000"
+    },
+    {
+     "begin": "20261019T000000",
+     "end": "20261019T030000"
+    },
+    {
+     "begin": "20261020T000000",
+     "end": "20261020T030000"
+    },
+    {
+     "begin": "20261021T000000",
+     "end": "20261021T030000"
+    },
+    {
+     "begin": "20261022T000000",
+     "end": "20261022T030000"
+    },
+    {
+     "begin": "20261023T000000",
+     "end": "20261023T030000"
+    },
+    {
+     "begin": "20261026T000000",
+     "end": "20261026T030000"
+    },
+    {
+     "begin": "20261027T000000",
+     "end": "20261027T030000"
+    },
+    {
+     "begin": "20261028T000000",
+     "end": "20261028T030000"
+    },
+    {
+     "begin": "20261029T000000",
+     "end": "20261029T030000"
+    },
+    {
+     "begin": "20261030T000000",
+     "end": "20261030T030000"
+    },
+    {
+     "begin": "20261102T000000",
+     "end": "20261102T030000"
+    },
+    {
+     "begin": "20261103T000000",
+     "end": "20261103T030000"
+    },
+    {
+     "begin": "20261104T000000",
+     "end": "20261104T030000"
+    },
+    {
+     "begin": "20261105T000000",
+     "end": "20261105T030000"
+    },
+    {
+     "begin": "20261106T000000",
+     "end": "20261106T030000"
+    },
+    {
+     "begin": "20261109T000000",
+     "end": "20261109T030000"
+    },
+    {
+     "begin": "20261110T000000",
+     "end": "20261110T030000"
+    },
+    {
+     "begin": "20261112T000000",
+     "end": "20261112T030000"
+    },
+    {
+     "begin": "20261113T000000",
+     "end": "20261113T030000"
+    },
+    {
+     "begin": "20261116T000000",
+     "end": "20261116T030000"
+    },
+    {
+     "begin": "20261117T000000",
+     "end": "20261117T030000"
+    },
+    {
+     "begin": "20261118T000000",
+     "end": "20261118T030000"
+    },
+    {
+     "begin": "20261119T000000",
+     "end": "20261119T030000"
+    },
+    {
+     "begin": "20261120T000000",
+     "end": "20261120T030000"
+    },
+    {
+     "begin": "20261123T000000",
+     "end": "20261123T030000"
+    },
+    {
+     "begin": "20261124T000000",
+     "end": "20261124T030000"
+    },
+    {
+     "begin": "20261125T000000",
+     "end": "20261125T030000"
+    },
+    {
+     "begin": "20261126T000000",
+     "end": "20261126T030000"
+    },
+    {
+     "begin": "20261127T000000",
+     "end": "20261127T030000"
+    },
+    {
+     "begin": "20261130T000000",
+     "end": "20261130T030000"
+    },
+    {
+     "begin": "20261201T000000",
+     "end": "20261201T030000"
+    },
+    {
+     "begin": "20261202T000000",
+     "end": "20261202T030000"
+    },
+    {
+     "begin": "20261203T000000",
+     "end": "20261203T030000"
+    },
+    {
+     "begin": "20261204T000000",
+     "end": "20261204T030000"
+    },
+    {
+     "begin": "20261207T000000",
+     "end": "20261207T030000"
+    },
+    {
+     "begin": "20261208T000000",
+     "end": "20261208T030000"
+    },
+    {
+     "begin": "20261209T000000",
+     "end": "20261209T030000"
+    },
+    {
+     "begin": "20261210T000000",
+     "end": "20261210T030000"
+    },
+    {
+     "begin": "20261211T000000",
+     "end": "20261211T030000"
+    },
+    {
+     "begin": "20261214T000000",
+     "end": "20261214T030000"
+    },
+    {
+     "begin": "20261215T000000",
+     "end": "20261215T030000"
+    },
+    {
+     "begin": "20261216T000000",
+     "end": "20261216T030000"
+    },
+    {
+     "begin": "20261217T000000",
+     "end": "20261217T030000"
+    },
+    {
+     "begin": "20261218T000000",
+     "end": "20261218T030000"
+    },
+    {
+     "begin": "20261221T000000",
+     "end": "20261221T030000"
+    },
+    {
+     "begin": "20261222T000000",
+     "end": "20261222T030000"
+    },
+    {
+     "begin": "20261223T000000",
+     "end": "20261223T030000"
+    },
+    {
+     "begin": "20261224T000000",
+     "end": "20261224T030000"
+    },
+    {
+     "begin": "20261228T000000",
+     "end": "20261228T030000"
+    },
+    {
+     "begin": "20261229T000000",
+     "end": "20261229T030000"
+    },
+    {
+     "begin": "20261230T000000",
+     "end": "20261230T030000"
+    },
+    {
+     "begin": "20261231T000000",
+     "end": "20261231T030000"
+    }
+   ],
+   "lastUpdate": "20260702T150909",
+   "cause": "TRAVAUX",
+   "severity": "PERTURBEE",
+   "title": "RER B : Châtelet <-> Aéroport CDG2 - Mitry - Claye 01/06-31/12",
+   "message": "<p>P&#233;riode : en semaine &#224; partir de 22h45.<br><br>Dates : du lundi 1er juin au jeudi 31 d&#233;cembre<br><br>Le trafic est interrompu entre Ch&#226;telet Les Halles et A&#233;rop. C De Gaulle 2 et entre Ch&#226;telet Les Halles et Mitry - Claye.<br><br>Un dispositif de bus de remplacement sera mis en place au d&#233;part du Gare du Nord.<br><br>Pour plus d'informations, consultez le site du RER B<br><br>Motif : travaux sur le r&#233;seau ferroviaire.</p>",
+   "shortMessage": "Arrêt(s) non desservi(s)",
+   "impactedSections": [
+    {
+     "lineId": "line:IDFM:C01743",
+     "from": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:69065",
+      "name": "Mitry - Claye (Mitry-Mory)"
+     },
+     "to": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:474151",
+      "name": "Châtelet - Les Halles (Paris)"
+     }
+    },
+    {
+     "lineId": "line:IDFM:C01743",
+     "from": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:73699",
+      "name": "Aéroport CDG (Terminal 2) - TGV (Tremblay-en-France)"
+     },
+     "to": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:474151",
+      "name": "Châtelet - Les Halles (Paris)"
+     }
+    },
+    {
+     "lineId": "line:IDFM:C01743",
+     "from": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:474151",
+      "name": "Châtelet - Les Halles (Paris)"
+     },
+     "to": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:69065",
+      "name": "Mitry - Claye (Mitry-Mory)"
+     }
+    },
+    {
+     "lineId": "line:IDFM:C01743",
+     "from": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:474151",
+      "name": "Châtelet - Les Halles (Paris)"
+     },
+     "to": {
+      "type": "stop_area",
+      "id": "stop_area:IDFM:73699",
+      "name": "Aéroport CDG (Terminal 2) - TGV (Tremblay-en-France)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "325c4022-b023-43bd-84fb-67684af3dec3",
+   "applicationPeriods": [
+    {
+     "begin": "20261025T090000",
+     "end": "20261025T190000"
+    }
+   ],
+   "lastUpdate": "20261016T161547",
+   "cause": "INFORMATION",
+   "severity": "PERTURBEE",
+   "title": "RER B - Stade de France - Match de football Américain - 25/10/26",
+   "message": "<p>Date : le dimanche 25 octobre</p><p>Horaires : de 9h &#224; 19h</p><p>Match de football am&#233;ricain au Stade de France.</p><p>Risque de forte affluence sur les RER B, RER D et m&#233;tro 13. Aucun RER D en direction du nord. Privil&#233;giez le m&#233;tro 14 &#224; l'aller et au retour.</p><p>Bon match &#224; toutes et tous.</p>"
+  }
+ ],
+ "lines": [
+  {
+   "id": "line:IDFM:C01171",
+   "name": "146",
+   "shortName": "146",
+   "mode": "Bus",
+   "networkId": "network:IDFM:1094",
+   "impactedObjects": [
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:28780",
+     "name": "Lycée Eugène Delacroix",
+     "disruptionIds": [
+      "3be3f87d-2657-4664-9c46-1cdd70b4fbaf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "line:IDFM:C01375",
+   "name": "5",
+   "shortName": "5",
+   "mode": "Metro",
+   "networkId": "network:IDFM:Operator_100",
+   "impactedObjects": [
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:463059",
+     "name": "Oberkampf",
+     "disruptionIds": [
+      "5d94f811-c850-4094-b36d-0e7d3e3d9349"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:463191",
+     "name": "Jacques Bonsergent",
+     "disruptionIds": [
+      "1d92b943-2390-421c-b6ad-37a1e4e6e164"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:22011",
+     "name": "Jacques Bonsergent",
+     "disruptionIds": [
+      "1d92b943-2390-421c-b6ad-37a1e4e6e164"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:21905",
+     "name": "Oberkampf",
+     "disruptionIds": [
+      "5d94f811-c850-4094-b36d-0e7d3e3d9349"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:21903",
+     "name": "République",
+     "disruptionIds": [
+      "f7579cab-3ba0-40f1-8c3c-ceb43aca06f6"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:463018",
+     "name": "Bastille",
+     "disruptionIds": [
+      "8eb6e9b3-9dc7-4488-98de-8ad11109c866"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:22010",
+     "name": "Bastille",
+     "disruptionIds": [
+      "8eb6e9b3-9dc7-4488-98de-8ad11109c866"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:462961",
+     "name": "République",
+     "disruptionIds": [
+      "f7579cab-3ba0-40f1-8c3c-ceb43aca06f6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "line:IDFM:C01743",
+   "name": "B",
+   "shortName": "B",
+   "mode": "RapidTransit",
+   "networkId": "network:IDFM:71",
+   "impactedObjects": [
+    {
+     "type": "line",
+     "id": "line:IDFM:C01743",
+     "name": "B",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55",
+      "325c4022-b023-43bd-84fb-67684af3dec3"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:46222",
+     "name": "Vert-Galant",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43145",
+     "name": "La Plaine Stade de France",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:46163",
+     "name": "Le Blanc-Mesnil",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43164",
+     "name": "Mitry - Claye",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43122",
+     "name": "Drancy",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43193",
+     "name": "Sevran - Beaudottes",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43231",
+     "name": "Le Bourget",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:462394",
+     "name": "Gare du Nord",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:473364",
+     "name": "Aéroport Charles de Gaulle 2 (Terminal 2)",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43140",
+     "name": "La Courneuve - Aubervilliers",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:47878",
+     "name": "Parc des Expositions",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43194",
+     "name": "Sevran - Livry",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:46725",
+     "name": "Villeparisis - Mitry-le-Neuf",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:45102",
+     "name": "Châtelet - Les Halles",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:58793",
+     "name": "Villepinte",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:462398",
+     "name": "Aéroport CDG 1 (Terminal 3) - RER",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    },
+    {
+     "type": "stop_point",
+     "id": "stop_point:IDFM:monomodalStopPlace:43071",
+     "name": "Aulnay-sous-Bois",
+     "disruptionIds": [
+      "209bc1f3-4072-4aa7-9f97-b8fcc1cefc55"
+     ]
+    }
+   ]
+  }
+ ],
+ "lastUpdatedDate": "2026-10-17T18:25:16.628Z"
+}

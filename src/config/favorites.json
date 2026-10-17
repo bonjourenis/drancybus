@@ -1,92 +1,101 @@
 {
-  "stops": [
+  "trackedLines": [
+    { "lineId": "IDFM:C01173", "name": "Bus 148", "type": "bus", "color": "#6e491e" },
+    { "lineId": "IDFM:C01171", "name": "Bus 146", "type": "bus", "color": "#E4B4D3" },
+    { "lineId": "IDFM:C01375", "name": "Metro 5", "type": "metro", "color": "#F68F4B" },
+    { "lineId": "IDFM:C01743", "name": "RER B", "type": "rer", "color": "#7BA3DC" }
+  ],
+  "connections": {
+    "metro-5": { "label": "Métro 5", "color": "#EA580C" },
+    "rer-b": { "label": "RER B", "color": "#2563EB" }
+  },
+  "profiles": [
     {
-      "id": "STIF:StopPoint:Q:7948:",
-      "name": "Danton",
-      "lines": [
+      "id": "aller",
+      "label": "Aller",
+      "description": "Vers le métro 5 et le RER B",
+      "defaultHours": { "from": 0, "to": 12 },
+      "stops": [
         {
-          "lineId": "IDFM:C01173",
-          "lineName": "148"
+          "id": "STIF:StopPoint:Q:7948:",
+          "name": "Danton",
+          "lines": [
+            { "lineId": "IDFM:C01173", "lineName": "148", "towards": "metro-5" },
+            { "lineId": "IDFM:C01171", "lineName": "146", "towards": "metro-5" }
+          ],
+          "coordinates": { "lat": 48.91956075706188, "lng": 2.437957241278171 }
         },
         {
-          "lineId": "IDFM:C01171",
-          "lineName": "146"
-        }
-      ],
-      "coordinates": {
-        "lat": 48.91956075706188,
-        "lng": 2.437957241278171
-      }
-    },
-    {
-      "id": "STIF:StopPoint:Q:23530:",
-      "name": "Lamartine - François Rude",
-      "lines": [
+          "id": "STIF:StopPoint:Q:23530:",
+          "name": "Lamartine - François Rude",
+          "lines": [
+            { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Le Bourget RER", "towards": "rer-b" }
+          ],
+          "coordinates": { "lat": 48.92544875449877, "lng": 2.431738736072646 }
+        },
         {
-          "lineId": "IDFM:C01171",
-          "lineName": "146",
-          "direction": "Le Bourget RER"
+          "id": "STIF:StopArea:SP:43231:",
+          "name": "Le Bourget RER",
+          "lines": [
+            { "lineId": "IDFM:C01743", "lineName": "RER B", "excludeDirection": ["Aéroport", "Mitry"] }
+          ],
+          "coordinates": { "lat": 48.9315, "lng": 2.4256 }
         }
       ],
-      "coordinates": {
-        "lat": 48.92544875449877,
-        "lng": 2.431738736072646
-      }
-    },
-    {
-      "id": "STIF:StopArea:SP:43231:",
-      "name": "Le Bourget RER",
-      "lines": [
+      "traffic": [
         {
-          "lineId": "IDFM:C01743",
-          "lineName": "RER B",
-          "excludeDirection": [
-            "Aéroport",
-            "Mitry"
-          ]
+          "id": "danton-bobigny",
+          "name": "Danton → Bobigny - Pablo Picasso",
+          "from": { "lat": 48.919561, "lng": 2.437957 },
+          "to": { "lat": 48.907284, "lng": 2.449277 },
+          "alongLine": "IDFM:C01173"
+        }
+      ]
+    },
+    {
+      "id": "retour",
+      "label": "Retour",
+      "description": "Vers Danton",
+      "defaultHours": { "from": 12, "to": 24 },
+      "stops": [
+        {
+          "id": "STIF:StopPoint:Q:479720:",
+          "name": "Cheminots",
+          "lines": [
+            { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Les Bosquets" }
+          ],
+          "coordinates": { "lat": 48.928966, "lng": 2.428125 }
+        },
+        {
+          "id": "STIF:StopArea:SP:463865:",
+          "name": "Bobigny - Pablo Picasso",
+          "lines": [
+            { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Le Bourget" },
+            { "lineId": "IDFM:C01173", "lineName": "148", "excludeDirection": "Pablo Picasso" }
+          ],
+          "coordinates": { "lat": 48.90707, "lng": 2.44955 }
         }
       ],
-      "coordinates": {
-        "lat": 48.9315,
-        "lng": 2.4256
-      }
-    }
-  ],
-  "trackedLines": [
-    {
-      "lineId": "IDFM:C01173",
-      "name": "Bus 148",
-      "type": "bus",
-      "color": "#6e491e"
-    },
-    {
-      "lineId": "IDFM:C01171",
-      "name": "Bus 146",
-      "type": "bus",
-      "color": "#E4B4D3"
-    },
-    {
-      "lineId": "IDFM:C01375",
-      "name": "Metro 5",
-      "type": "metro",
-      "color": "#F68F4B"
-    },
-    {
-      "lineId": "IDFM:C01743",
-      "name": "RER B",
-      "type": "rer",
-      "color": "#7BA3DC"
+      "traffic": [
+        {
+          "id": "bobigny-danton",
+          "name": "Bobigny - Pablo Picasso → Danton",
+          "from": { "lat": 48.906826, "lng": 2.449472 },
+          "to": { "lat": 48.919598, "lng": 2.438284 },
+          "alongLine": "IDFM:C01173"
+        }
+      ]
     }
   ],
   "settings": {
+    "timeZone": "Europe/Paris",
     "departureRefreshInterval": 60000,
     "vehicleRefreshInterval": 60000,
+    "trafficRefreshInterval": 180000,
+    "disruptionsRefreshInterval": 120000,
     "maxDeparturesPerStop": 5,
-    "mapCenter": {
-      "lat": 48.92,
-      "lng": 2.45
-    },
-    "mapZoom": 14,
-    "vehicleHorizonMinutes": 30
+    "vehicleHorizonMinutes": 30,
+    "mapCenter": { "lat": 48.92, "lng": 2.45 },
+    "mapZoom": 14
   }
 }

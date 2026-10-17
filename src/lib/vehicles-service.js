@@ -4,10 +4,12 @@
  * Which vehicles to show, and how far they are from the configured stops,
  * comes from stop monitoring (same stops and direction rules as the board).
  * Where to draw them comes from the estimated timetable when the journey is
- * in that feed: the vehicle's nearest upcoming call is a much closer anchor
- * than the configured stop, and the gap to the following call gives a
- * measured speed. Journeys missing from the timetable fall back to walking
- * back from the configured stop at the mode's average speed.
+ * in that feed and one of its calls is a consistent anchor upstream of the
+ * configured stop (see estimateFromTimetable). Otherwise the vehicle is
+ * walked back from the configured stop at the mode's average speed.
+ *
+ * Each vehicle carries `towards`, the connection (e.g. Métro 5, RER B) set on
+ * the stop's line entry in favorites.json, so the map can colour it.
  *
  * Vehicles are identified by their SIRI dated journey reference so the same
  * bus seen from two stops is one marker.
@@ -15,7 +17,7 @@
 import favorites from '@/config/favorites.json';
 import lineDataFile from '@/data/line-data.json';
 import { groupStopsById } from './config-utils';
-import { matchesStopConfig } from './direction-filter';
+import { findMatchingLineConfig } from './direction-filter';
 import { getEstimatedTimetable } from './estimated-timetable-cache';
 import { safeErrorMessage } from './idfm-client';
 import { buildLineLookup, buildLineNames } from './lines';
@@ -41,6 +43,7 @@ export async function getVehicles({
   const lineNames = buildLineNames(config, lineData);
   const horizon = config.settings?.vehicleHorizonMinutes ?? DEFAULT_HORIZON_MINUTES;
   const stops = groupStopsById(config.stops);
+  const connections = config.connections ?? {};
 
   // Only lines that can produce vehicles: tracked lines listed at a configured stop.
   const timetableLineIds = [
@@ -93,7 +96,8 @@ export async function getVehicles({
     for (const departure of departures) {
       const meta = lines.get(departure.lineRef);
       if (!meta) continue; // not a tracked line
-      if (!matchesStopConfig(departure, stop)) continue;
+      const lineConfig = findMatchingLineConfig(departure, stop);
+      if (!lineConfig) continue;
       if (departure.minutesUntil > horizon) continue;
 
       const id =
@@ -115,7 +119,17 @@ export async function getVehicles({
       let position = null;
       const journey = departure.journeyRef ? journeys.get(departure.journeyRef) : null;
       if (journey && !departure.vehicleAtStop && departure.minutesUntil > 0) {
-        position = estimateFromTimetable({ journey, destinationStop, now, type: meta.type }, prepared);
+        position = estimateFromTimetable(
+          {
+            journey,
+            monitoredStop,
+            minutesUntil: departure.minutesUntil,
+            destinationStop,
+            now,
+            type: meta.type,
+          },
+          prepared
+        );
       }
       if (!position) {
         position = estimateVehiclePosition(
@@ -151,8 +165,10 @@ export async function getVehicles({
         nextStopName: stop.name,
         position: { lat: position.lat, lng: position.lng },
         positionMethod: position.method,
+        atTerminus: Boolean(position.atTerminus),
         anchorStopName: position.anchorStopName ?? null,
         minutesToAnchor: position.minutesToAnchor ?? null,
+        towards: towardsFor(lineConfig, connections),
         isEstimated: true,
         updatedAt: new Date(result.fetchedAt).toISOString(),
       });
@@ -167,4 +183,10 @@ export async function getVehicles({
     timetable,
     allFailed: stops.length > 0 && errors.length === stops.length,
   };
+}
+
+function towardsFor(lineConfig, connections) {
+  const id = lineConfig?.towards;
+  const connection = id ? connections[id] : null;
+  return connection ? { id, label: connection.label, color: connection.color } : null;
 }

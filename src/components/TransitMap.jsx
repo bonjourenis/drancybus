@@ -6,9 +6,10 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import { MAP_TILES, DEFAULT_LINE_COLOR } from '@/lib/constants';
-import { getContrastTextColor } from '@/lib/color-utils';
 import { groupStopsById } from '@/lib/config-utils';
-import RefreshIndicator from './RefreshIndicator';
+import { SCREEN, SCREEN_FONT } from '@/lib/screen-theme';
+import LineBadge from './LineBadge';
+import ScreenCard, { ScreenMessage } from './ScreenCard';
 
 const BUS_PATH =
   'M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z';
@@ -18,28 +19,38 @@ const TRAIN_PATH =
 // Leaflet icons are plain objects; build each distinct one once.
 const vehicleIconCache = new Map();
 const STOP_ICON = L.divIcon({
-  html: '<div style="background-color:#EF4444;width:12px;height:12px;border-radius:50%;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,0.3);"></div>',
+  html: `<div style="background-color:${SCREEN.navy};width:12px;height:12px;border-radius:50%;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,0.3);"></div>`,
   className: 'stop-marker',
   iconSize: [12, 12],
   iconAnchor: [6, 6],
   popupAnchor: [0, -8],
 });
 
-function getVehicleIcon(color, type, minutesUntil) {
-  const key = `${color}|${type}|${minutesUntil ?? ''}`;
+// Minute-counter background when the vehicle has no `towards` connection:
+// amber on black like the screens, green when imminent.
+const BADGE_IMMINENT = SCREEN.ok;
+const BADGE_DEFAULT = '#000000';
+
+function badgeColorFor(vehicle) {
+  if (vehicle.towards?.color) return vehicle.towards.color;
+  return vehicle.minutesUntil <= 1 ? BADGE_IMMINENT : BADGE_DEFAULT;
+}
+
+function getVehicleIcon(color, type, minutesUntil, badgeColor) {
+  const key = `${color}|${type}|${minutesUntil ?? ''}|${badgeColor}`;
   let icon = vehicleIconCache.get(key);
   if (!icon) {
-    icon = createVehicleIcon(color, type, minutesUntil);
+    icon = createVehicleIcon(color, type, minutesUntil, badgeColor);
     vehicleIconCache.set(key, icon);
   }
   return icon;
 }
 
-function createVehicleIcon(color, type, minutesUntil) {
+function createVehicleIcon(color, type, minutesUntil, badgeColor) {
   const size = type === 'bus' ? 28 : 32;
   const showTime = typeof minutesUntil === 'number' && minutesUntil >= 0;
   const timeText = showTime ? (minutesUntil <= 1 ? '!' : String(minutesUntil)) : '';
-  const badgeColor = minutesUntil <= 1 ? '#22c55e' : '#3b82f6';
+  const timeColor = badgeColor === BADGE_DEFAULT ? SCREEN.amber : 'white';
 
   return L.divIcon({
     html: `
@@ -49,7 +60,7 @@ function createVehicleIcon(color, type, minutesUntil) {
         </svg>
         ${
           showTime
-            ? `<div style="position:absolute;top:-8px;right:-8px;background-color:${badgeColor};color:white;font-size:10px;font-weight:bold;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:0 3px;border:1px solid white;">${timeText}</div>`
+            ? `<div style="position:absolute;top:-9px;right:-10px;background-color:${badgeColor};color:${timeColor};font-size:11px;font-weight:bold;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;border:1.5px solid white;box-shadow:0 1px 2px rgba(0,0,0,0.35);">${timeText}</div>`
             : ''
         }
       </div>`,
@@ -81,53 +92,80 @@ function FitBoundsOnce({ stops }) {
   return null;
 }
 
-function timeClass(minutesUntil) {
-  if (minutesUntil <= 1) return 'text-green-600';
-  if (minutesUntil <= 5) return 'text-orange-600';
-  return 'text-zinc-900';
+// Base map recoloured as a duotone of the screens: dark tones become navy,
+// mid tones lavender, light tones white. Applied to the tile pane in CSS.
+const TINT_FILTER_ID = 'ratp-map-tint';
+const TINT_STOPS = [SCREEN.navy, SCREEN.trafficBackground, '#FFFFFF'];
+const LUMINANCE_ROW = '0.2126 0.7152 0.0722 0 0';
+
+function tintTable(channel) {
+  return TINT_STOPS.map((hex) => (parseInt(hex.slice(1 + channel * 2, 3 + channel * 2), 16) / 255).toFixed(3)).join(' ');
 }
 
-function StopPopupContent({ stop, entry, loading, lineColors }) {
+function MapTintFilter() {
+  return (
+    <svg aria-hidden="true" width="0" height="0" className="absolute">
+      <filter id={TINT_FILTER_ID} colorInterpolationFilters="sRGB">
+        <feColorMatrix type="matrix" values={`${LUMINANCE_ROW} ${LUMINANCE_ROW} ${LUMINANCE_ROW} 0 0 0 1 0`} />
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues={tintTable(0)} />
+          <feFuncG type="table" tableValues={tintTable(1)} />
+          <feFuncB type="table" tableValues={tintTable(2)} />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+  );
+}
+
+function MinutesBox({ children }) {
+  return (
+    <span
+      className="inline-flex items-center justify-center h-6 min-w-7 px-1.5 rounded bg-black text-sm font-bold tabular-nums"
+      style={{ color: SCREEN.amber }}
+    >
+      {children}
+    </span>
+  );
+}
+
+function StopPopupContent({ stop, entry, loading, lineColors, lineTypes }) {
   const lineNames = Array.from(new Set(stop.lines.map((line) => `Ligne ${line.lineName}`)));
 
   let body;
   if (!entry && loading) {
-    body = <p className="text-xs text-zinc-400 italic">Chargement...</p>;
+    body = <p className="text-xs italic" style={{ color: SCREEN.muted }}>Chargement...</p>;
   } else if (entry?.error) {
-    body = <p className="text-xs text-amber-600 italic">Horaires indisponibles</p>;
+    body = <p className="text-xs italic" style={{ color: SCREEN.muted }}>Horaires indisponibles</p>;
   } else if (!entry || entry.departures.length === 0) {
-    body = <p className="text-xs text-zinc-400 italic">Aucun départ prévu</p>;
+    body = <p className="text-xs italic" style={{ color: SCREEN.muted }}>Aucun départ prévu</p>;
   } else {
     body = (
-      <div className="border-t border-zinc-200 pt-2">
-        <p className="text-xs text-zinc-500 mb-1">Prochains passages:</p>
-        {entry.departures.slice(0, 4).map((departure) => {
-          const badgeColor = lineColors[departure.lineRef] || DEFAULT_LINE_COLOR;
-          return (
-            <div key={departure.id} className="flex items-center justify-between text-sm py-1">
-              <div className="flex items-center gap-2">
-                <span
-                  className="inline-flex items-center justify-center min-w-[1.8rem] h-5 px-1 text-xs font-bold rounded"
-                  style={{ backgroundColor: badgeColor, color: getContrastTextColor(badgeColor) }}
-                >
-                  {departure.lineName}
-                </span>
-                <span className="text-zinc-700 truncate max-w-[100px]">{departure.destination}</span>
-              </div>
-              <span className={`font-mono font-medium ${timeClass(departure.minutesUntil)}`}>
-                {departure.displayTime}
+      <div className="border-t pt-2" style={{ borderColor: SCREEN.divider }}>
+        <p className="text-xs mb-1" style={{ color: SCREEN.muted }}>Prochains passages :</p>
+        {entry.departures.slice(0, 4).map((departure) => (
+          <div key={departure.id} className="flex items-center justify-between gap-3 text-sm py-1">
+            <div className="flex items-center gap-2 min-w-0">
+              <LineBadge
+                name={departure.lineName}
+                color={lineColors[departure.lineRef]}
+                type={lineTypes[departure.lineRef]}
+                size="sm"
+              />
+              <span className="font-bold truncate max-w-[120px]" style={{ color: SCREEN.navy }}>
+                {departure.destination}
               </span>
             </div>
-          );
-        })}
+            <MinutesBox>{departure.vehicleAtStop ? "À l'arrêt" : departure.minutesUntil}</MinutesBox>
+          </div>
+        ))}
       </div>
     );
   }
 
   return (
-    <div className="font-sans min-w-[200px]">
-      <strong className="text-base">{stop.name}</strong>
-      <p className="text-sm text-zinc-600 mt-1 mb-2">{lineNames.join(', ')}</p>
+    <div className="min-w-[220px]" style={{ fontFamily: SCREEN_FONT }}>
+      <strong className="text-base" style={{ color: SCREEN.navy }}>{stop.name}</strong>
+      <p className="text-sm mt-1 mb-2" style={{ color: SCREEN.muted }}>{lineNames.join(', ')}</p>
       {body}
     </div>
   );
@@ -136,13 +174,14 @@ function StopPopupContent({ stop, entry, loading, lineColors }) {
 export default function TransitMap({
   lines,
   stops,
+  connections = [],
   center,
   zoom,
   vehicles: vehicleState,
   departuresByStop,
   departuresLoading,
 }) {
-  const { vehicles, loading, error, stale, lastUpdated, unplaced, refresh } = vehicleState;
+  const { vehicles, loading, error, unplaced } = vehicleState;
   const uniqueStops = groupStopsById(stops);
 
   const lineColors = {};
@@ -152,25 +191,28 @@ export default function TransitMap({
     lineTypes[line.lineId] = line.type || 'bus';
   }
 
-  return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-zinc-600 dark:text-zinc-400">
-            {vehicles.length} véhicule{vehicles.length !== 1 ? 's' : ''} en approche
-          </span>
-          {loading && (
-            <span className="text-xs text-blue-600 dark:text-blue-400">Actualisation...</span>
-          )}
-        </div>
-        <RefreshIndicator lastUpdated={lastUpdated} onRefresh={refresh} loading={loading} stale={stale} />
-      </div>
+  const title = `${vehicles.length} véhicule${vehicles.length !== 1 ? 's' : ''} en approche`;
 
-      <div className="h-[400px] md:h-[500px] w-full rounded-xl overflow-hidden shadow-md border border-zinc-200 dark:border-zinc-700">
+  return (
+    <ScreenCard
+      title={title}
+      aside={
+        loading && (
+          <span className="text-xs font-bold" style={{ color: SCREEN.amber }}>
+            Actualisation...
+          </span>
+        )
+      }
+    >
+      <div
+        className="ratp-map h-[400px] md:h-[500px] w-full"
+        style={{ '--screen-navy': SCREEN.navy, '--screen-amber': SCREEN.amber }}
+      >
+        <MapTintFilter />
         <MapContainer
           center={[center.lat, center.lng]}
           zoom={zoom}
-          style={{ height: '100%', width: '100%' }}
+          style={{ height: '100%', width: '100%', backgroundColor: SCREEN.divider }}
           scrollWheelZoom={true}
         >
           <TileLayer attribution={MAP_TILES.attribution} url={MAP_TILES.url} />
@@ -189,6 +231,7 @@ export default function TransitMap({
                     entry={departuresByStop[stop.id]}
                     loading={departuresLoading}
                     lineColors={lineColors}
+                    lineTypes={lineTypes}
                   />
                 </Popup>
               </Marker>
@@ -201,24 +244,41 @@ export default function TransitMap({
               icon={getVehicleIcon(
                 lineColors[vehicle.lineRef] || vehicle.color || DEFAULT_LINE_COLOR,
                 lineTypes[vehicle.lineRef] || vehicle.type || 'bus',
-                vehicle.minutesUntil
+                vehicle.minutesUntil,
+                badgeColorFor(vehicle)
               )}
             >
               <Popup>
-                <div className="font-sans">
-                  <strong className="text-base">Ligne {vehicle.lineName}</strong>
-                  <p className="text-sm text-zinc-600 mt-1">Direction : {vehicle.destination}</p>
-                  <p className="text-sm text-zinc-600">Prochain arrêt suivi : {vehicle.nextStopName}</p>
-                  <p className="text-sm font-medium text-blue-600 mt-1">
-                    {vehicle.minutesUntil <= 1 ? 'Arrivée imminente' : `Dans ${vehicle.minutesUntil} min`}
+                <div style={{ fontFamily: SCREEN_FONT, color: SCREEN.muted }}>
+                  <strong className="text-base" style={{ color: SCREEN.navy }}>
+                    Ligne {vehicle.lineName}
+                  </strong>
+                  <p className="text-sm mt-1">Direction : {vehicle.destination}</p>
+                  {vehicle.towards && (
+                    <p className="text-sm font-semibold mt-1" style={{ color: vehicle.towards.color }}>
+                      Vers {vehicle.towards.label}
+                    </p>
+                  )}
+                  <p className="text-sm">Prochain arrêt suivi : {vehicle.nextStopName}</p>
+                  <p className="text-sm font-bold mt-1 flex items-center gap-2" style={{ color: SCREEN.navy }}>
+                    {vehicle.minutesUntil <= 1 ? (
+                      'Arrivée imminente'
+                    ) : (
+                      <>
+                        Dans <MinutesBox>{vehicle.minutesUntil}</MinutesBox> min
+                      </>
+                    )}
                   </p>
                   {vehicle.positionMethod === 'timetable' && vehicle.anchorStopName && (
-                    <p className="text-xs text-zinc-500 mt-1">
+                    <p className="text-xs mt-1">
                       Prochain arrêt : {vehicle.anchorStopName}
                       {vehicle.minutesToAnchor > 1 ? ` (${Math.round(vehicle.minutesToAnchor)} min)` : ''}
                     </p>
                   )}
-                  <p className="text-xs text-zinc-400 mt-1 italic">
+                  {vehicle.atTerminus && (
+                    <p className="text-xs mt-1">Au terminus ou en fin de trajet précédent</p>
+                  )}
+                  <p className="text-xs mt-1 italic">
                     {vehicle.positionMethod === 'timetable'
                       ? "Position estimée d'après l'horaire temps réel"
                       : 'Position estimée'}
@@ -233,27 +293,42 @@ export default function TransitMap({
       </div>
 
       {error && (
-        <p className="text-sm text-amber-600 dark:text-amber-400 text-center">
+        <ScreenMessage className="py-2 text-sm text-center">
           Impossible d&apos;actualiser les positions des véhicules
-        </p>
+        </ScreenMessage>
       )}
       {!error && unplaced > 0 && (
-        <p className="text-xs text-zinc-500 dark:text-zinc-400 text-center">
+        <ScreenMessage className="py-2 text-xs text-center">
           {unplaced} véhicule{unplaced > 1 ? 's' : ''} non localisable{unplaced > 1 ? 's' : ''} sur le tracé
-        </p>
+        </ScreenMessage>
       )}
 
-      <div className="flex flex-wrap gap-4 justify-center pt-2">
+      <div
+        className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 bg-white px-3 py-2.5 text-sm font-bold"
+        style={{ color: SCREEN.navy }}
+      >
         {lines.map((line) => (
-          <div key={line.lineId} className="flex items-center gap-2 text-sm">
+          <div key={line.lineId} className="flex items-center gap-2">
             <span
-              className="w-4 h-4 rounded-full"
+              className="w-4 h-4 rounded-full border-2 border-white shadow"
               style={{ backgroundColor: line.color || DEFAULT_LINE_COLOR }}
             />
-            <span className="text-zinc-700 dark:text-zinc-300">{line.name}</span>
+            <span>{line.name}</span>
+          </div>
+        ))}
+        {connections.map((connection) => (
+          <div key={connection.id} className="flex items-center gap-2">
+            <span
+              className="inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full text-[11px] font-bold text-white"
+              style={{ backgroundColor: connection.color }}
+              aria-hidden="true"
+            >
+              4
+            </span>
+            <span>Vers {connection.label}</span>
           </div>
         ))}
       </div>
-    </div>
+    </ScreenCard>
   );
 }

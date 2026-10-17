@@ -1,32 +1,47 @@
 import DepartureRow from './DepartureRow';
+import ScreenCard, { ScreenMessage } from './ScreenCard';
 
-export default function DepartureCard({ stop, departures, error = null, lineColors }) {
-  const lineNames = Array.from(new Set(stop.lines.map((line) => line.lineName)));
+const DEPARTURES_PER_ROW = 2;
+
+/**
+ * Groups departures by line and destination, keeping the soonest first, the
+ * way RATP screens show one row per destination with the next two waits.
+ */
+function groupDepartures(departures) {
+  const groups = new Map();
+  for (const departure of departures) {
+    const key = `${departure.lineRef}|${departure.destination}`;
+    const group = groups.get(key);
+    if (!group) {
+      groups.set(key, { key, first: departure, departures: [departure] });
+    } else if (group.departures.length < DEPARTURES_PER_ROW) {
+      group.departures.push(departure);
+    }
+  }
+  return Array.from(groups.values());
+}
+
+export default function DepartureCard({ stop, departures, error = null, lineColors, lineTypes }) {
+  const groups = groupDepartures(departures);
 
   return (
-    <div className="bg-white dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden border border-zinc-200 dark:border-zinc-700">
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-3">
-        <h3 className="font-semibold text-lg text-white">{stop.name}</h3>
-        <p className="text-sm text-blue-100">
-          Ligne{lineNames.length > 1 ? 's' : ''} {lineNames.join(', ')}
-        </p>
-      </div>
-
-      <div className="divide-y divide-zinc-100 dark:divide-zinc-700">
-        {error ? (
-          <p className="px-4 py-6 text-amber-700 dark:text-amber-400 text-center italic">
-            Horaires indisponibles pour cet arrêt
-          </p>
-        ) : departures.length === 0 ? (
-          <p className="px-4 py-6 text-zinc-500 dark:text-zinc-400 text-center italic">
-            Aucun départ prévu
-          </p>
-        ) : (
-          departures.map((departure) => (
-            <DepartureRow key={departure.id} departure={departure} lineColors={lineColors} />
-          ))
-        )}
-      </div>
-    </div>
+    <ScreenCard title={stop.name} bodyClassName="min-h-24">
+      {error ? (
+        <ScreenMessage>Horaires indisponibles pour cet arrêt</ScreenMessage>
+      ) : groups.length === 0 ? (
+        <ScreenMessage>Aucun départ prévu</ScreenMessage>
+      ) : (
+        groups.map((group) => (
+          <DepartureRow
+            key={group.key}
+            lineName={group.first.lineName}
+            lineColor={lineColors?.[group.first.lineRef]}
+            lineType={lineTypes?.[group.first.lineRef]}
+            destination={group.first.destination}
+            departures={group.departures}
+          />
+        ))
+      )}
+    </ScreenCard>
   );
 }

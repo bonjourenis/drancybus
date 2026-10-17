@@ -3,7 +3,7 @@ import { haversineDistance } from '../geo';
 import {
   estimateFromTimetable,
   estimateVehiclePosition,
-  measureSpeed,
+  findDirectedSegment,
   pointAtDistance,
   prepareLine,
   resolveStop,
@@ -34,10 +34,9 @@ describe('prepareLine', () => {
 });
 
 describe('resolveStop', () => {
-  it('matches the numeric part of any SIRI reference format', () => {
+  it('matches a SIRI platform reference to the numeric part of the stop id', () => {
     expect(resolveStop(prepared, { ref: 'STIF:StopPoint:Q:1002:' })).toMatchObject({ lat: LAT, lng: 2.43 });
-    expect(resolveStop(prepared, { ref: 'STIF:StopArea:SP:1003:' })).toMatchObject({ lng: 2.45 });
-    expect(resolveStop(prepared, { ref: 'IDFM:monomodalStopPlace:1001' })).toMatchObject({ lng: 2.41 });
+    expect(resolveStop(prepared, { ref: 'IDFM:1003' })).toMatchObject({ lng: 2.45 });
   });
 
   it('falls back to a normalized name match, then to the fallback', () => {
@@ -95,12 +94,17 @@ describe('estimateVehiclePosition', () => {
     expect(haversineDistance(rer, stopB)).toBeGreaterThan(haversineDistance(bus, stopB));
   });
 
-  it('never goes past the start of the route', () => {
+  it('never goes past the start of the route, and says so', () => {
     const far = estimateVehiclePosition(
       { monitoredStop: stopB, destinationStop: stopC, minutesUntil: 500, type: 'bus' },
       prepared
     );
     expect(far.method).toBe('route');
+    expect(far.atTerminus).toBe(true);
+    expect(
+      estimateVehiclePosition({ monitoredStop: stopB, destinationStop: stopC, minutesUntil: 2, type: 'bus' }, prepared)
+        .atTerminus
+    ).toBe(false);
     expect(far.lat).toBeCloseTo(LAT, 6);
     expect(far.lng).toBeCloseTo(2.4, 6);
   });
@@ -115,92 +119,114 @@ describe('estimateVehiclePosition', () => {
   });
 });
 
-describe('measureSpeed', () => {
-  const distanceBC = haversineDistance(stopB, stopC);
+describe('resolveStop reference kinds', () => {
+  it('never matches a station reference to a platform with the same number', () => {
+    const line = prepareLine({
+      segments: [eastbound],
+      stops: [
+        { id: 'IDFM:463865', name: 'Quai', lat: LAT, lng: 2.41 },
+        { id: 'IDFM:monomodalStopPlace:463865', name: 'Gare', lat: LAT, lng: 2.45 },
+      ],
+    });
+    expect(resolveStop(line, { ref: 'STIF:StopArea:SP:463865:' })).toMatchObject({ name: 'Gare' });
+    expect(resolveStop(line, { ref: 'STIF:StopPoint:Q:463865:' })).toMatchObject({ name: 'Quai' });
 
-  it('derives speed from trace distance and elapsed minutes', () => {
-    expect(measureSpeed(prepared, stopB, stopC, 4, 'bus')).toBeCloseTo(distanceBC / 4, -1);
-    // the return trip direction is found on the westbound segment
-    expect(measureSpeed(prepared, stopC, stopB, 4, 'bus')).toBeCloseTo(distanceBC / 4, -1);
-  });
-
-  it('rejects implausible or unmeasurable values', () => {
-    expect(measureSpeed(prepared, stopB, stopC, 0.1, 'bus')).toBeNull(); // too short a gap
-    expect(measureSpeed(prepared, stopB, stopC, 0.5, 'bus')).toBeNull(); // > 2000 m/min
-    expect(measureSpeed(prepared, stopB, stopB, 4, 'bus')).toBeNull(); // no distance
-    expect(measureSpeed(prepared, stopB, { lat: 48.99, lng: 2.43 }, 4, 'bus')).toBeNull(); // off trace
+    const busOnly = prepareLine({ segments: [eastbound], stops: [{ id: 'IDFM:463865', name: 'Quai', lat: LAT, lng: 2.41 }] });
+    expect(resolveStop(busOnly, { ref: 'STIF:StopArea:SP:463865:' })).toBeNull();
   });
 });
 
 describe('estimateFromTimetable', () => {
+  // Longer straight route, 2.40 -> 2.50, stops every 0.02 deg (~1.47 km).
+  const longEast = Array.from({ length: 101 }, (_, i) => [LAT, 2.4 + i * 0.001]);
+  const longWest = [...longEast].reverse();
+  const P = [1, 2, 3, 4].map((n) => ({ id: `IDFM:20${n}`, name: `P${n}`, lat: LAT, lng: 2.4 + n * 0.02 }));
+  const line = prepareLine({ segments: [longEast, longWest], stops: P });
+
   const now = new Date('2026-10-17T18:00:00Z');
   const at = (minutes) => new Date(now.getTime() + minutes * 60000).toISOString();
+  const call = (n, minutes) => ({ stopRef: `STIF:StopPoint:Q:20${n}:`, time: at(minutes) });
   const journey = (calls) => ({ journeyRef: 'J1', calls });
 
-  it('anchors on the nearest upcoming call and uses the measured speed', () => {
-    const result = estimateFromTimetable(
-      {
-        journey: journey([
-          { stopRef: 'STIF:StopPoint:Q:1003:', time: at(6) },
-          { stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) },
-        ]),
-        destinationStop: stopC,
-        now,
-        type: 'bus',
-      },
-      prepared
+  const east = (calls, minutesUntil = 6) =>
+    estimateFromTimetable(
+      { journey: journey(calls), monitoredStop: P[2], minutesUntil, destinationStop: P[3], now, type: 'bus' },
+      line
     );
 
-    const speed = haversineDistance(stopB, stopC) / 4;
-    expect(result.method).toBe('timetable');
-    expect(result.anchorStopName).toBe('Bravo - Centre');
-    expect(result.minutesToAnchor).toBe(2);
+  it('anchors on an upstream call and walks back at the measured speed', () => {
+    const result = east([call(2, 2), call(4, 9)]);
+    const speed = haversineDistance(P[1], P[2]) / 4; // P2 -> P3 in 4 minutes
+    expect(result).toMatchObject({ method: 'timetable', anchorStopName: 'P2', minutesToAnchor: 2 });
     expect(result.speedMetersPerMinute).toBe(Math.round(speed));
-    expect(result.lng).toBeLessThan(stopB.lng); // heading east, so it is west of Bravo
-    expect(haversineDistance(result, stopB)).toBeCloseTo(2 * speed, -1);
+    expect(result.lng).toBeLessThan(P[1].lng);
+    expect(haversineDistance(result, P[1])).toBeCloseTo(2 * speed, -1);
   });
 
-  it('takes the direction from the following call when the destination is unknown', () => {
-    const result = estimateFromTimetable(
-      {
-        journey: journey([
-          { stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) },
-          { stopRef: 'STIF:StopPoint:Q:1001:', time: at(6) },
-        ]),
-        destinationStop: null,
-        now,
-      },
-      prepared
-    );
-    expect(result.method).toBe('timetable');
-    expect(result.lng).toBeGreaterThan(stopB.lng); // heading west, so it is east of Bravo
+  it('prefers the call closest to the vehicle among consistent ones', () => {
+    // P1 -> P3 (2.9 km) in 7 min and P2 -> P3 (1.5 km) in 5 min are both plausible
+    expect(east([call(2, 3), call(1, 1)], 8).anchorStopName).toBe('P1');
   });
 
-  it('falls back to the mode speed with a single call and a known destination', () => {
-    const result = estimateFromTimetable(
-      {
-        journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) }]),
-        destinationStop: stopC,
-        now,
-        type: 'bus',
-      },
-      prepared
+  it('ignores calls downstream of the monitored stop even when their time is earlier', () => {
+    // P4 lies after P3 heading east; the feed claims it comes first.
+    const result = east([call(4, 1), call(2, 2)]);
+    expect(result.anchorStopName).toBe('P2');
+  });
+
+  it('rejects anchors implying an implausible speed', () => {
+    // P2 -> P3 (1.47 km) in 29 min is 50 m/min, below a bus's minimum.
+    expect(east([call(2, 1)], 30)).toBeNull();
+    // P1 -> P3 (2.9 km) in 2 min is 1.5 km/min, above a bus's maximum.
+    expect(east([call(1, 4)], 6)).toBeNull();
+  });
+
+  it('respects direction: the same call is downstream for a westbound vehicle', () => {
+    const west = estimateFromTimetable(
+      { journey: journey([call(2, 2)]), monitoredStop: P[2], minutesUntil: 6, destinationStop: P[0], now, type: 'bus' },
+      line
     );
-    expect(result.speedMetersPerMinute).toBeNull();
-    expect(haversineDistance(result, stopB)).toBeCloseTo(500, -1);
+    expect(west).toBeNull();
   });
 
   it('returns null when nothing usable is ahead', () => {
-    expect(estimateFromTimetable({ journey: journey([]), now }, prepared)).toBeNull();
+    expect(east([])).toBeNull();
+    expect(east([call(2, -1)])).toBeNull(); // already passed
+    expect(east([call(2, 7)])).toBeNull(); // after the monitored stop time
+    expect(east([{ stopRef: 'STIF:StopPoint:Q:999:', time: at(2) }])).toBeNull();
     expect(
-      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(-3) }]), now }, prepared)
+      estimateFromTimetable({ journey: journey([call(2, 2)]), monitoredStop: P[2], minutesUntil: 6, destinationStop: null, now }, line)
     ).toBeNull();
-    expect(
-      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:9999:', time: at(3) }]), now }, prepared)
-    ).toBeNull();
-    expect(
-      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(3) }]), now }, prepared)
-    ).toBeNull(); // one call, no destination: direction unknown
-    expect(estimateFromTimetable({ journey: null, now }, prepared)).toBeNull();
+    expect(estimateFromTimetable({ journey: null, monitoredStop: P[2], minutesUntil: 6, destinationStop: P[3], now }, line)).toBeNull();
+  });
+});
+
+describe('findDirectedSegment with route variants', () => {
+  // Full route 2.40 -> 2.46 drawn ~10 m off the stops, and a short turn
+  // starting at Bravo (2.43) drawn exactly through them: the short turn is
+  // the better geometric fit, as segment 4 of the real 146 trace is.
+  const fullRoute = Array.from({ length: 61 }, (_, i) => [LAT + 0.00009, 2.4 + i * 0.001]);
+  const shortTurn = Array.from({ length: 31 }, (_, i) => [LAT, 2.43 + i * 0.001]);
+  const variants = prepareLine({ segments: [fullRoute, shortTurn], stops: [stopA, stopB, stopC] });
+
+  it('prefers the variant with the most route before the stop when fits are similar', () => {
+    const directed = findDirectedSegment(variants, stopB, stopC, 'bus');
+    expect(directed.error).toBeGreaterThan(15); // not the best-fitting segment...
+    expect(directed.segment.index).toBe(0); // ...but the full route wins
+    expect(directed.from.distAlong).toBeGreaterThan(2000);
+  });
+
+  it('lets the vehicle be walked back past the short turn start', () => {
+    const position = estimateVehiclePosition(
+      { monitoredStop: stopB, destinationStop: stopC, minutesUntil: 6, type: 'bus' },
+      variants
+    );
+    expect(position.lng).toBeLessThan(stopB.lng - 0.015); // 1.5 km back, not pinned at Bravo
+  });
+
+  it('still rejects a variant that fits much worse', () => {
+    const farVariant = Array.from({ length: 61 }, (_, i) => [LAT + 0.0012, 2.4 + i * 0.001]); // ~130 m off
+    const line = prepareLine({ segments: [farVariant, shortTurn], stops: [stopA, stopB, stopC] });
+    expect(findDirectedSegment(line, stopB, stopC, 'bus').segment.index).toBe(1);
   });
 });

@@ -1,7 +1,7 @@
 /**
  * IDFM PRIM API client. Server-side only: it needs the API key.
  */
-import { UPSTREAM_TIMEOUT_MS } from './constants';
+import { DISRUPTIONS_CACHE, UPSTREAM_TIMEOUT_MS } from './constants';
 
 const BASE_URL = process.env.IDFM_API_BASE_URL || 'https://prim.iledefrance-mobilites.fr/marketplace';
 
@@ -27,6 +27,7 @@ export function getApiKey() {
  * the upstream response body.
  */
 export function safeErrorMessage(error) {
+  if (error?.safeMessage) return error.safeMessage;
   if (error instanceof IdfmApiError) return error.message;
   return 'Erreur interne';
 }
@@ -37,7 +38,7 @@ export function toStifLineRef(lineId) {
   return match ? `STIF:Line::${match[1]}:` : String(lineId ?? '');
 }
 
-async function fetchSiri(path, params, { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch, label = path } = {}) {
+async function fetchPrim(path, params, { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch, label = path } = {}) {
   const apiKey = getApiKey();
   const url = new URL(`${BASE_URL}/${path}`);
   for (const [name, value] of Object.entries(params)) {
@@ -47,7 +48,9 @@ async function fetchSiri(path, params, { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchI
   let response;
   try {
     response = await fetchImpl(url, {
-      headers: { apiKey, Accept: 'application/json' },
+      // Without an explicit language PRIM may answer in English (Node's fetch
+      // sends "Accept-Language: *"); the app is in French.
+      headers: { apiKey, Accept: 'application/json', 'Accept-Language': 'fr-FR,fr;q=0.9' },
       cache: 'no-store',
       signal: AbortSignal.timeout(timeoutMs),
     });
@@ -77,7 +80,7 @@ async function fetchSiri(path, params, { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchI
  * @param {string} monitoringRef  e.g. STIF:StopPoint:Q:7948: or STIF:StopArea:SP:43231:
  */
 export function fetchStopMonitoring(monitoringRef, options = {}) {
-  return fetchSiri('stop-monitoring', { MonitoringRef: monitoringRef }, { ...options, label: monitoringRef });
+  return fetchPrim('stop-monitoring', { MonitoringRef: monitoringRef }, { ...options, label: monitoringRef });
 }
 
 /**
@@ -86,5 +89,17 @@ export function fetchStopMonitoring(monitoringRef, options = {}) {
  * @param {string} lineId  e.g. IDFM:C01173
  */
 export function fetchEstimatedTimetable(lineId, options = {}) {
-  return fetchSiri('estimated-timetable', { LineRef: toStifLineRef(lineId) }, { ...options, label: lineId });
+  return fetchPrim('estimated-timetable', { LineRef: toStifLineRef(lineId) }, { ...options, label: lineId });
+}
+
+/**
+ * Every current and planned disruption on the network ("Info trafic -
+ * requête globale"), about 1.5 MB.
+ */
+export function fetchDisruptionsBulk(options = {}) {
+  return fetchPrim('disruptions_bulk/disruptions/v2', {}, {
+    timeoutMs: DISRUPTIONS_CACHE.timeoutMs,
+    ...options,
+    label: 'bulk',
+  });
 }

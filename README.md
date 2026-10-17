@@ -1,4 +1,4 @@
-# DranCyBus
+# DrancyBus
 
 Real-time departures and a live map for the public transport around Drancy
 (bus 148, bus 146, métro 5, RER B), built on the Île-de-France Mobilités
@@ -15,6 +15,11 @@ npm run dev                        # http://localhost:3000
 Get an API key at <https://prim.iledefrance-mobilites.fr/>. The server logs a
 warning at startup and the API routes answer 503 while the key is missing.
 
+Road traffic needs a second, optional key: add `TOMTOM_API_KEY` to
+`.env.local` (free tier at <https://developer.tomtom.com/>, 2,500 requests a
+day). Without it the traffic card says it is not configured and everything
+else works.
+
 ## Scripts
 
 | Command                | What it does                                              |
@@ -25,37 +30,61 @@ warning at startup and the API routes answer 503 while the key is missing.
 | `npm run lint`         | ESLint                                                    |
 | `npm test`             | Unit tests (Vitest)                                       |
 | `npm run lines:update` | Refresh `src/data/line-data.json` from IDFM open data     |
+| `npm run icons`        | Re-render `public/icons/*.png` from `src/app/icon.svg` (needs Chrome, `CHROME_PATH` to override) |
 
 ## Configuration
 
 Everything the app shows is driven by [`src/config/favorites.json`](src/config/favorites.json):
 
-- **`stops`**: the stops to display. Each entry has a PRIM `MonitoringRef`
-  (`STIF:StopPoint:Q:…:` for a platform, `STIF:StopArea:SP:…:` for a whole
-  station), a display name, coordinates for the map, and the lines to show
-  there. A line entry may restrict directions:
-  - `direction` / `excludeDirection`: substring match on the destination name.
-    Case, accents and punctuation are ignored, so `"Le Bourget RER"` matches the
-    feed's `"Le Bourget <RER>"`.
-  - `directionRef` / `excludeDirectionRef`: exact match on the SIRI
-    `DestinationRef`.
-  All rules present on an entry are applied.
-- **`trackedLines`**: lines drawn on the map, with name, mode (`bus`, `tram`,
-  `metro`, `rer`) and colour. A line only produces vehicles if at least one
-  configured stop lists it.
-- **`settings`**: refresh intervals, departures per stop, map centre and zoom,
-  and `vehicleHorizonMinutes`, the furthest-out departure turned into a marker.
+- **`profiles`**: one tab each, "Aller" and "Retour". `defaultHours`
+  (`{ "from": 0, "to": 12 }`) picks the tab that opens by default, in
+  `settings.timeZone` (Paris). `/#aller` or `/#retour` forces a tab. A
+  profile has:
+  - **`stops`**: the stops to display. Each entry has a PRIM `MonitoringRef`
+    (`STIF:StopPoint:Q:…:` for one platform, `STIF:StopArea:SP:…:` for a
+    whole station), a display name, coordinates for the map, and the lines
+    to show there. A line entry may restrict directions:
+    - `direction` / `excludeDirection`: substring match on the destination
+      name. Case, accents and punctuation are ignored, so `"Le Bourget RER"`
+      matches the feed's `"Le Bourget <RER>"`.
+    - `directionRef` / `excludeDirectionRef`: exact match on the SIRI
+      `DestinationRef`.
+    - `towards`: a key of `connections`. Vehicles matched on that entry get
+      that connection's colour on their minute counter on the map.
+  - **`traffic`**: road routes to check, `{ id, name, from, to, alongLine }`.
+    `alongLine` keeps the car route on that bus line's road.
+- **`connections`**: what a bus can be heading to, e.g. `"metro-5"` (orange)
+  and `"rer-b"` (blue).
+- **`trackedLines`**: lines shared by all profiles, with name, mode (`bus`,
+  `tram`, `metro`, `rer`) and colour. They appear in the line status table;
+  a line only produces vehicles if a stop of the active profile lists it.
+- **`settings`**: time zone, refresh intervals, departures per stop, map
+  centre and zoom, and `vehicleHorizonMinutes`, the furthest-out departure
+  turned into a marker.
 
 After changing `trackedLines`, run `npm run lines:update` so the route traces
 and stop lists for the new lines are available.
 
+## API
+
+| Endpoint | Returns |
+| --- | --- |
+| `GET /api/idfm/departures?profile=aller` | Next departures per stop of the profile |
+| `GET /api/idfm/vehicles?profile=aller` | Estimated vehicle positions, with `towards` |
+| `GET /api/idfm/disruptions` | Status of every tracked line: active and upcoming (7 days) disruptions |
+| `GET /api/traffic?profile=aller` | Car travel time with live traffic vs free flow on the profile's routes |
+
+`profile` defaults to the first profile; an unknown one answers 400.
+
 ## How it works
 
 ```
-browser ──/api/idfm/departures──▶ departures-service ─┐
-        ──/api/idfm/vehicles────▶ vehicles-service ───┼─▶ stop-monitoring-cache ──────▶ PRIM stop-monitoring (per stop)
-                                        │              └─▶ estimated-timetable-cache ─▶ PRIM estimated-timetable (per line)
-                                  position-estimator  (+ src/data/line-data.json)
+browser ──/api/idfm/departures───▶ departures-service ─┐
+        ──/api/idfm/vehicles─────▶ vehicles-service ───┼─▶ stop-monitoring-cache ──────▶ PRIM stop-monitoring (per stop)
+                                         │              └─▶ estimated-timetable-cache ─▶ PRIM estimated-timetable (per line)
+                                   position-estimator  (+ src/data/line-data.json)
+        ──/api/idfm/disruptions──▶ disruptions-service ───▶ PRIM disruptions_bulk (whole network)
+        ──/api/traffic───────────▶ traffic-service ───────▶ TomTom calculateRoute (per route)
 ```
 
 - **One upstream call per stop.** Both routes read the same cached SIRI
@@ -67,18 +96,54 @@ browser ──/api/idfm/departures──▶ departures-service ─┐
   instead of being fetched at runtime.
 - **Vehicle positions are estimates.** No IDFM feed carries GPS. Stop
   monitoring decides which vehicles to show and how far they are from the
-  configured stops. The estimated-timetable feed (one call per line, cached
-  30 s) lists each running journey's upcoming calls: the vehicle's nearest
-  upcoming call becomes the anchor, the gap to the following call gives a
-  measured speed, and the estimator walks back from the anchor along the
-  trace segment that passes it before the journey's destination (which fixes
-  the direction of travel). Journeys missing from the timetable fall back to
-  walking back from the configured stop at the mode's average speed. Vehicles
-  are identified by the SIRI dated journey reference, so a bus seen from two
-  stops is one marker.
+  configured stops. The estimator picks the trace segment on which the stop
+  comes before the journey's destination (direction of travel), preferring
+  the full-length route variant over short turns, and walks the vehicle back
+  from the stop. The estimated-timetable feed (one call per line, cached
+  30 s) can supply a closer anchor: an upcoming call that lies upstream of
+  the stop and implies a plausible speed for the mode. The bus feed often
+  lists stops of the other direction or times that contradict route order,
+  so calls failing those checks are ignored. Otherwise the vehicle is walked
+  back at the mode's average speed. When the walk-back runs past the start of
+  the route the vehicle is flagged `atTerminus`. Vehicles are identified by
+  the SIRI dated journey reference, so a bus seen from two stops is one
+  marker.
+- **Disruptions** come from the IDFM bulk feed (whole network, ~1.5 MB, one
+  call cached 2 min). A line is "Interrompu" only for an active line-wide
+  blocking disruption; station closures count as "Perturbé".
+- **Traffic** comes from TomTom routing with live traffic, cached 3 min per
+  route. The level compares travel time to free-flow time.
 - **Client polling** pauses while the tab is hidden, refreshes on return and
   when the browser comes back online, aborts superseded requests and keeps the
   last good data when a refresh fails.
+
+## Installing on a phone (PWA)
+
+The app is installable and works offline once opened online.
+
+- **Android / Chrome / Edge**: "Installer l'application" in the browser menu
+  (or the install icon in the address bar). Long-press the home-screen icon
+  for the Aller and Retour shortcuts.
+- **iPhone / iPad**: Safari, Share, "Sur l'écran d'accueil".
+
+Pieces: `src/app/manifest.js` (manifest), `public/icons/` (192/512 icons,
+plain and maskable), `public/sw.js` (service worker, production only),
+`src/components/ServiceWorkerRegister.jsx` and `OfflineNotice.jsx`.
+
+Offline behaviour, from `public/sw.js`:
+
+- The page is network-first: online you always get the latest deployment.
+- Build assets are precached from the page's HTML and then served
+  cache-first (their URLs are content-hashed).
+- API calls are network-first with a 6 s timeout. When the network fails, is
+  slow or the server errors, the last good response is replayed with an
+  `x-drancybus-cache: hit` header; the page flags it as stale and shows its
+  real age from the response `timestamp`. Each profile is cached separately.
+- Map tiles are not cached by the worker (only by the browser's HTTP cache).
+
+To ship a worker change that must drop old caches, bump `VERSION` in
+`public/sw.js`. In development the worker is unregistered automatically; if a
+dev page ever looks stale after a production run on the same port, reload once.
 
 ## Project layout
 

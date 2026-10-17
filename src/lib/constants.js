@@ -47,5 +47,39 @@ export const ESTIMATED_TIMETABLE_CACHE = {
   staleMaxMs: 5 * 60_000,
 };
 
-// Sanity bounds for a speed measured between two upcoming timetable calls.
-export const SPEED_BOUNDS_M_PER_MIN = { min: 50, max: 2000 };
+/**
+ * Plausible speeds per mode, in metres per minute. A timetable call is only
+ * used as a position anchor when the speed it implies between that call and
+ * the monitored stop falls in this range: the bus feed sometimes lists
+ * stops of the wrong direction or with times that contradict route order.
+ */
+export const SPEED_BOUNDS_M_PER_MIN = {
+  bus: { min: 60, max: 500 }, //   3.6 - 30 km/h average, stops included
+  tram: { min: 60, max: 600 },
+  metro: { min: 100, max: 900 },
+  rer: { min: 150, max: 1600 }, // up to ~95 km/h
+};
+
+// IDFM bulk disruptions feed: about 1.5 MB for the whole network.
+export const DISRUPTIONS_CACHE = {
+  freshMs: 2 * 60_000,
+  staleMaxMs: 30 * 60_000,
+  timeoutMs: 15_000,
+  upcomingDays: 7,
+};
+
+// TomTom routing with live traffic. The free tier allows 2,500 calls a day.
+export const TRAFFIC_CACHE = {
+  freshMs: 3 * 60_000,
+  staleMaxMs: 15 * 60_000,
+};
+
+/**
+ * Traffic level from the ratio between travel time with traffic and
+ * free-flow travel time. Delays under `minDelaySeconds` always count as fluid.
+ */
+export const TRAFFIC_LEVELS = {
+  minDelaySeconds: 60,
+  slowRatio: 1.25,
+  heavyRatio: 1.6,
+};

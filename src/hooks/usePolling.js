@@ -5,6 +5,15 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const INITIAL = { response: null, error: null, loading: true, lastUpdated: null };
 
 /**
+ * When the data was produced: the server's `timestamp` if present, so a
+ * response replayed from the offline cache shows its real age.
+ */
+function responseTime(response) {
+  const time = response?.timestamp ? new Date(response.timestamp) : null;
+  return time && !Number.isNaN(time.getTime()) ? time : new Date();
+}
+
+/**
  * Poll an async fetcher on an interval, robustly:
  *  - each run aborts the previous in-flight request;
  *  - responses that arrive out of order are dropped (sequence number);
@@ -31,7 +40,7 @@ export function usePolling(fetcher, { interval = 60000, enabled = true } = {}) {
     try {
       const response = await fetcher(controller.signal);
       if (id !== sequence.current) return; // superseded
-      setState({ response, error: null, loading: false, lastUpdated: new Date() });
+      setState({ response, error: null, loading: false, lastUpdated: responseTime(response) });
     } catch (error) {
       if (id !== sequence.current || error?.name === 'AbortError') return;
       setState((previous) => ({
@@ -68,6 +77,7 @@ export function usePolling(fetcher, { interval = 60000, enabled = true } = {}) {
     response: state.response,
     data: state.response?.data ?? null,
     stale: Boolean(state.response?.stale),
+    fromCache: Boolean(state.response?.fromCache),
     error: state.error,
     loading: state.loading,
     lastUpdated: state.lastUpdated,

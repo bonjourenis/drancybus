@@ -1,0 +1,3128 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-17T18:21:14.921Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:3acb5226-c4bd-4b46-acb1-865133dc1222:LOC:",
+   "EstimatedTimetableDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-17T18:21:14.945Z",
+     "Version": "2.0",
+     "Status": "true",
+     "EstimatedJourneyVersionFrame": [
+      {
+       "EstimatedVehicleJourney": [
+        {
+         "RecordedAtTime": "2026-10-17T18:17:47.310Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.52.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27549:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:16.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37429:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:58:46.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22702:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:32.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22701:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27676:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7856:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:53.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427598:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19085:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:19:47.544Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.51.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19360:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:15103:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:39.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:56.019Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.57.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23527:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:03.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23532:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:50:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22685:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T19:02:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23524:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:48:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27674:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:39:08.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:40096:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:53:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:18:47.915Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.51.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22702:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:09.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37429:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:27.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27676:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:42.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22701:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:45.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.58.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427606:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18937:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:45.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19380:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:15.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:9284:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:48.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18840:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7951:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:13064:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:17.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27668:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37418:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:49.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37433:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:54:22.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:47.197Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.55.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24899:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:55:09.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28477:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:28.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7857:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:47:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19139:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:34:06.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:479720:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19150:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:17.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24897:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:56:07.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27672:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:02.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19313:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22600:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:10.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23529:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:47:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7775:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:48:03.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:15104:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7948:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:14.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:03:41.653Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.58.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23527:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:46:23.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.57.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23526:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:9284:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7944:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:46.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37418:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27677:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27671:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:48:36.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37433:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:15.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22703:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:56.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23530:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27670:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:46:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27673:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:50:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22617:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:46:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18840:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:17.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22696:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:34.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27668:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27548:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:47:12.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:11.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:17:47.310Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.48.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37434:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.53.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18847:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:36.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:413092:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:28.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27549:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:41:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7856:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7949:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:22.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:13063:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427598:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:48:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27669:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:39.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27057:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:14.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24898:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:43.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:470572:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19085:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:50:41.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18976:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:11.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19082:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:47.197Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.54.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:421198:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:20:47.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7860:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:55.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:20466:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:07.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37431:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:21:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:424882:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:30.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:47.197Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.55.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37431:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:49.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19358:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:21:23.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427597:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:42.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39580:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:21:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23528:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:39.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:462940:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:34:07.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427599:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:09.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23533:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427607:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28884:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:41.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:20466:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:27.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:421198:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37430:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:03.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:17:47.310Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.45.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36435:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:07:55.186Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.60.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7947:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.46.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36435:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:56.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:21:13.629Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.56.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23526:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7944:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:39.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19358:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23530:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:45.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27671:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:22.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27677:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:14.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22696:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:11.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22703:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27673:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:03.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22617:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:39580:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:19.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27670:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:31:02.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37430:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:34:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23533:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427599:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:39:09.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27548:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:462940:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:53.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23528:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28884:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:29.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427607:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:30.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.54.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18847:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:42:23.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19150:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:25:50.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:413092:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:56:43.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:13063:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:53:57.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24897:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:34:07.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7949:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:59.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24899:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:32:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27057:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T19:00:31.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19313:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:23:42.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7775:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:30:27.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23529:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:24.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27669:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:49.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22600:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:33:44.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27672:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:22:15.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7948:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:29:38.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18976:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:43:47.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:470572:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:53:20.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19082:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:41:25.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:24898:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:54:06.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7857:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:28:43.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:19:47.544Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.52.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36434:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:21:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "ArrivalProximityText": {
+             "value": "à l'approche"
+            },
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:15103:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:46:33.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19360:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:45:37.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:19:47.544Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.53.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:36434:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:40.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7860:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:58.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:424882:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:05.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Retour"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.59.R.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:470572:"
+         },
+         "DestinationName": [
+          {
+           "value": "Le Bourget <RER>"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:18937:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:40:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:427606:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:35:00.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7947:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:24:21.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19380:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:38:04.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:13064:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:52:36.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:7951:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:08.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Le Bourget RER"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:20:17.874Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.56.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23524:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:26:31.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:23532:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:27:14.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:15104:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:37:43.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:40096:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:36:13.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:19139:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:18.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:22685:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:39:54.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:479720:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:44:57.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:27674:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:20:53.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           },
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:28477:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:51:16.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        },
+        {
+         "RecordedAtTime": "2026-10-17T18:18:47.915Z",
+         "LineRef": {
+          "value": "STIF:Line::C01171:"
+         },
+         "DirectionRef": {
+          "value": "Aller"
+         },
+         "DatedVehicleJourneyRef": {
+          "value": "MeC_Bus_PC:VehicleJourney::20261017.49.A.C01171:LOC"
+         },
+         "VehicleMode": [
+          "BUS"
+         ],
+         "VehicleFeatureRef": [],
+         "RouteRef": {},
+         "PublishedLineName": [
+          {
+           "value": "146"
+          }
+         ],
+         "DirectionName": [
+          {
+           "value": "Montfermeil-Les Bosquets"
+          }
+         ],
+         "OriginRef": {},
+         "OriginName": [],
+         "DestinationRef": {
+          "value": "STIF:StopPoint:Q:427606:"
+         },
+         "DestinationName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "DestinationShortName": [
+          {
+           "value": "Les Bosquets"
+          }
+         ],
+         "OperatorRef": {
+          "value": "MeC_Bus_PC:Operator::1050:"
+         },
+         "ProductCategoryRef": {},
+         "JourneyNote": [],
+         "EstimatedCalls": {
+          "EstimatedCall": [
+           {
+            "StopPointRef": {
+             "value": "STIF:StopPoint:Q:37434:"
+            },
+            "ExpectedDepartureTime": "2026-10-17T18:49:51.000Z",
+            "DestinationDisplay": [
+             {
+              "value": "Les Bosquets"
+             }
+            ],
+            "DepartureStatus": "ON_TIME"
+           }
+          ]
+         },
+         "VehicleJourneyName": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

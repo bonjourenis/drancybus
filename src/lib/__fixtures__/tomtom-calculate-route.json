@@ -1,0 +1,32 @@
+{
+  "formatVersion": "0.0.12",
+  "routes": [
+    {
+      "summary": {
+        "lengthInMeters": 2140,
+        "travelTimeInSeconds": 540,
+        "trafficDelayInSeconds": 180,
+        "trafficLengthInMeters": 620,
+        "departureTime": "2026-10-19T08:10:00+02:00",
+        "arrivalTime": "2026-10-19T08:19:00+02:00",
+        "noTrafficTravelTimeInSeconds": 330,
+        "historicTrafficTravelTimeInSeconds": 420,
+        "liveTrafficIncidentsTravelTimeInSeconds": 540
+      },
+      "legs": [],
+      "sections": [
+        { "startPointIndex": 0, "endPointIndex": 41, "sectionType": "TRAVEL_MODE", "travelMode": "car" },
+        {
+          "startPointIndex": 12,
+          "endPointIndex": 27,
+          "sectionType": "TRAFFIC",
+          "simpleCategory": "JAM",
+          "effectiveSpeedInKmh": 12,
+          "delayInSeconds": 150,
+          "magnitudeOfDelay": 2,
+          "tec": { "effectCode": 4, "causes": [{ "mainCauseCode": 1 }] }
+        }
+      ]
+    }
+  ]
+}

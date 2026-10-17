@@ -4,6 +4,12 @@
  */
 export async function register() {
   if (process.env.NEXT_RUNTIME !== 'nodejs') return;
+  if (!process.env.TOMTOM_API_KEY) {
+    console.info(
+      '[drancybus] TOMTOM_API_KEY is not set: the road traffic card stays empty. ' +
+        'A free key is available at https://developer.tomtom.com/.'
+    );
+  }
   if (!process.env.IDFM_API_KEY) {
     console.warn(
       '[drancybus] IDFM_API_KEY is not set. Copy .env.local.example to .env.local and add your key; ' +

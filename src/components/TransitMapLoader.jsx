@@ -1,12 +1,16 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { SCREEN } from '@/lib/screen-theme';
 import LoadingSpinner from './LoadingSpinner';
 
 // Leaflet touches `window` at import time, so the map is client-only.
 const TransitMap = dynamic(() => import('./TransitMap'), {
   loading: () => (
-    <div className="h-[400px] md:h-[500px] w-full rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
+    <div
+      className="h-[400px] md:h-[500px] w-full rounded-xl flex items-center justify-center"
+      style={{ backgroundColor: SCREEN.background }}
+    >
       <LoadingSpinner message="Chargement de la carte..." />
     </div>
   ),

@@ -9,10 +9,12 @@ export default function DepartureBoard({
   loading,
   error,
   stale,
+  fromCache = false,
   lastUpdated,
   partialErrors,
   refresh,
   lineColors,
+  lineTypes,
 }) {
   const hasData = stops.length > 0;
 
@@ -53,6 +55,7 @@ export default function DepartureBoard({
             departures={departures}
             error={stopError}
             lineColors={lineColors}
+            lineTypes={lineTypes}
           />
         ))}
       </div>
@@ -64,7 +67,9 @@ export default function DepartureBoard({
       )}
       {stale && !hadProblem && (
         <p className="text-sm text-amber-600 dark:text-amber-400 text-center">
-          Le service IDFM répond mal : horaires possiblement obsolètes
+          {fromCache
+            ? 'Données enregistrées : horaires possiblement obsolètes'
+            : 'Le service IDFM répond mal : horaires possiblement obsolètes'}
         </p>
       )}
     </div>

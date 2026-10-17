@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import favorites from '@/config/favorites.json';
+import { getProfile, scopeConfig } from './profiles';
 
 const NO_STORE = { 'Cache-Control': 'no-store' };
 
@@ -37,4 +39,25 @@ export function internalErrorResponse(error) {
     { success: false, error: 'Erreur interne du serveur', timestamp: new Date().toISOString() },
     { status: 500, headers: NO_STORE }
   );
+}
+
+export function badRequestResponse(message) {
+  return NextResponse.json(
+    { success: false, error: message, timestamp: new Date().toISOString() },
+    { status: 400, headers: NO_STORE }
+  );
+}
+
+/**
+ * Resolve ?profile= to a config scoped to that profile.
+ * @returns {{ config: Object } | { response: NextResponse }}
+ */
+export function resolveProfile(request, config = favorites) {
+  const id = new URL(request.url).searchParams.get('profile');
+  const profile = getProfile(config, id);
+  if (!profile) {
+    const known = (config.profiles ?? []).map((p) => p.id).join(', ');
+    return { response: badRequestResponse(`Profil inconnu : ${id}. Profils disponibles : ${known}`) };
+  }
+  return { config: scopeConfig(config, profile) };
 }

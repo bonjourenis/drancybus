@@ -1,6 +1,11 @@
 /**
  * Browser-side helper for our own API routes.
  */
+
+// Set by public/sw.js when it answers with a saved response because the
+// network failed, was too slow or returned an error.
+export const SW_CACHE_HEADER = 'x-drancybus-cache';
+
 export async function fetchApi(path, { signal } = {}) {
   let response;
   try {
@@ -25,5 +30,8 @@ export async function fetchApi(path, { signal } = {}) {
     throw new Error(body?.error || `Erreur serveur (HTTP ${response.status})`);
   }
 
+  if (response.headers.get(SW_CACHE_HEADER) === 'hit') {
+    return { ...body, stale: true, fromCache: true };
+  }
   return body;
 }

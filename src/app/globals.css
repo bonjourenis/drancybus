@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Transit map in the RATP screen palette (filter defined in TransitMap.jsx).
+   leaflet.css loads after this file, so these selectors outrank its own. */
+.ratp-map .leaflet-tile-pane {
+  filter: url(#ratp-map-tint);
+}
+
+.ratp-map .leaflet-control-zoom.leaflet-bar {
+  border: 0;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+
+.ratp-map .leaflet-control-zoom a {
+  background-color: var(--screen-navy);
+  border-bottom-color: rgb(255 255 255 / 0.25);
+  color: #fff;
+}
+
+.ratp-map .leaflet-control-zoom a:hover,
+.ratp-map .leaflet-control-zoom a:focus {
+  background-color: var(--screen-navy);
+  color: var(--screen-amber);
+}
+
+.ratp-map .leaflet-control-zoom a.leaflet-disabled {
+  background-color: var(--screen-navy);
+  color: rgb(255 255 255 / 0.4);
+}
