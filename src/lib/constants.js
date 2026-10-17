@@ -38,3 +38,14 @@ export const STOP_MONITORING_CACHE = {
 
 // Hard limit on every upstream request
 export const UPSTREAM_TIMEOUT_MS = 8_000;
+
+// Server-side cache for PRIM estimated-timetable responses (one per line).
+// Fresh window is longer than stop monitoring because the feed is heavier and
+// its quota is lower; stale window is shorter because positions age fast.
+export const ESTIMATED_TIMETABLE_CACHE = {
+  freshMs: 30_000,
+  staleMaxMs: 5 * 60_000,
+};
+
+// Sanity bounds for a speed measured between two upcoming timetable calls.
+export const SPEED_BOUNDS_M_PER_MIN = { min: 50, max: 2000 };

@@ -212,7 +212,17 @@ export default function TransitMap({
                   <p className="text-sm font-medium text-blue-600 mt-1">
                     {vehicle.minutesUntil <= 1 ? 'Arrivée imminente' : `Dans ${vehicle.minutesUntil} min`}
                   </p>
-                  <p className="text-xs text-zinc-400 mt-1 italic">Position estimée</p>
+                  {vehicle.positionMethod === 'timetable' && vehicle.anchorStopName && (
+                    <p className="text-xs text-zinc-500 mt-1">
+                      Prochain arrêt : {vehicle.anchorStopName}
+                      {vehicle.minutesToAnchor > 1 ? ` (${Math.round(vehicle.minutesToAnchor)} min)` : ''}
+                    </p>
+                  )}
+                  <p className="text-xs text-zinc-400 mt-1 italic">
+                    {vehicle.positionMethod === 'timetable'
+                      ? "Position estimée d'après l'horaire temps réel"
+                      : 'Position estimée'}
+                  </p>
                 </div>
               </Popup>
             </Marker>

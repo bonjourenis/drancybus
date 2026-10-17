@@ -31,17 +31,18 @@ export function safeErrorMessage(error) {
   return 'Erreur interne';
 }
 
-/**
- * Fetch the SIRI StopMonitoring feed for one stop (all lines serving it).
- * @param {string} monitoringRef  e.g. STIF:StopPoint:Q:7948: or STIF:StopArea:SP:43231:
- */
-export async function fetchStopMonitoring(
-  monitoringRef,
-  { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch } = {}
-) {
+/** IDFM:C01173 -> STIF:Line::C01173: (the format PRIM expects in LineRef) */
+export function toStifLineRef(lineId) {
+  const match = String(lineId ?? '').match(/(C\d+)/);
+  return match ? `STIF:Line::${match[1]}:` : String(lineId ?? '');
+}
+
+async function fetchSiri(path, params, { timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch, label = path } = {}) {
   const apiKey = getApiKey();
-  const url = new URL(`${BASE_URL}/stop-monitoring`);
-  url.searchParams.set('MonitoringRef', monitoringRef);
+  const url = new URL(`${BASE_URL}/${path}`);
+  for (const [name, value] of Object.entries(params)) {
+    url.searchParams.set(name, value);
+  }
 
   let response;
   try {
@@ -62,11 +63,28 @@ export async function fetchStopMonitoring(
 
   if (!response.ok) {
     const body = await response.text().catch(() => '');
-    console.error(`[idfm] HTTP ${response.status} for ${monitoringRef}: ${body.slice(0, 500)}`);
+    console.error(`[idfm] HTTP ${response.status} for ${path} ${label}: ${body.slice(0, 500)}`);
     throw new IdfmApiError(`IDFM API responded with HTTP ${response.status}`, {
       status: response.status,
     });
   }
 
   return response.json();
+}
+
+/**
+ * SIRI StopMonitoring: next visits at one stop, all lines.
+ * @param {string} monitoringRef  e.g. STIF:StopPoint:Q:7948: or STIF:StopArea:SP:43231:
+ */
+export function fetchStopMonitoring(monitoringRef, options = {}) {
+  return fetchSiri('stop-monitoring', { MonitoringRef: monitoringRef }, { ...options, label: monitoringRef });
+}
+
+/**
+ * SIRI EstimatedTimetable: every running journey on one line with its
+ * upcoming calls and expected times. No GPS, only times.
+ * @param {string} lineId  e.g. IDFM:C01173
+ */
+export function fetchEstimatedTimetable(lineId, options = {}) {
+  return fetchSiri('estimated-timetable', { LineRef: toStifLineRef(lineId) }, { ...options, label: lineId });
 }

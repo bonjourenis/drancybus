@@ -19,6 +19,7 @@ export async function GET() {
       unplaced: result.unplaced,
       stale: result.stale,
       errors: result.errors,
+      timetable: result.timetable,
     });
   } catch (error) {
     return internalErrorResponse(error);

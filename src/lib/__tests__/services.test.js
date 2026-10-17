@@ -7,6 +7,8 @@ import lineData from '@/data/line-data.json';
 import danton from '../__fixtures__/stop-monitoring-danton.json';
 import lamartine from '../__fixtures__/stop-monitoring-lamartine.json';
 import leBourget from '../__fixtures__/stop-monitoring-le-bourget-rer.json';
+import timetable148 from '../__fixtures__/estimated-timetable-148.json';
+import timetable146 from '../__fixtures__/estimated-timetable-146.json';
 
 const DANTON = 'STIF:StopPoint:Q:7948:';
 const LAMARTINE = 'STIF:StopPoint:Q:23530:';
@@ -53,6 +55,25 @@ const fakeMonitoring = (overrides = {}) =>
     if (overrides[stopId]) return overrides[stopId]();
     return { data: fixtures[stopId], fetchedAt: now.getTime(), stale: false };
   });
+
+const timetables = { 'IDFM:C01173': timetable148, 'IDFM:C01171': timetable146 };
+
+// Bus lines have a timetable; the RER B one fails, exercising the fallback.
+const fakeTimetable = (overrides = {}) =>
+  vi.fn(async (lineId) => {
+    if (overrides[lineId]) return overrides[lineId]();
+    if (!timetables[lineId]) throw new IdfmApiError('IDFM API responded with HTTP 500', { status: 500 });
+    return { data: timetables[lineId], fetchedAt: now.getTime(), stale: false };
+  });
+
+const vehicleOptions = (extra = {}) => ({
+  config,
+  lineData,
+  now,
+  getMonitoring: fakeMonitoring(),
+  getTimetable: fakeTimetable(),
+  ...extra,
+});
 
 describe('getDepartures', () => {
   it('applies each stop\'s line and direction rules', async () => {
@@ -117,7 +138,7 @@ describe('getDepartures', () => {
 
 describe('getVehicles', () => {
   it('produces one placed vehicle per journey within the horizon', async () => {
-    const result = await getVehicles({ config, lineData, now, getMonitoring: fakeMonitoring() });
+    const result = await getVehicles(vehicleOptions());
 
     expect(result.allFailed).toBe(false);
     expect(result.vehicles.length).toBeGreaterThan(0);
@@ -130,13 +151,38 @@ describe('getVehicles', () => {
       expect(vehicle.minutesUntil).toBeLessThanOrEqual(30);
       expect(Number.isFinite(vehicle.position.lat)).toBe(true);
       expect(Number.isFinite(vehicle.position.lng)).toBe(true);
-      expect(['route', 'at-stop']).toContain(vehicle.positionMethod);
+      expect(['timetable', 'route', 'at-stop']).toContain(vehicle.positionMethod);
       expect(normalizeText(vehicle.destination)).not.toMatch(/aeroport|mitry/);
     }
   });
 
+  it('positions buses from the timetable and falls back to the route for lines without one', async () => {
+    const result = await getVehicles(vehicleOptions());
+
+    expect(result.timetable.lines.sort()).toEqual(['IDFM:C01171', 'IDFM:C01173']);
+    expect(result.timetable.errors).toEqual([
+      { lineId: 'IDFM:C01743', message: 'IDFM API responded with HTTP 500', code: 'UPSTREAM' },
+    ]);
+
+    const buses = result.vehicles.filter((vehicle) => vehicle.type === 'bus' && vehicle.minutesUntil > 0);
+    const fromTimetable = buses.filter((vehicle) => vehicle.positionMethod === 'timetable');
+    expect(fromTimetable.length).toBeGreaterThan(0);
+    for (const vehicle of fromTimetable) {
+      expect(typeof vehicle.anchorStopName).toBe('string');
+      expect(vehicle.minutesToAnchor).toBeGreaterThan(0);
+      expect(vehicle.minutesToAnchor).toBeLessThanOrEqual(vehicle.minutesUntil + 1);
+    }
+
+    const trains = result.vehicles.filter((vehicle) => vehicle.lineRef === 'IDFM:C01743');
+    expect(trains.length).toBeGreaterThan(0);
+    for (const vehicle of trains) {
+      expect(['route', 'at-stop']).toContain(vehicle.positionMethod);
+      expect(vehicle.anchorStopName).toBeNull();
+    }
+  });
+
   it('spreads RER trains along the line instead of stacking them', async () => {
-    const result = await getVehicles({ config, lineData, now, getMonitoring: fakeMonitoring() });
+    const result = await getVehicles(vehicleOptions());
     const trains = result.vehicles.filter((vehicle) => vehicle.lineRef === 'IDFM:C01743' && vehicle.minutesUntil > 1);
     const distinctPositions = new Set(trains.map((t) => `${t.position.lat.toFixed(4)},${t.position.lng.toFixed(4)}`));
     expect(trains.length).toBeGreaterThan(1);
@@ -145,12 +191,37 @@ describe('getVehicles', () => {
   });
 
   it('keeps going when one stop fails', async () => {
-    const getMonitoring = fakeMonitoring({
-      [LE_BOURGET]: () => { throw new IdfmApiError('down', { code: 'UPSTREAM' }); },
-    });
-    const result = await getVehicles({ config, lineData, now, getMonitoring });
+    const result = await getVehicles(
+      vehicleOptions({
+        getMonitoring: fakeMonitoring({
+          [LE_BOURGET]: () => { throw new IdfmApiError('down', { code: 'UPSTREAM' }); },
+        }),
+      })
+    );
     expect(result.allFailed).toBe(false);
     expect(result.errors).toHaveLength(1);
     expect(result.vehicles.every((vehicle) => vehicle.lineRef !== 'IDFM:C01743')).toBe(true);
+  });
+
+  it('still places every vehicle when the whole timetable feed is down', async () => {
+    const failing = vi.fn(async () => { throw new IdfmApiError('down', { code: 'NETWORK' }); });
+    const withTimetable = await getVehicles(vehicleOptions());
+    const without = await getVehicles(vehicleOptions({ getTimetable: failing }));
+
+    expect(without.allFailed).toBe(false);
+    expect(without.timetable.lines).toEqual([]);
+    expect(without.timetable.errors).toHaveLength(3);
+    expect(without.vehicles.map((v) => v.id).sort()).toEqual(withTimetable.vehicles.map((v) => v.id).sort());
+    expect(without.vehicles.every((vehicle) => vehicle.positionMethod !== 'timetable')).toBe(true);
+  });
+
+  it('flags the response stale when the timetable is stale', async () => {
+    const staleTimetable = vi.fn(async (lineId) => ({
+      data: timetables[lineId] ?? { Siri: {} },
+      fetchedAt: now.getTime(),
+      stale: true,
+    }));
+    const result = await getVehicles(vehicleOptions({ getTimetable: staleTimetable }));
+    expect(result.stale).toBe(true);
   });
 });

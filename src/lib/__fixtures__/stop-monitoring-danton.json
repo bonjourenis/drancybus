@@ -1,82 +1,18 @@
 {
  "Siri": {
   "ServiceDelivery": {
-   "ResponseTimestamp": "2026-10-17T13:31:00.422Z",
+   "ResponseTimestamp": "2026-10-17T18:09:00.404Z",
    "ProducerRef": "IVTR_HET",
-   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:7e000c7c-e3a2-4c38-a59f-7a6c7716c212:LOC:",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:4e6f312b-b34e-4cd5-90e8-2c43cc51f3a7:LOC:",
    "StopMonitoringDelivery": [
     {
-     "ResponseTimestamp": "2026-10-17T13:31:00.444Z",
+     "ResponseTimestamp": "2026-10-17T18:09:00.409Z",
      "Version": "2.0",
      "Status": "true",
      "MonitoredStopVisit": [
       {
-       "RecordedAtTime": "2026-10-17T13:25:44.774Z",
-       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.54.PALS.IDFM.C01173.R.EXP.50233394.54:LOC",
-       "MonitoringRef": {
-        "value": "STIF:StopPoint:Q:7948:"
-       },
-       "MonitoredVehicleJourney": {
-        "LineRef": {
-         "value": "STIF:Line::C01173:"
-        },
-        "OperatorRef": {
-         "value": "MeC_Bus_PC:Operator::1050:"
-        },
-        "FramedVehicleJourneyRef": {
-         "DataFrameRef": {
-          "value": "any"
-         },
-         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.54.R.C01173:LOC"
-        },
-        "DirectionName": [
-         {
-          "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
-         }
-        ],
-        "DestinationRef": {
-         "value": "STIF:StopPoint:Q:22684:"
-        },
-        "DestinationName": [
-         {
-          "value": "Bobigny - Pablo Picasso"
-         }
-        ],
-        "VehicleJourneyName": [],
-        "JourneyNote": [],
-        "MonitoredCall": {
-         "StopPointName": [
-          {
-           "value": "Danton"
-          }
-         ],
-         "VehicleAtStop": false,
-         "DestinationDisplay": [
-          {
-           "value": "Pablo Picasso"
-          }
-         ],
-         "ExpectedDepartureTime": "2026-10-17T13:32:58.000Z",
-         "DepartureStatus": "onTime",
-         "ArrivalStatus": ""
-        },
-        "TrainNumbers": {
-         "TrainNumberRef": []
-        },
-        "VehicleFeatureRef": [],
-        "DirectionRef": {
-         "value": "Retour"
-        },
-        "DestinationShortName": [
-         {
-          "value": "Pablo Picasso"
-         }
-        ]
-       }
-      },
-      {
-       "RecordedAtTime": "2026-10-17T13:25:32.311Z",
-       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.37.PALS.IDFM.C01171.A.EXP.50233394.10:LOC",
+       "RecordedAtTime": "2026-10-17T18:08:47.721Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.53.PALS.IDFM.C01171.A.EXP.50233394.10:LOC",
        "MonitoringRef": {
         "value": "STIF:StopPoint:Q:7948:"
        },
@@ -91,7 +27,7 @@
          "DataFrameRef": {
           "value": "any"
          },
-         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.37.A.C01171:LOC"
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.53.A.C01171:LOC"
         },
         "DirectionName": [
          {
@@ -114,13 +50,13 @@
            "value": "Danton"
           }
          ],
-         "VehicleAtStop": false,
+         "VehicleAtStop": true,
          "DestinationDisplay": [
           {
            "value": "Les Bosquets"
           }
          ],
-         "ExpectedDepartureTime": "2026-10-17T13:43:13.000Z",
+         "ExpectedDepartureTime": "2026-10-17T18:09:25.000Z",
          "DepartureStatus": "onTime",
          "ArrivalStatus": ""
         },
@@ -139,8 +75,8 @@
        }
       },
       {
-       "RecordedAtTime": "2026-10-17T13:30:34.515Z",
-       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.55.PALS.IDFM.C01173.R.EXP.50233394.54:LOC",
+       "RecordedAtTime": "2026-10-17T18:08:51.237Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.78.PALS.IDFM.C01173.R.EXP.50233394.54:LOC",
        "MonitoringRef": {
         "value": "STIF:StopPoint:Q:7948:"
        },
@@ -155,7 +91,7 @@
          "DataFrameRef": {
           "value": "any"
          },
-         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.55.R.C01173:LOC"
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.78.R.C01173:LOC"
         },
         "DirectionName": [
          {
@@ -184,7 +120,7 @@
            "value": "Pablo Picasso"
           }
          ],
-         "ExpectedDepartureTime": "2026-10-17T13:49:41.000Z",
+         "ExpectedDepartureTime": "2026-10-17T18:10:30.000Z",
          "DepartureStatus": "onTime",
          "ArrivalStatus": ""
         },
@@ -203,8 +139,72 @@
        }
       },
       {
-       "RecordedAtTime": "2026-10-17T13:27:53.354Z",
-       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.38.PALS.IDFM.C01171.A.EXP.50233394.10:LOC",
+       "RecordedAtTime": "2026-10-17T18:08:12.942Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.79.PALS.IDFM.C01173.R.EXP.50233394.54:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:7948:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01173:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.79.R.C01173:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Dugny Musée de l'Air et de l'Espace - Drancy - Lib"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:22684:"
+        },
+        "DestinationName": [
+         {
+          "value": "Bobigny - Pablo Picasso"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Danton"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Pablo Picasso"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T18:22:05.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Pablo Picasso"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T17:49:45.014Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.54.PALS.IDFM.C01171.A.EXP.50233394.10:LOC",
        "MonitoringRef": {
         "value": "STIF:StopPoint:Q:7948:"
        },
@@ -219,7 +219,7 @@
          "DataFrameRef": {
           "value": "any"
          },
-         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.38.A.C01171:LOC"
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.54.A.C01171:LOC"
         },
         "DirectionName": [
          {
@@ -248,7 +248,7 @@
            "value": "Les Bosquets"
           }
          ],
-         "ExpectedDepartureTime": "2026-10-17T13:58:44.000Z",
+         "ExpectedDepartureTime": "2026-10-17T18:28:30.000Z",
          "DepartureStatus": "onTime",
          "ArrivalStatus": ""
         },

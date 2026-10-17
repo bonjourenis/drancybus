@@ -53,9 +53,9 @@ and stop lists for the new lines are available.
 
 ```
 browser ──/api/idfm/departures──▶ departures-service ─┐
-        ──/api/idfm/vehicles────▶ vehicles-service ───┼─▶ stop-monitoring-cache ─▶ PRIM stop-monitoring
-                                                       │
-                                  position-estimator ◀─┘  (+ src/data/line-data.json)
+        ──/api/idfm/vehicles────▶ vehicles-service ───┼─▶ stop-monitoring-cache ──────▶ PRIM stop-monitoring (per stop)
+                                        │              └─▶ estimated-timetable-cache ─▶ PRIM estimated-timetable (per line)
+                                  position-estimator  (+ src/data/line-data.json)
 ```
 
 - **One upstream call per stop.** Both routes read the same cached SIRI
@@ -65,12 +65,17 @@ browser ──/api/idfm/departures──▶ departures-service ─┐
 - **Static route data.** Route traces and stop lists come from IDFM open data
   but change rarely, so they are committed in `src/data/line-data.json`
   instead of being fetched at runtime.
-- **Vehicle positions are estimates.** The stop-monitoring feed has no GPS.
-  For each departure the estimator picks the trace segment that passes the
-  monitored stop before the journey's destination (which fixes the direction
-  of travel) and walks back from the stop by `minutes × average speed` for the
-  mode. Vehicles are identified by the SIRI dated journey reference, so a bus
-  seen from two stops is one marker.
+- **Vehicle positions are estimates.** No IDFM feed carries GPS. Stop
+  monitoring decides which vehicles to show and how far they are from the
+  configured stops. The estimated-timetable feed (one call per line, cached
+  30 s) lists each running journey's upcoming calls: the vehicle's nearest
+  upcoming call becomes the anchor, the gap to the following call gives a
+  measured speed, and the estimator walks back from the anchor along the
+  trace segment that passes it before the journey's destination (which fixes
+  the direction of travel). Journeys missing from the timetable fall back to
+  walking back from the configured stop at the mode's average speed. Vehicles
+  are identified by the SIRI dated journey reference, so a bus seen from two
+  stops is one marker.
 - **Client polling** pauses while the tab is hidden, refreshes on return and
   when the browser comes back online, aborts superseded requests and keeps the
   last good data when a refresh fails.

@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeLineRef, parseDepartures } from '../siri-parser';
+import { normalizeLineRef, parseDepartures, parseEstimatedTimetable } from '../siri-parser';
 import danton from '../__fixtures__/stop-monitoring-danton.json';
 import leBourget from '../__fixtures__/stop-monitoring-le-bourget-rer.json';
+import timetable148 from '../__fixtures__/estimated-timetable-148.json';
 
 const responseTime = (fixture) => new Date(fixture.Siri.ServiceDelivery.ResponseTimestamp);
 const visitCount = (fixture) =>
@@ -65,5 +66,31 @@ describe('parseDepartures', () => {
   it('falls back to a short name derived from the line id', () => {
     const [departure] = parseDepartures(danton, { now: responseTime(danton) });
     expect(departure.lineName).toMatch(/^\d+$/);
+  });
+});
+
+describe('parseEstimatedTimetable', () => {
+  it('returns an empty list for malformed input', () => {
+    expect(parseEstimatedTimetable(null)).toEqual([]);
+    expect(parseEstimatedTimetable({})).toEqual([]);
+  });
+
+  it('parses a real line response into journeys with sorted upcoming calls', () => {
+    const now = responseTime(timetable148);
+    const journeys = parseEstimatedTimetable(timetable148, { now });
+
+    expect(journeys.length).toBeGreaterThan(0);
+    for (const journey of journeys) {
+      expect(journey.journeyRef).toMatch(/VehicleJourney/);
+      expect(journey.lineRef).toBe('IDFM:C01173');
+      expect(journey.calls.length).toBeGreaterThan(0);
+      for (let i = 0; i < journey.calls.length; i++) {
+        const call = journey.calls[i];
+        expect(call.stopRef).toMatch(/^STIF:/);
+        expect(new Date(call.time).toISOString()).toBe(call.time);
+        expect(typeof call.minutesFromNow).toBe('number');
+        if (i > 0) expect(call.time >= journey.calls[i - 1].time).toBe(true);
+      }
+    }
   });
 });

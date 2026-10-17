@@ -71,3 +71,65 @@ function formatDisplayTime(minutesUntil, vehicleAtStop) {
   if (minutesUntil <= 0) return 'Proche';
   return `${minutesUntil} min`;
 }
+
+/**
+ * Parse a SIRI EstimatedTimetable response into journeys with their upcoming
+ * calls, sorted by time. PRIM only publishes calls that are still ahead of
+ * the vehicle (none in the past), and not necessarily every stop.
+ *
+ * @param {Object} siriResponse  Raw SIRI JSON
+ * @param {Object} [options]
+ * @param {Date}   [options.now]  Reference time (injectable for tests)
+ */
+export function parseEstimatedTimetable(siriResponse, { now = new Date() } = {}) {
+  const deliveries = siriResponse?.Siri?.ServiceDelivery?.EstimatedTimetableDelivery;
+  if (!Array.isArray(deliveries)) return [];
+
+  const nowMs = now.getTime();
+  const journeys = [];
+
+  for (const delivery of deliveries) {
+    for (const frame of delivery?.EstimatedJourneyVersionFrame ?? []) {
+      for (const journey of frame?.EstimatedVehicleJourney ?? []) {
+        const journeyRef =
+          journey?.DatedVehicleJourneyRef?.value ||
+          journey?.FramedVehicleJourneyRef?.DatedVehicleJourneyRef ||
+          null;
+        if (!journeyRef) continue;
+
+        const calls = [];
+        for (const call of journey.EstimatedCalls?.EstimatedCall ?? []) {
+          const stopRef = call?.StopPointRef?.value;
+          const raw =
+            call?.ExpectedDepartureTime ||
+            call?.ExpectedArrivalTime ||
+            call?.AimedDepartureTime ||
+            call?.AimedArrivalTime;
+          if (!stopRef || !raw) continue;
+          const time = parseISO(raw);
+          if (!isValid(time)) continue;
+
+          calls.push({
+            stopRef,
+            time: time.toISOString(),
+            minutesFromNow: Math.round(((time.getTime() - nowMs) / 60000) * 10) / 10,
+            isRealtime: Boolean(call.ExpectedDepartureTime || call.ExpectedArrivalTime),
+          });
+        }
+        calls.sort((a, b) => a.time.localeCompare(b.time));
+
+        journeys.push({
+          journeyRef,
+          lineRef: normalizeLineRef(journey.LineRef?.value),
+          destination: journey.DestinationName?.[0]?.value || 'Inconnu',
+          destinationRef: journey.DestinationRef?.value || null,
+          directionRef: journey.DirectionRef?.value || null,
+          recordedAt: journey.RecordedAtTime || null,
+          calls,
+        });
+      }
+    }
+  }
+
+  return journeys;
+}

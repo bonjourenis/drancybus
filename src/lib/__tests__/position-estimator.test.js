@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { haversineDistance } from '../geo';
 import {
+  estimateFromTimetable,
   estimateVehiclePosition,
+  measureSpeed,
   pointAtDistance,
   prepareLine,
   resolveStop,
@@ -110,5 +112,95 @@ describe('estimateVehiclePosition', () => {
 
     const offRoute = { lat: 48.99, lng: 2.43 }; // 8 km north of the trace
     expect(estimateVehiclePosition({ monitoredStop: stopB, destinationStop: offRoute, minutesUntil: 3 }, prepared)).toBeNull();
+  });
+});
+
+describe('measureSpeed', () => {
+  const distanceBC = haversineDistance(stopB, stopC);
+
+  it('derives speed from trace distance and elapsed minutes', () => {
+    expect(measureSpeed(prepared, stopB, stopC, 4, 'bus')).toBeCloseTo(distanceBC / 4, -1);
+    // the return trip direction is found on the westbound segment
+    expect(measureSpeed(prepared, stopC, stopB, 4, 'bus')).toBeCloseTo(distanceBC / 4, -1);
+  });
+
+  it('rejects implausible or unmeasurable values', () => {
+    expect(measureSpeed(prepared, stopB, stopC, 0.1, 'bus')).toBeNull(); // too short a gap
+    expect(measureSpeed(prepared, stopB, stopC, 0.5, 'bus')).toBeNull(); // > 2000 m/min
+    expect(measureSpeed(prepared, stopB, stopB, 4, 'bus')).toBeNull(); // no distance
+    expect(measureSpeed(prepared, stopB, { lat: 48.99, lng: 2.43 }, 4, 'bus')).toBeNull(); // off trace
+  });
+});
+
+describe('estimateFromTimetable', () => {
+  const now = new Date('2026-10-17T18:00:00Z');
+  const at = (minutes) => new Date(now.getTime() + minutes * 60000).toISOString();
+  const journey = (calls) => ({ journeyRef: 'J1', calls });
+
+  it('anchors on the nearest upcoming call and uses the measured speed', () => {
+    const result = estimateFromTimetable(
+      {
+        journey: journey([
+          { stopRef: 'STIF:StopPoint:Q:1003:', time: at(6) },
+          { stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) },
+        ]),
+        destinationStop: stopC,
+        now,
+        type: 'bus',
+      },
+      prepared
+    );
+
+    const speed = haversineDistance(stopB, stopC) / 4;
+    expect(result.method).toBe('timetable');
+    expect(result.anchorStopName).toBe('Bravo - Centre');
+    expect(result.minutesToAnchor).toBe(2);
+    expect(result.speedMetersPerMinute).toBe(Math.round(speed));
+    expect(result.lng).toBeLessThan(stopB.lng); // heading east, so it is west of Bravo
+    expect(haversineDistance(result, stopB)).toBeCloseTo(2 * speed, -1);
+  });
+
+  it('takes the direction from the following call when the destination is unknown', () => {
+    const result = estimateFromTimetable(
+      {
+        journey: journey([
+          { stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) },
+          { stopRef: 'STIF:StopPoint:Q:1001:', time: at(6) },
+        ]),
+        destinationStop: null,
+        now,
+      },
+      prepared
+    );
+    expect(result.method).toBe('timetable');
+    expect(result.lng).toBeGreaterThan(stopB.lng); // heading west, so it is east of Bravo
+  });
+
+  it('falls back to the mode speed with a single call and a known destination', () => {
+    const result = estimateFromTimetable(
+      {
+        journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(2) }]),
+        destinationStop: stopC,
+        now,
+        type: 'bus',
+      },
+      prepared
+    );
+    expect(result.speedMetersPerMinute).toBeNull();
+    expect(haversineDistance(result, stopB)).toBeCloseTo(500, -1);
+  });
+
+  it('returns null when nothing usable is ahead', () => {
+    expect(estimateFromTimetable({ journey: journey([]), now }, prepared)).toBeNull();
+    expect(
+      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(-3) }]), now }, prepared)
+    ).toBeNull();
+    expect(
+      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:9999:', time: at(3) }]), now }, prepared)
+    ).toBeNull();
+    expect(
+      estimateFromTimetable({ journey: journey([{ stopRef: 'STIF:StopPoint:Q:1002:', time: at(3) }]), now }, prepared)
+    ).toBeNull(); // one call, no destination: direction unknown
+    expect(estimateFromTimetable({ journey: null, now }, prepared)).toBeNull();
   });
 });
