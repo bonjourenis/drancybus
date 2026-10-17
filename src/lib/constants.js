@@ -1,49 +1,40 @@
-// IDFM Line Reference IDs
-export const LINES = {
-  BUS_148: 'IDFM:C01173',
-  BUS_146: 'IDFM:C01171',
-  METRO_5: 'IDFM:C01375',
-  RER_B: 'IDFM:C01743',
-};
-
-// Line type configuration
-export const LINE_TYPES = {
-  bus: { icon: 'bus', prefix: 'Bus' },
-  metro: { icon: 'train', prefix: 'Metro' },
-  rer: { icon: 'train', prefix: 'RER' },
-  tram: { icon: 'tram', prefix: 'Tram' },
-};
-
-// Official RATP/IDFM line colors
-export const LINE_COLORS = {
-  [LINES.BUS_148]: '#6BC24A',
-  [LINES.BUS_146]: '#E4B4D3',
-  [LINES.METRO_5]: '#F68F4B',
-  [LINES.RER_B]: '#7BA3DC',
-};
-
-// Line display names mapping
-export const LINE_NAMES = {
-  [LINES.BUS_148]: '148',
-  [LINES.BUS_146]: '146',
-  [LINES.METRO_5]: '5',
-  [LINES.RER_B]: 'B',
-};
-
 // OpenStreetMap tile configuration
 export const MAP_TILES = {
   url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 };
 
-// Default map center (Drancy area)
-export const DEFAULT_CENTER = {
-  lat: 48.92,
-  lng: 2.45,
+// Used when a line has no colour in favorites.json and no official colour in line-data.json
+export const DEFAULT_LINE_COLOR = '#3B82F6';
+
+/**
+ * Average commercial speed per mode, in metres per minute. Used to estimate
+ * how far a vehicle still is from the stop it is heading to.
+ */
+export const AVERAGE_SPEED_M_PER_MIN = {
+  bus: 250,
+  tram: 300,
+  metro: 500,
+  rer: 800,
 };
 
-// Refresh intervals (ms)
-export const REFRESH_INTERVALS = {
-  departures: 60000, // 1 minute
-  vehicles: 60000,   // 1 minute
+/**
+ * How far (metres) a stop may sit from the route trace and still be
+ * considered "on" that trace. Rail station centroids are further from the
+ * tracks than bus stops are from the road.
+ */
+export const MAX_SNAP_DISTANCE_M = {
+  bus: 150,
+  tram: 150,
+  metro: 400,
+  rer: 500,
 };
+
+// Server-side cache for PRIM stop-monitoring responses
+export const STOP_MONITORING_CACHE = {
+  freshMs: 15_000,          // serve from memory without calling PRIM
+  staleMaxMs: 10 * 60_000,  // serve last good data this long when PRIM fails
+};
+
+// Hard limit on every upstream request
+export const UPSTREAM_TIMEOUT_MS = 8_000;

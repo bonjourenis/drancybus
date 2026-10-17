@@ -3,7 +3,7 @@
 import { formatDistanceToNow } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
-export default function RefreshIndicator({ lastUpdated, onRefresh, loading = false }) {
+export default function RefreshIndicator({ lastUpdated, onRefresh, loading = false, stale = false }) {
   const timeAgo = lastUpdated
     ? formatDistanceToNow(lastUpdated, { addSuffix: true, locale: fr })
     : null;
@@ -11,19 +11,31 @@ export default function RefreshIndicator({ lastUpdated, onRefresh, loading = fal
   return (
     <div className="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400">
       {timeAgo && (
-        <span>Mis à jour {timeAgo}</span>
+        <span className="flex items-center gap-1.5">
+          {stale && (
+            <span
+              className="w-2 h-2 rounded-full bg-amber-500"
+              title="Données possiblement obsolètes"
+              aria-label="Données possiblement obsolètes"
+            />
+          )}
+          Mis à jour {timeAgo}
+        </span>
       )}
       <button
+        type="button"
         onClick={onRefresh}
         disabled={loading}
         className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors disabled:opacity-50"
         title="Actualiser"
+        aria-label="Actualiser"
       >
         <svg
           className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"

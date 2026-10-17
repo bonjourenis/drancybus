@@ -1,168 +1,73 @@
-import { parseISO, differenceInMinutes } from 'date-fns';
-import { LINE_NAMES } from './constants';
+import { parseISO, differenceInMinutes, isValid } from 'date-fns';
+import { shortNameFromLineId } from './config-utils';
 
 /**
- * Parse SIRI StopMonitoring response into usable departure data
- * @param {Object} siriResponse - Raw SIRI JSON response
- * @returns {Array<Object>} Parsed departures
+ * Parse a SIRI StopMonitoring response into departure objects.
+ *
+ * @param {Object} siriResponse  Raw SIRI JSON
+ * @param {Object} [options]
+ * @param {Date}   [options.now]        Reference time (injectable for tests)
+ * @param {Object} [options.lineNames]  lineRef -> display name
  */
-export function parseDepartures(siriResponse) {
+export function parseDepartures(siriResponse, { now = new Date(), lineNames = {} } = {}) {
   const deliveries = siriResponse?.Siri?.ServiceDelivery?.StopMonitoringDelivery;
-
-  if (!deliveries || !Array.isArray(deliveries)) {
-    return [];
-  }
+  if (!Array.isArray(deliveries)) return [];
 
   const departures = [];
 
   for (const delivery of deliveries) {
-    const visits = delivery.MonitoredStopVisit || [];
-
-    for (const visit of visits) {
-      const journey = visit.MonitoredVehicleJourney;
+    for (const visit of delivery?.MonitoredStopVisit ?? []) {
+      const journey = visit?.MonitoredVehicleJourney;
       const call = journey?.MonitoredCall;
-
       if (!journey || !call) continue;
 
-      // Get expected or aimed departure time
-      const expectedTime = call.ExpectedDepartureTime || call.AimedDepartureTime;
-      if (!expectedTime) continue;
+      const expectedRaw = call.ExpectedDepartureTime || call.AimedDepartureTime;
+      if (!expectedRaw) continue;
 
-      const departureTime = parseISO(expectedTime);
-      const now = new Date();
+      const departureTime = parseISO(expectedRaw);
+      if (!isValid(departureTime)) continue;
+
       const minutesUntil = differenceInMinutes(departureTime, now);
+      if (minutesUntil < -1) continue; // already gone
 
-      // Skip departures that have already passed
-      if (minutesUntil < -1) continue;
+      const lineRef = normalizeLineRef(journey.LineRef?.value);
+      const journeyRef = journey.FramedVehicleJourneyRef?.DatedVehicleJourneyRef || null;
+      const vehicleAtStop = call.VehicleAtStop === true;
+      const aimedTime = call.AimedDepartureTime || null;
 
-      const normalizedLineRef = normalizeLineRef(journey.LineRef?.value);
       departures.push({
-        id: visit.ItemIdentifier || `${journey.LineRef?.value}-${expectedTime}`,
-        lineRef: normalizedLineRef,
-        lineName: extractLineName(normalizedLineRef),
+        id: visit.ItemIdentifier || `${journeyRef || lineRef}|${aimedTime || expectedRaw}`,
+        journeyRef,
+        lineRef,
+        lineName: lineNames[lineRef] || shortNameFromLineId(lineRef),
         destination: journey.DestinationName?.[0]?.value || 'Inconnu',
-        destinationRef: journey.DestinationRef?.value,
+        destinationRef: journey.DestinationRef?.value || null,
+        directionRef: journey.DirectionRef?.value || null,
         expectedTime: departureTime.toISOString(),
-        aimedTime: call.AimedDepartureTime || null,
+        aimedTime,
         minutesUntil: Math.max(0, minutesUntil),
         departureStatus: call.DepartureStatus || 'unknown',
-        vehicleRef: journey.VehicleRef?.value,
-        vehicleAtStop: call.VehicleAtStop === true,
-        // Format for display
-        displayTime: formatDisplayTime(minutesUntil, call.VehicleAtStop),
-        isRealtime: !!call.ExpectedDepartureTime,
+        vehicleAtStop,
+        displayTime: formatDisplayTime(minutesUntil, vehicleAtStop),
+        isRealtime: Boolean(call.ExpectedDepartureTime),
       });
     }
   }
 
-  // Sort by departure time
   return departures.sort((a, b) => a.minutesUntil - b.minutesUntil);
 }
 
 /**
- * Parse vehicle positions from SIRI response
- * @param {Object} siriResponse - Raw SIRI JSON response
- * @param {string[]} lineFilter - Line IDs to include (IDFM format)
- * @returns {Array<Object>} Parsed vehicle positions
+ * STIF:Line::C01173: -> IDFM:C01173. Unknown formats are returned unchanged.
  */
-export function parseVehiclePositions(siriResponse, lineFilter = []) {
-  const deliveries = siriResponse?.Siri?.ServiceDelivery?.StopMonitoringDelivery;
-
-  if (!deliveries || !Array.isArray(deliveries)) {
-    return [];
-  }
-
-  const vehicles = new Map(); // Use Map to deduplicate by vehicleRef
-
-  for (const delivery of deliveries) {
-    const visits = delivery.MonitoredStopVisit || [];
-
-    for (const visit of visits) {
-      const journey = visit.MonitoredVehicleJourney;
-
-      if (!journey) continue;
-
-      const lineRef = normalizeLineRef(journey.LineRef?.value);
-
-      // Filter by tracked lines if specified
-      if (lineFilter.length > 0 && !lineFilter.includes(lineRef)) {
-        continue;
-      }
-
-      const vehicleRef = journey.VehicleRef?.value;
-      if (!vehicleRef) continue;
-
-      // VehicleLocation contains GPS coordinates when available
-      const location = journey.VehicleLocation;
-      if (!location?.Longitude || !location?.Latitude) continue;
-
-      vehicles.set(vehicleRef, {
-        id: vehicleRef,
-        lineRef,
-        lineName: extractLineName(lineRef),
-        destination: journey.DestinationName?.[0]?.value || 'Inconnu',
-        position: {
-          lat: parseFloat(location.Latitude),
-          lng: parseFloat(location.Longitude),
-        },
-        bearing: journey.Bearing ? parseFloat(journey.Bearing) : null,
-        updatedAt: visit.RecordedAtTime ? parseISO(visit.RecordedAtTime).toISOString() : new Date().toISOString(),
-      });
-    }
-  }
-
-  return Array.from(vehicles.values());
-}
-
-/**
- * Normalize line reference to IDFM format
- * @param {string} lineRef - Line reference from API (STIF:Line::CXXXXX:)
- * @returns {string} Normalized line ref (IDFM:CXXXXX)
- */
-function normalizeLineRef(lineRef) {
+export function normalizeLineRef(lineRef) {
   if (!lineRef) return '';
-  // Convert STIF:Line::C01173: to IDFM:C01173
-  const match = lineRef.match(/(?:STIF:Line::)?(C\d+)/);
-  if (match) {
-    return `IDFM:${match[1]}`;
-  }
-  return lineRef;
+  const match = String(lineRef).match(/(?:STIF:Line::)?(C\d+)/);
+  return match ? `IDFM:${match[1]}` : String(lineRef);
 }
 
-/**
- * Extract line name from line reference
- * @param {string} lineRef - Line reference (normalized IDFM format)
- * @returns {string} Line name
- */
-function extractLineName(lineRef) {
-  if (!lineRef) return '?';
-  // First check if we have a known line name mapping
-  if (LINE_NAMES[lineRef]) {
-    return LINE_NAMES[lineRef];
-  }
-  // Fallback: Extract number from C01173 -> 173
-  const match = lineRef.match(/C0*(\d+)/);
-  if (match) {
-    return match[1];
-  }
-  return lineRef;
-}
-
-/**
- * Format display time for departure
- * @param {number} minutesUntil - Minutes until departure
- * @param {boolean} vehicleAtStop - Whether vehicle is at the stop
- * @returns {string} Formatted display time
- */
 function formatDisplayTime(minutesUntil, vehicleAtStop) {
-  if (vehicleAtStop) {
-    return 'À quai';
-  }
-  if (minutesUntil <= 0) {
-    return 'Proche';
-  }
-  if (minutesUntil === 1) {
-    return '1 min';
-  }
+  if (vehicleAtStop) return 'À quai';
+  if (minutesUntil <= 0) return 'Proche';
   return `${minutesUntil} min`;
 }

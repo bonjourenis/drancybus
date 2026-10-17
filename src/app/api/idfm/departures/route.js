@@ -1,39 +1,20 @@
-import { NextResponse } from 'next/server';
-import { fetchStopDepartures } from '@/lib/idfm-client';
-import { parseDepartures } from '@/lib/siri-parser';
+import { getDepartures } from '@/lib/departures-service';
+import { failureResponse, internalErrorResponse, successResponse } from '@/lib/api-response';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(request) {
-  const { searchParams } = new URL(request.url);
-  const stopId = searchParams.get('stopId');
-  const lineId = searchParams.get('lineId');
-
-  if (!stopId) {
-    return NextResponse.json(
-      { error: 'stopId parameter is required' },
-      { status: 400 }
-    );
-  }
-
+/**
+ * GET /api/idfm/departures
+ * Next departures for every stop configured in src/config/favorites.json.
+ */
+export async function GET() {
   try {
-    const siriResponse = await fetchStopDepartures(stopId, lineId);
-    const departures = parseDepartures(siriResponse);
-
-    return NextResponse.json({
-      success: true,
-      data: departures,
-      timestamp: new Date().toISOString(),
-    });
+    const result = await getDepartures();
+    if (result.allFailed) {
+      return failureResponse(result.errors);
+    }
+    return successResponse({ data: result.stops, stale: result.stale, errors: result.errors });
   } catch (error) {
-    console.error('IDFM API Error:', error);
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'Failed to fetch departures',
-        message: error.message
-      },
-      { status: 500 }
-    );
+    return internalErrorResponse(error);
   }
 }

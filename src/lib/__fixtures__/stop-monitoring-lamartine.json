@@ -1,0 +1,148 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-17T13:31:01.819Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:a4be4e83-fb56-4654-a9d2-cb8bb3933337:LOC:",
+   "StopMonitoringDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-17T13:31:01.821Z",
+     "Version": "2.0",
+     "Status": "true",
+     "MonitoredStopVisit": [
+      {
+       "RecordedAtTime": "2026-10-17T13:05:10.799Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.38.PALS.IDFM.C01171.R.EXP.50233806.62:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:23530:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.38.R.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:470572:"
+        },
+        "DestinationName": [
+         {
+          "value": "Le Bourget <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Lamartine - François Rude"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T13:41:18.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ]
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:28:56.151Z",
+       "ItemIdentifier": "MeC_Bus_PC:Item::20261017.39.PALS.IDFM.C01171.R.EXP.50233806.62:LOC",
+       "MonitoringRef": {
+        "value": "STIF:StopPoint:Q:23530:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01171:"
+        },
+        "OperatorRef": {
+         "value": "MeC_Bus_PC:Operator::1050:"
+        },
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "MeC_Bus_PC:VehicleJourney::20261017.39.R.C01171:LOC"
+        },
+        "DirectionName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ],
+        "DestinationRef": {
+         "value": "STIF:StopPoint:Q:470572:"
+        },
+        "DestinationName": [
+         {
+          "value": "Le Bourget <RER>"
+         }
+        ],
+        "VehicleJourneyName": [],
+        "JourneyNote": [],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Lamartine - François Rude"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Le Bourget RER"
+          }
+         ],
+         "ExpectedDepartureTime": "2026-10-17T13:52:17.000Z",
+         "DepartureStatus": "onTime",
+         "ArrivalStatus": ""
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": []
+        },
+        "VehicleFeatureRef": [],
+        "DirectionRef": {
+         "value": "Retour"
+        },
+        "DestinationShortName": [
+         {
+          "value": "Le Bourget RER"
+         }
+        ]
+       }
+      }
+     ],
+     "StopLineNotice": [],
+     "ServiceException": []
+    }
+   ]
+  }
+ }
+}

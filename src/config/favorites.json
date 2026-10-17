@@ -40,7 +40,10 @@
         {
           "lineId": "IDFM:C01743",
           "lineName": "RER B",
-          "excludeDirection": ["Aéroport", "Mitry"]
+          "excludeDirection": [
+            "Aéroport",
+            "Mitry"
+          ]
         }
       ],
       "coordinates": {
@@ -83,6 +86,7 @@
       "lat": 48.92,
       "lng": 2.45
     },
-    "mapZoom": 14
+    "mapZoom": 14,
+    "vehicleHorizonMinutes": 30
   }
 }

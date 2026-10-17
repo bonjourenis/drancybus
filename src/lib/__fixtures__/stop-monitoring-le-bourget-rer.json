@@ -1,0 +1,4196 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-17T13:30:50.294Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:28c7970f-8eb5-4257-b01b-54ad9201f145:LOC:",
+   "StopMonitoringDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-17T13:30:50.315Z",
+     "Version": "2.0",
+     "Status": "true",
+     "MonitoredStopVisit": [
+      {
+       "RecordedAtTime": "2026-10-17T13:30:47.330Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-21-b5157ffc-cf03-4e50-97ec-c7310209de1b:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::b5157ffc-cf03-4e50-97ec-c7310209de1b:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS77"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": true,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:31:00.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:31:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-17T13:31:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:31:50.000Z",
+         "ArrivalStatus": "arrived"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS77"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:19.105Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-11-885735a5-3110-435f-b251-f590053a8d5f:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::885735a5-3110-435f-b251-f590053a8d5f:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO92"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:31:39.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:32:09.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 11,
+         "AimedArrivalTime": "2026-10-17T13:31:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:32:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO92"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:29:50.585Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-12-c5f158a0-1bcd-4fea-be7f-cb089a17bc66:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c5f158a0-1bcd-4fea-be7f-cb089a17bc66:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PIST94"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PIST"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:37:34.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:38:04.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 12,
+         "AimedArrivalTime": "2026-10-17T13:37:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:38:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PIST94"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:29:30.864Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-35-90bd76d1-2596-484b-afb2-9bd6c0c5a573:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::90bd76d1-2596-484b-afb2-9bd6c0c5a573:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPAU81"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPAU"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:42:47.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:43:17.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 35,
+         "AimedArrivalTime": "2026-10-17T13:40:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:40:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPAU81"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:44.006Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-11-a07a158e-3b0c-454d-b37b-ff7770e07f1d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::a07a158e-3b0c-454d-b37b-ff7770e07f1d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO98"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:47:13.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:47:43.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 11,
+         "AimedArrivalTime": "2026-10-17T13:46:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:47:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO98"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:40.884Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-21-45c04614-8fcc-4e9e-bb1b-6cf11cac4640:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::45c04614-8fcc-4e9e-bb1b-6cf11cac4640:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS83"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:48:02.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:48:32.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-17T13:46:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:46:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS83"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:19.303Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-12-b14abc45-1e49-4e0f-96d2-30100d41370e:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::b14abc45-1e49-4e0f-96d2-30100d41370e:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS62"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:52:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:53:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 12,
+         "AimedArrivalTime": "2026-10-17T13:52:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:53:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS62"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:00.754Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-35-ec4f7156-1188-4565-8719-a9de47b3c700:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ec4f7156-1188-4565-8719-a9de47b3c700:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPIN87"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPIN"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T13:55:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T13:55:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 35,
+         "AimedArrivalTime": "2026-10-17T13:55:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T13:55:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPIN87"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:27.024Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-808b00f4-e54f-4b24-bc1e-6b88077488e7:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::808b00f4-e54f-4b24-bc1e-6b88077488e7:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR66"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:01:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:02:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T14:01:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:02:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR66"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:21.116Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-21-01bb9e58-b50f-4637-924b-08b3493b6614:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::01bb9e58-b50f-4637-924b-08b3493b6614:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS89"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:04:19.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:04:49.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-17T14:01:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:01:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS89"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:34.212Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-bbc9db5b-2e8a-4179-b486-b71cf3de6b85:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::bbc9db5b-2e8a-4179-b486-b71cf3de6b85:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS68"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:07:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:08:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T14:07:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:08:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS68"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:00.974Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-35-1797d5c1-6d2e-4941-82ad-5e89ea63f840:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::1797d5c1-6d2e-4941-82ad-5e89ea63f840:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPAU93"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPAU"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:10:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:10:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 35,
+         "AimedArrivalTime": "2026-10-17T14:10:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:10:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPAU93"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:29.856Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-ca5c19dc-3d79-4613-858d-ef2fe18c9d60:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ca5c19dc-3d79-4613-858d-ef2fe18c9d60:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS95"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:16:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:16:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T14:16:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:16:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS95"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:28.785Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-13aba870-7ff5-4d32-929d-4bf53bb57fba:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::13aba870-7ff5-4d32-929d-4bf53bb57fba:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR72"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:16:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:17:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T14:16:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:17:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR72"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:35.245Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-f4c0c508-00ab-431c-a187-56cd00c22bcb:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::f4c0c508-00ab-431c-a187-56cd00c22bcb:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS74"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:22:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:23:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T14:22:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:23:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS74"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T13:30:41.183Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-35-de231c55-35d0-4c11-ab1f-d307a4b8f49b:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::de231c55-35d0-4c11-ab1f-d307a4b8f49b:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPIN99"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPIN"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:25:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:25:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 35,
+         "AimedArrivalTime": "2026-10-17T14:25:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:25:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPIN99"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:33.983Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-d615df30-c8d6-48aa-a5be-6a1f89f64ad3:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::d615df30-c8d6-48aa-a5be-6a1f89f64ad3:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON65"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:31:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:31:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T14:31:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:31:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON65"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:28.868Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-3a4b4b89-bd8c-49f6-b3d6-3747d7ca58c7:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::3a4b4b89-bd8c-49f6-b3d6-3747d7ca58c7:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR78"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:31:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:32:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T14:31:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:32:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR78"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:33.331Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-4857c606-a5b9-423e-a9b0-2657de6d9547:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::4857c606-a5b9-423e-a9b0-2657de6d9547:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS80"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:37:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:38:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T14:37:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:38:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS80"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:58.820Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-96b298b5-fed9-4a26-97ae-2d716d1adad6:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::96b298b5-fed9-4a26-97ae-2d716d1adad6:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL69"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:40:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:40:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T14:40:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:40:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL69"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:36.205Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-98af7c5b-99bf-43f9-b317-1ff1ced9ce36:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::98af7c5b-99bf-43f9-b317-1ff1ced9ce36:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON71"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:46:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:46:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T14:46:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:46:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON71"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:33.597Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-e97f01f2-e24d-4149-962b-1a392a52d5e0:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::e97f01f2-e24d-4149-962b-1a392a52d5e0:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR84"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:46:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:47:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T14:46:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:47:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR84"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:30.918Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-3a84a37b-007d-4baf-bc6d-dcf117d36ca8:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::3a84a37b-007d-4baf-bc6d-dcf117d36ca8:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS86"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:52:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:53:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T14:52:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:53:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS86"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:01.405Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-93f79af5-3f08-465f-8090-1c9a34739740:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::93f79af5-3f08-465f-8090-1c9a34739740:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL75"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T14:55:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T14:55:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T14:55:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T14:55:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL75"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:30.119Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-8c7b695e-e6a0-4300-a8ef-0018536ff77d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8c7b695e-e6a0-4300-a8ef-0018536ff77d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON77"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:01:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:01:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T15:01:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:01:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON77"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:29.457Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-c9979e71-ac5d-4db1-b1e5-fc7ddce72bcb:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c9979e71-ac5d-4db1-b1e5-fc7ddce72bcb:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR90"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:01:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:02:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T15:01:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:02:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR90"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:49.841Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-c57aa833-7c86-4156-a690-20bf8773e111:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c57aa833-7c86-4156-a690-20bf8773e111:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS92"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:07:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:08:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T15:07:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:08:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS92"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:55.113Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-d20f2ad0-2283-41a4-a005-8cf46f1994fa:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::d20f2ad0-2283-41a4-a005-8cf46f1994fa:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL81"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:10:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:10:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T15:10:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:10:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL81"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:32.291Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-ef205805-4278-44fa-878d-0ded254360a8:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ef205805-4278-44fa-878d-0ded254360a8:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON83"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:16:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:16:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T15:16:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:16:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON83"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:37.219Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-96d0fece-70bd-4d75-8727-38631b056cd2:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::96d0fece-70bd-4d75-8727-38631b056cd2:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOIR96"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOIR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:16:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:17:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T15:16:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:17:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOIR96"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:49.609Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-9b709e64-3257-4716-86e4-fedf7caee60d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::9b709e64-3257-4716-86e4-fedf7caee60d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PINS98"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PINS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:22:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:23:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T15:22:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:23:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PINS98"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:55.455Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-d0d5de13-c35c-4923-8fad-205ae0ac3155:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::d0d5de13-c35c-4923-8fad-205ae0ac3155:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL87"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:25:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:25:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T15:25:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:25:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL87"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:27.615Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-5677a4f7-b6b8-4ac4-a4d1-4a886bcd2c0d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::5677a4f7-b6b8-4ac4-a4d1-4a886bcd2c0d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON89"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:31:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:31:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T15:31:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:31:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON89"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:33:07.418Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-af0bb1a3-fbaf-41c6-806b-d2bbaf007a1f:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::af0bb1a3-fbaf-41c6-806b-d2bbaf007a1f:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOTE04"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOTE"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:31:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:32:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T15:31:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:32:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOTE04"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:48.802Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-91ef1376-21f6-4e45-ae8c-d087d58a40b5:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::91ef1376-21f6-4e45-ae8c-d087d58a40b5:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PITA06"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PITA"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:37:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:38:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T15:37:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:38:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PITA06"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:57.441Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-1e79adf3-8833-439d-b605-8b6f5928d3ff:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::1e79adf3-8833-439d-b605-8b6f5928d3ff:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL93"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:40:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:40:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T15:40:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:40:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL93"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:28.297Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-38eb8fd4-2631-48ab-b6ef-b1b1ee6652dc:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::38eb8fd4-2631-48ab-b6ef-b1b1ee6652dc:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILON95"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILON"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:46:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:46:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T15:46:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:46:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILON95"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:33:03.212Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-8b7a17cc-4332-4531-85db-3cb4c888ff18:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8b7a17cc-4332-4531-85db-3cb4c888ff18:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOTE10"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOTE"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:46:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:47:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T15:46:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:47:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOTE10"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:54.085Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-33c9d4db-93a2-4f72-84d5-63609265d74f:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::33c9d4db-93a2-4f72-84d5-63609265d74f:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PITA12"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PITA"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:52:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:53:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T15:52:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:53:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PITA12"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:56.771Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-a80dfe07-8eb3-416b-9ac1-6f2a76e13895:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::a80dfe07-8eb3-416b-9ac1-6f2a76e13895:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOL99"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOL"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T15:55:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T15:55:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T15:55:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T15:55:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOL99"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:44.700Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-98c28029-96b6-4d7d-ab7e-6ff040506d6e:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::98c28029-96b6-4d7d-ab7e-6ff040506d6e:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILAR01"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILAR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:01:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:01:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T16:01:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:01:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILAR01"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:33:03.816Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-aed3f6ba-6e24-484a-8dec-3286aa0f5608:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::aed3f6ba-6e24-484a-8dec-3286aa0f5608:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOTE16"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOTE"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:01:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:02:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T16:01:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:02:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOTE16"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:53.671Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-f7f16daf-f478-4739-a833-96a13ca7215d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::f7f16daf-f478-4739-a833-96a13ca7215d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PITA18"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PITA"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:07:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:08:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T16:07:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:08:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PITA18"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:22.482Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-eeea8cbc-c262-4f4c-a0fe-0b640db5970d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::eeea8cbc-c262-4f4c-a0fe-0b640db5970d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOU05"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOU"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:10:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:10:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T16:10:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:10:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOU05"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:44.323Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-43-43fd896a-60ca-4e39-a944-4bc69a85cf50:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::43fd896a-60ca-4e39-a944-4bc69a85cf50:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILAR07"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILAR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:16:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:16:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-17T16:16:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:16:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILAR07"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:33:15.558Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-33-2c661150-21dd-4fc6-b058-2c63f98b6275:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::2c661150-21dd-4fc6-b058-2c63f98b6275:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOTE22"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOTE"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:16:30.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:17:00.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-17T16:16:30.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:17:00.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOTE22"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:31:52.702Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-49-cf6c7bca-264b-4230-9cc7-2eb621269d96:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::cf6c7bca-264b-4230-9cc7-2eb621269d96:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:47889:"
+        },
+        "DestinationName": [
+         {
+          "value": "Saint-Rémy-lès-Chevreuse"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "PITA24"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "PITA"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Saint-Rémy-lès-Chevreuse"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:471112:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:22:40.000Z",
+         "DeparturePlatformName": {
+          "value": "2B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:23:10.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-17T16:22:40.000Z",
+         "ArrivalPlatformName": {
+          "value": "2B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:23:10.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "PITA24"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-17T02:32:25.118Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::43231-72-c91c82f1-15b4-4050-b600-7d0c2f3af843:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:43231:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c91c82f1-15b4-4050-b600-7d0c2f3af843:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "EPOU11"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "EPOU"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Le Bourget"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:472166:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-17T16:25:20.000Z",
+         "DeparturePlatformName": {
+          "value": "1B"
+         },
+         "ExpectedDepartureTime": "2026-10-17T16:25:50.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 72,
+         "AimedArrivalTime": "2026-10-17T16:25:20.000Z",
+         "ArrivalPlatformName": {
+          "value": "1B"
+         },
+         "AimedDepartureTime": "2026-10-17T16:25:50.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "EPOU11"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      }
+     ],
+     "StopLineNotice": [],
+     "ServiceException": []
+    }
+   ]
+  }
+ }
+}
