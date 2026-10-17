@@ -1,0 +1,88 @@
+{
+  "stops": [
+    {
+      "id": "STIF:StopPoint:Q:7948:",
+      "name": "Danton",
+      "lines": [
+        {
+          "lineId": "IDFM:C01173",
+          "lineName": "148"
+        },
+        {
+          "lineId": "IDFM:C01171",
+          "lineName": "146"
+        }
+      ],
+      "coordinates": {
+        "lat": 48.91956075706188,
+        "lng": 2.437957241278171
+      }
+    },
+    {
+      "id": "STIF:StopPoint:Q:23530:",
+      "name": "Lamartine - François Rude",
+      "lines": [
+        {
+          "lineId": "IDFM:C01171",
+          "lineName": "146",
+          "direction": "Le Bourget RER"
+        }
+      ],
+      "coordinates": {
+        "lat": 48.92544875449877,
+        "lng": 2.431738736072646
+      }
+    },
+    {
+      "id": "STIF:StopArea:SP:43231:",
+      "name": "Le Bourget RER",
+      "lines": [
+        {
+          "lineId": "IDFM:C01743",
+          "lineName": "RER B",
+          "excludeDirection": ["Aéroport", "Mitry"]
+        }
+      ],
+      "coordinates": {
+        "lat": 48.9315,
+        "lng": 2.4256
+      }
+    }
+  ],
+  "trackedLines": [
+    {
+      "lineId": "IDFM:C01173",
+      "name": "Bus 148",
+      "type": "bus",
+      "color": "#6e491e"
+    },
+    {
+      "lineId": "IDFM:C01171",
+      "name": "Bus 146",
+      "type": "bus",
+      "color": "#E4B4D3"
+    },
+    {
+      "lineId": "IDFM:C01375",
+      "name": "Metro 5",
+      "type": "metro",
+      "color": "#F68F4B"
+    },
+    {
+      "lineId": "IDFM:C01743",
+      "name": "RER B",
+      "type": "rer",
+      "color": "#7BA3DC"
+    }
+  ],
+  "settings": {
+    "departureRefreshInterval": 60000,
+    "vehicleRefreshInterval": 60000,
+    "maxDeparturesPerStop": 5,
+    "mapCenter": {
+      "lat": 48.92,
+      "lng": 2.45
+    },
+    "mapZoom": 14
+  }
+}
