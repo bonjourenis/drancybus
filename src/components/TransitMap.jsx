@@ -117,11 +117,11 @@ function MapTintFilter() {
   );
 }
 
-function MinutesBox({ children }) {
+function MinutesBox({ children, color = SCREEN.amber }) {
   return (
     <span
       className="inline-flex items-center justify-center h-6 min-w-7 px-1.5 rounded bg-black text-sm font-bold tabular-nums"
-      style={{ color: SCREEN.amber }}
+      style={{ color }}
     >
       {children}
     </span>
@@ -155,7 +155,11 @@ function StopPopupContent({ stop, entry, loading, lineColors, lineTypes }) {
                 {departure.destination}
               </span>
             </div>
-            <MinutesBox>{departure.vehicleAtStop ? "À l'arrêt" : departure.minutesUntil}</MinutesBox>
+            {departure.cancelled ? (
+              <MinutesBox color={SCREEN.alert}>Supprimé</MinutesBox>
+            ) : (
+              <MinutesBox>{departure.vehicleAtStop ? "À l'arrêt" : departure.minutesUntil}</MinutesBox>
+            )}
           </div>
         ))}
       </div>

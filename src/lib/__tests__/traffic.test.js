@@ -3,7 +3,8 @@ import favorites from '@/config/favorites.json';
 import lineData from '@/data/line-data.json';
 import { haversineDistance } from '../geo';
 import { fetchRouteWithTraffic, parseRoute, TrafficApiError, trafficLevel } from '../tomtom-client';
-import { clearTrafficCache, getTraffic, routeLocations } from '../traffic-service';
+import { clearTrafficCache, getTraffic, routePath } from '../traffic-service';
+import { findDirectedSegment, getPreparedLine, projectOnSegment } from '../position-estimator';
 // Built from the response schema in TomTom's Calculate Route documentation;
 // not captured live (no TomTom key was available).
 import tomtomRoute from '../__fixtures__/tomtom-calculate-route.json';
@@ -48,25 +49,33 @@ describe('trafficLevel', () => {
   });
 });
 
-describe('routeLocations', () => {
-  it('adds two via points along the bus trace between origin and destination', () => {
-    const locations = routeLocations(route, lineData);
-    expect(locations).toHaveLength(4);
-    expect(locations[0]).toEqual(route.from);
-    expect(locations[3]).toEqual(route.to);
+describe('routePath', () => {
+  it('follows the 148 trace from Danton to Bobigny - Pablo Picasso, in order', () => {
+    const path = routePath(route, lineData);
+    expect(path.length).toBeGreaterThan(50);
+    expect(path[0]).toEqual(route.from);
+    expect(path.at(-1)).toEqual(route.to);
 
-    const total = haversineDistance(route.from, route.to);
-    const d1 = haversineDistance(route.from, locations[1]);
-    const d2 = haversineDistance(route.from, locations[2]);
-    expect(d1).toBeGreaterThan(100);
-    expect(d2).toBeGreaterThan(d1);
-    expect(haversineDistance(locations[2], route.to)).toBeLessThan(total);
+    const prepared = getPreparedLine(lineData.lines[route.alongLine]);
+    const { segment } = findDirectedSegment(prepared, route.from, route.to, 'bus');
+    const along = path.slice(1, -1).map((point) => projectOnSegment(segment, point));
+    for (let i = 0; i < along.length; i++) {
+      expect(along[i].distance).toBeLessThan(1); // trace vertices themselves
+      if (i > 0) expect(along[i].distAlong).toBeGreaterThan(along[i - 1].distAlong);
+    }
+    // about the 2.1 km of road between the two stops, not the whole line
+    const length = path.slice(1).reduce((sum, point, i) => sum + haversineDistance(path[i], point), 0);
+    expect(length).toBeGreaterThan(1900);
+    expect(length).toBeLessThan(2500);
   });
 
-  it('works for the return route and without a line', () => {
+  it('builds the return path too, and nothing without a line', () => {
     const retour = favorites.profiles.find((p) => p.id === 'retour').traffic[0];
-    expect(routeLocations(retour, lineData)).toHaveLength(4);
-    expect(routeLocations({ from: route.from, to: route.to }, lineData)).toEqual([route.from, route.to]);
+    const back = routePath(retour, lineData);
+    expect(back[0]).toEqual(retour.from);
+    expect(back.at(-1)).toEqual(retour.to);
+    expect(routePath({ from: route.from, to: route.to }, lineData)).toBeNull();
+    expect(routePath({ ...route, alongLine: 'IDFM:C99999' }, lineData)).toBeNull();
   });
 });
 
@@ -83,6 +92,24 @@ describe('fetchRouteWithTraffic', () => {
       travelMode: 'car',
       computeTravelTimeFor: 'all',
       sectionType: 'traffic',
+    });
+  });
+
+  it('posts the path to follow when given supporting points', async () => {
+    const fetchImpl = vi.fn(async () => new Response(JSON.stringify(tomtomRoute), { status: 200 }));
+    const path = [{ lat: 48.9, lng: 2.4 }, { lat: 48.905, lng: 2.405 }, { lat: 48.91, lng: 2.41 }];
+    await fetchRouteWithTraffic([path[0], path[2]], { apiKey: 'k123', fetchImpl, supportingPoints: path });
+
+    const [url, init] = fetchImpl.mock.calls[0];
+    expect(new URL(url).pathname).toBe('/routing/1/calculateRoute/48.900000,2.400000:48.910000,2.410000/json');
+    expect(init.method).toBe('POST');
+    expect(init.headers['Content-Type']).toBe('application/json');
+    expect(JSON.parse(init.body)).toEqual({
+      supportingPoints: [
+        { latitude: 48.9, longitude: 2.4 },
+        { latitude: 48.905, longitude: 2.405 },
+        { latitude: 48.91, longitude: 2.41 },
+      ],
     });
   });
 
@@ -116,7 +143,10 @@ describe('getTraffic', () => {
     await getTraffic({ config, lineData, apiKey: 'k', fetchRoute });
 
     expect(fetchRoute).toHaveBeenCalledTimes(1);
-    expect(fetchRoute.mock.calls[0][0]).toHaveLength(4);
+    const [locations, options] = fetchRoute.mock.calls[0];
+    expect(locations).toEqual([route.from, route.to]);
+    expect(options.supportingPoints.length).toBeGreaterThan(50);
+    expect(first.routes[0].followsLine).toBe(true);
     expect(first.routes[0]).toMatchObject({
       id: 'danton-bobigny',
       status: 'ok',
@@ -125,9 +155,25 @@ describe('getTraffic', () => {
       travelMinutes: 9,
       freeFlowMinutes: 6,
       typicalMinutes: 7,
-      delayMinutes: 4,
+      delayMinutes: 4, // 540 s vs 330 s free flow
+      typicalDelayMinutes: 2, // 540 s vs 420 s usual at this hour
       incidents: [{ label: 'Bouchon', category: 'JAM', delayMinutes: 3, speedKmh: 12 }],
     });
+  });
+
+  it('falls back to TomTom\'s own route when it cannot follow the bus path', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    const fetchRoute = vi.fn(async (locations, { supportingPoints }) => {
+      if (supportingPoints) {
+        throw new TrafficApiError('TomTom responded with HTTP 400', { status: 400, code: 'NO_ROUTE', safeMessage: 'Itinéraire introuvable' });
+      }
+      return tomtomRoute;
+    });
+    const result = await getTraffic({ config, lineData, apiKey: 'k', fetchRoute });
+
+    expect(fetchRoute).toHaveBeenCalledTimes(2);
+    expect(fetchRoute.mock.calls[1][1].supportingPoints).toBeUndefined();
+    expect(result.routes[0]).toMatchObject({ status: 'ok', followsLine: false, travelMinutes: 9 });
   });
 
   it('isolates a failing route behind a safe message', async () => {
@@ -137,5 +183,29 @@ describe('getTraffic', () => {
     });
     const result = await getTraffic({ config, lineData, apiKey: 'k', fetchRoute });
     expect(result.routes[0]).toMatchObject({ status: 'error', error: 'Quota TomTom dépassé', code: 'QUOTA' });
+  });
+});
+
+describe('comparison with usual traffic', () => {
+  it('rounds to +0 when the trip takes as long as usual, and goes negative when faster', async () => {
+    const usual = {
+      routes: [{ summary: { lengthInMeters: 2144, travelTimeInSeconds: 362, trafficDelayInSeconds: 0, noTrafficTravelTimeInSeconds: 321, historicTrafficTravelTimeInSeconds: 356 }, sections: [] }],
+    };
+    const faster = structuredClone(usual);
+    faster.routes[0].summary.historicTrafficTravelTimeInSeconds = 480;
+
+    const [now] = (await getTraffic({ config, lineData, apiKey: 'k', fetchRoute: vi.fn(async () => usual) })).routes;
+    // the live values from 2026-10-17 behind "+1 min par rapport au trafic fluide"
+    expect(now).toMatchObject({ travelMinutes: 6, delayMinutes: 1, typicalDelayMinutes: 0 });
+
+    clearTrafficCache();
+    const [quick] = (await getTraffic({ config, lineData, apiKey: 'k', fetchRoute: vi.fn(async () => faster) })).routes;
+    expect(quick.typicalDelayMinutes).toBe(-2);
+  });
+
+  it('leaves the comparison out when TomTom has no historic time', async () => {
+    const noHistory = { routes: [{ summary: { travelTimeInSeconds: 362, noTrafficTravelTimeInSeconds: 321 }, sections: [] }] };
+    const [route] = (await getTraffic({ config, lineData, apiKey: 'k', fetchRoute: vi.fn(async () => noHistory) })).routes;
+    expect(route.typicalDelayMinutes).toBeNull();
   });
 });

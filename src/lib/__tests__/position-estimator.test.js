@@ -163,6 +163,12 @@ describe('estimateFromTimetable', () => {
     expect(haversineDistance(result, P[1])).toBeCloseTo(2 * speed, -1);
   });
 
+  it('never anchors on a cancelled call', () => {
+    const cancelledCall = { ...call(1, 1), cancelled: true };
+    expect(east([cancelledCall, call(2, 3)], 8).anchorStopName).toBe('P2');
+    expect(east([cancelledCall], 8)).toBeNull();
+  });
+
   it('prefers the call closest to the vehicle among consistent ones', () => {
     // P1 -> P3 (2.9 km) in 7 min and P2 -> P3 (1.5 km) in 5 min are both plausible
     expect(east([call(2, 3), call(1, 1)], 8).anchorStopName).toBe('P1');

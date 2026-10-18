@@ -94,6 +94,7 @@ export async function getVehicles({
     const departures = parseDepartures(result.data, { now, lineNames });
 
     for (const departure of departures) {
+      if (departure.cancelled) continue; // no vehicle is coming
       const meta = lines.get(departure.lineRef);
       if (!meta) continue; // not a tracked line
       const lineConfig = findMatchingLineConfig(departure, stop);

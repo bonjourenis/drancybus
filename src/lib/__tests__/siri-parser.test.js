@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeLineRef, parseDepartures, parseEstimatedTimetable } from '../siri-parser';
+import { normalizeCallStatus, normalizeLineRef, parseDepartures, parseEstimatedTimetable } from '../siri-parser';
+import gentillyCancelled from '../__fixtures__/stop-monitoring-rer-b-cancelled.json';
+import timetableRerBCancelled from '../__fixtures__/estimated-timetable-rer-b-cancelled.json';
 import danton from '../__fixtures__/stop-monitoring-danton.json';
 import leBourget from '../__fixtures__/stop-monitoring-le-bourget-rer.json';
 import timetable148 from '../__fixtures__/estimated-timetable-148.json';
@@ -92,5 +94,53 @@ describe('parseEstimatedTimetable', () => {
         if (i > 0) expect(call.time >= journey.calls[i - 1].time).toBe(true);
       }
     }
+  });
+});
+
+describe('cancelled trips', () => {
+  it('reads call statuses in both PRIM spellings', () => {
+    expect(normalizeCallStatus('onTime')).toBe('onTime');
+    expect(normalizeCallStatus('ON_TIME')).toBe('onTime');
+    expect(normalizeCallStatus('cancelled')).toBe('cancelled');
+    expect(normalizeCallStatus('CANCELLED')).toBe('cancelled');
+    expect(normalizeCallStatus('NO_REPORT')).toBe('noReport');
+    expect(normalizeCallStatus('')).toBe('unknown');
+    expect(normalizeCallStatus(undefined)).toBe('unknown');
+  });
+
+  // Captured 2026-10-18 at Gentilly: the 10:14 RER B to Robinson is cancelled
+  // but still listed with its time. Read it four minutes before.
+  const before = new Date('2026-10-18T08:10:00Z');
+
+  it('marks a cancelled stop-monitoring visit instead of counting down to it', () => {
+    const departures = parseDepartures(gentillyCancelled, { now: before });
+    const cancelled = departures.filter((d) => d.cancelled);
+
+    expect(cancelled).toHaveLength(1);
+    expect(cancelled[0]).toMatchObject({
+      destination: 'Robinson',
+      departureStatus: 'cancelled',
+      displayTime: 'Supprimé',
+      vehicleAtStop: false,
+      minutesUntil: 4,
+    });
+    expect(cancelled[0].journeyRef).toContain('2fc6df05');
+    expect(departures.filter((d) => !d.cancelled).length).toBeGreaterThan(10);
+    expect(departures.every((d) => d.cancelled || d.displayTime !== 'Supprimé')).toBe(true);
+  });
+
+  it('drops a cancelled visit once its time has passed, like any other', () => {
+    const atCapture = new Date(gentillyCancelled.Siri.ServiceDelivery.ResponseTimestamp);
+    expect(parseDepartures(gentillyCancelled, { now: atCapture }).some((d) => d.cancelled)).toBe(false);
+  });
+
+  it('marks cancelled calls in the estimated timetable (upper-case statuses)', () => {
+    const journeys = parseEstimatedTimetable(timetableRerBCancelled, { now: before });
+    const journey = journeys.find((j) => j.journeyRef.includes('2fc6df05'));
+    expect(journey.calls.some((call) => call.cancelled)).toBe(true);
+
+    const allCalls = journeys.flatMap((j) => j.calls);
+    expect(allCalls.filter((call) => call.cancelled).length).toBe(8);
+    expect(allCalls.filter((call) => !call.cancelled).length).toBeGreaterThan(500);
   });
 });

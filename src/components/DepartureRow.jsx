@@ -2,6 +2,18 @@ import { SCREEN } from '@/lib/screen-theme';
 import LineBadge from './LineBadge';
 
 function WaitBox({ departure }) {
+  if (departure.cancelled) {
+    return (
+      <span
+        className="inline-flex items-center justify-center h-9 min-w-11 px-2 rounded-md bg-black text-xs font-bold leading-none"
+        style={{ color: SCREEN.alert }}
+        title={`Trajet de ${departure.minutesUntil} min supprimé`}
+      >
+        Supprimé
+      </span>
+    );
+  }
+
   const label = departure.vehicleAtStop ? "À l'arrêt" : String(departure.minutesUntil);
   const imminent = !departure.vehicleAtStop && departure.minutesUntil === 0;
 

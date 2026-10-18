@@ -12,6 +12,22 @@ import { buildLineNames } from './lines';
 import { parseDepartures } from './siri-parser';
 import { getStopMonitoring } from './stop-monitoring-cache';
 
+/**
+ * The first `max` running departures, plus any cancelled ones due before the
+ * last of them: a cancellation is shown where it happens but never pushes a
+ * real departure off the board.
+ */
+export function limitDepartures(departures, max) {
+  const kept = [];
+  let running = 0;
+  for (const departure of departures) {
+    if (running >= max) break;
+    kept.push(departure);
+    if (!departure.cancelled) running += 1;
+  }
+  return kept;
+}
+
 export async function getDepartures({
   config = favorites,
   lineData = lineDataFile,
@@ -33,9 +49,10 @@ export async function getDepartures({
 
       try {
         const { data, stale, fetchedAt } = await getMonitoring(stop.id);
-        const departures = parseDepartures(data, { now, lineNames })
-          .filter((departure) => matchesStopConfig(departure, stop))
-          .slice(0, maxPerStop);
+        const departures = limitDepartures(
+          parseDepartures(data, { now, lineNames }).filter((departure) => matchesStopConfig(departure, stop)),
+          maxPerStop
+        );
 
         return {
           stop: summary,

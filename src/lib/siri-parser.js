@@ -1,6 +1,30 @@
 import { parseISO, differenceInMinutes, isValid } from 'date-fns';
 import { shortNameFromLineId } from './config-utils';
 
+const CALL_STATUSES = {
+  ontime: 'onTime',
+  early: 'early',
+  delayed: 'delayed',
+  cancelled: 'cancelled',
+  arrived: 'arrived',
+  departed: 'departed',
+  missed: 'missed',
+  noreport: 'noReport',
+  notexpected: 'notExpected',
+};
+
+/**
+ * SIRI call status in one spelling. The two PRIM feeds disagree: stop
+ * monitoring sends "onTime" / "cancelled", the estimated timetable
+ * "ON_TIME" / "CANCELLED".
+ */
+export function normalizeCallStatus(value) {
+  const key = String(value ?? '').replace(/[^a-z]/gi, '').toLowerCase();
+  return CALL_STATUSES[key] ?? (key || 'unknown');
+}
+
+const callStatus = (call) => normalizeCallStatus(call?.DepartureStatus || call?.ArrivalStatus);
+
 /**
  * Parse a SIRI StopMonitoring response into departure objects.
  *
@@ -32,7 +56,10 @@ export function parseDepartures(siriResponse, { now = new Date(), lineNames = {}
 
       const lineRef = normalizeLineRef(journey.LineRef?.value);
       const journeyRef = journey.FramedVehicleJourneyRef?.DatedVehicleJourneyRef || null;
-      const vehicleAtStop = call.VehicleAtStop === true;
+      const departureStatus = callStatus(call);
+      // A cancelled trip is still listed, with the time it would have passed.
+      const cancelled = departureStatus === 'cancelled';
+      const vehicleAtStop = !cancelled && call.VehicleAtStop === true;
       const aimedTime = call.AimedDepartureTime || null;
 
       departures.push({
@@ -46,9 +73,10 @@ export function parseDepartures(siriResponse, { now = new Date(), lineNames = {}
         expectedTime: departureTime.toISOString(),
         aimedTime,
         minutesUntil: Math.max(0, minutesUntil),
-        departureStatus: call.DepartureStatus || 'unknown',
+        departureStatus,
+        cancelled,
         vehicleAtStop,
-        displayTime: formatDisplayTime(minutesUntil, vehicleAtStop),
+        displayTime: cancelled ? 'Supprimé' : formatDisplayTime(minutesUntil, vehicleAtStop),
         isRealtime: Boolean(call.ExpectedDepartureTime),
       });
     }
@@ -114,6 +142,7 @@ export function parseEstimatedTimetable(siriResponse, { now = new Date() } = {})
             time: time.toISOString(),
             minutesFromNow: Math.round(((time.getTime() - nowMs) / 60000) * 10) / 10,
             isRealtime: Boolean(call.ExpectedDepartureTime || call.ExpectedArrivalTime),
+            cancelled: callStatus(call) === 'cancelled',
           });
         }
         calls.sort((a, b) => a.time.localeCompare(b.time));

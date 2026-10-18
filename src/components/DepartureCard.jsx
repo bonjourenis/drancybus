@@ -1,25 +1,6 @@
+import { groupDepartures } from '@/lib/departure-groups';
 import DepartureRow from './DepartureRow';
 import ScreenCard, { ScreenMessage } from './ScreenCard';
-
-const DEPARTURES_PER_ROW = 2;
-
-/**
- * Groups departures by line and destination, keeping the soonest first, the
- * way RATP screens show one row per destination with the next two waits.
- */
-function groupDepartures(departures) {
-  const groups = new Map();
-  for (const departure of departures) {
-    const key = `${departure.lineRef}|${departure.destination}`;
-    const group = groups.get(key);
-    if (!group) {
-      groups.set(key, { key, first: departure, departures: [departure] });
-    } else if (group.departures.length < DEPARTURES_PER_ROW) {
-      group.departures.push(departure);
-    }
-  }
-  return Array.from(groups.values());
-}
 
 export default function DepartureCard({ stop, departures, error = null, lineColors, lineTypes }) {
   const groups = groupDepartures(departures);

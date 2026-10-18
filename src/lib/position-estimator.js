@@ -269,6 +269,7 @@ export function estimateFromTimetable(
 
   let anchor = null;
   for (const call of journey.calls ?? []) {
+    if (call.cancelled) continue;
     const minutesToCall = (Date.parse(call.time) - nowMs) / 60000;
     if (!(minutesToCall > 0) || minutesToCall >= minutesUntil) continue;
 

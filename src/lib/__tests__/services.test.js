@@ -13,6 +13,8 @@ import timetable146Evening from '../__fixtures__/estimated-timetable-146-evening
 import timetable148Evening from '../__fixtures__/estimated-timetable-148-evening.json';
 import regressionDanton from '../__fixtures__/regression-stop-monitoring-danton.json';
 import regressionTimetable146 from '../__fixtures__/regression-estimated-timetable-146.json';
+import gentillyCancelled from '../__fixtures__/stop-monitoring-rer-b-cancelled.json';
+import timetableRerBCancelled from '../__fixtures__/estimated-timetable-rer-b-cancelled.json';
 import danton from '../__fixtures__/stop-monitoring-danton.json';
 import lamartine from '../__fixtures__/stop-monitoring-lamartine.json';
 import leBourget from '../__fixtures__/stop-monitoring-le-bourget-rer.json';
@@ -375,5 +377,31 @@ describe('regression: scrambled bus timetable', () => {
       // Les Bosquets is east (2.56); a bus that has not reached Danton (2.438) is west of it
       expect(vehicle.position.lng).toBeLessThan(2.45);
     }
+  });
+});
+
+describe('cancelled trips (captured RER B cancellation at Gentilly)', () => {
+  const GENTILLY = 'STIF:StopArea:SP:45877:';
+  const gentillyConfig = {
+    stops: [{ id: GENTILLY, name: 'Gentilly', lines: [{ lineId: 'IDFM:C01743', lineName: 'RER B' }], coordinates: { lat: 48.815228, lng: 2.340927 } }],
+    trackedLines: [{ lineId: 'IDFM:C01743', name: 'RER B', type: 'rer', color: '#7BA3DC' }],
+    settings: { maxDeparturesPerStop: 2, vehicleHorizonMinutes: 60 },
+  };
+  const before = new Date('2026-10-18T08:10:00Z'); // the cancelled train was due at 08:14
+  const getMonitoring = vi.fn(async () => ({ data: gentillyCancelled, fetchedAt: before.getTime(), stale: false }));
+  const getTimetable = vi.fn(async () => ({ data: timetableRerBCancelled, fetchedAt: before.getTime(), stale: false }));
+
+  it('lists the cancellation on the board without taking a running train’s place', async () => {
+    const result = await getDepartures({ config: gentillyConfig, lineData, now: before, getMonitoring });
+    const departures = result.stops[0].departures;
+
+    expect(departures[0]).toMatchObject({ cancelled: true, displayTime: 'Supprimé', destination: 'Robinson' });
+    expect(departures.filter((d) => !d.cancelled)).toHaveLength(2); // maxDeparturesPerStop still met
+  });
+
+  it('draws no vehicle for the cancelled trip', async () => {
+    const result = await getVehicles({ config: gentillyConfig, lineData, now: before, getMonitoring, getTimetable });
+    expect(result.vehicles.length).toBeGreaterThan(0);
+    expect(result.vehicles.some((vehicle) => vehicle.id.includes('2fc6df05'))).toBe(false);
   });
 });

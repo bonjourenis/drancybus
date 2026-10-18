@@ -1,0 +1,4283 @@
+{
+ "Siri": {
+  "ServiceDelivery": {
+   "ResponseTimestamp": "2026-10-18T08:44:18.856Z",
+   "ProducerRef": "IVTR_HET",
+   "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:8b90eb05-05be-4519-9e11-6b2eb4f07ddc:LOC:",
+   "StopMonitoringDelivery": [
+    {
+     "ResponseTimestamp": "2026-10-18T08:44:18.878Z",
+     "Version": "2.0",
+     "Status": "true",
+     "MonitoredStopVisit": [
+      {
+       "RecordedAtTime": "2026-10-18T08:15:02.695Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-21-2fc6df05-ae86-4062-9b3f-3e1e9928c1d8:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::2fc6df05-ae86-4062-9b3f-3e1e9928c1d8:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOUR14"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOUR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:13:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:14:19.000Z",
+         "DepartureStatus": "cancelled",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-18T08:13:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T08:14:29.000Z",
+         "ArrivalStatus": "cancelled"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOUR14"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:43:42.710Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-21-50766679-2a50-435e-acde-1b50ac67ba26:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::50766679-2a50-435e-acde-1b50ac67ba26:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOUR26"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOUR"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:44:22.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:44:42.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-18T08:43:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T08:44:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOUR26"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:44:01.532Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-11-25b13d4d-1c99-4ff3-bf1f-84e68cbc8aaf:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::25b13d4d-1c99-4ff3-bf1f-84e68cbc8aaf:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILOT75"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILOT"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:49:15.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:49:35.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 11,
+         "AimedArrivalTime": "2026-10-18T08:49:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T08:50:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILOT75"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:43:42.763Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-22-4d295d0a-82a3-4aab-914b-4acdbb66a6b7:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::4d295d0a-82a3-4aab-914b-4acdbb66a6b7:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI68"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:53:16.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:53:36.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 22,
+         "AimedArrivalTime": "2026-10-18T08:52:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T08:53:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI68"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:44:01.472Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-15-f249afd4-3166-4212-bc52-e536c27a8ca3:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::f249afd4-3166-4212-bc52-e536c27a8ca3:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIC77"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIC"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:55:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:56:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 15,
+         "AimedArrivalTime": "2026-10-18T08:55:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T08:56:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIC77"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:43:02.787Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-21-ba9ef35b-5ce7-433c-ba0f-dbb682ebea1f:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ba9ef35b-5ce7-433c-ba0f-dbb682ebea1f:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SORI70"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SORI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T08:58:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T08:59:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-18T08:58:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T08:59:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SORI70"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:13.851Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-ea07abd9-5a04-41fc-9d1e-bfecf5d65188:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ea07abd9-5a04-41fc-9d1e-bfecf5d65188:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILOT81"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILOT"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:04:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:05:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T09:04:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:05:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILOT81"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:44:13.855Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-22-dc21ed11-9355-4c43-8594-abe00da973df:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::dc21ed11-9355-4c43-8594-abe00da973df:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI74"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:07:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:08:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 22,
+         "AimedArrivalTime": "2026-10-18T09:07:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:08:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI74"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:29.598Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-8ec173f6-881b-4fc5-823f-f2f4fb95be7e:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8ec173f6-881b-4fc5-823f-f2f4fb95be7e:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIC83"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIC"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:10:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:11:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T09:10:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:11:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIC83"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:43:49.594Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-21-79858ff5-8694-470b-aaed-3d532b1e4700:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::79858ff5-8694-470b-aaed-3d532b1e4700:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SORI76"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SORI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:15:58.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:16:18.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-18T09:13:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:14:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SORI76"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:13.566Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-519b5832-24e9-406b-a413-d15683bbf680:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::519b5832-24e9-406b-a413-d15683bbf680:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILOT87"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILOT"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:19:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:20:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T09:19:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:20:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILOT87"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:30.392Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-c29dcae8-72c7-46b0-b07a-b08e35735006:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c29dcae8-72c7-46b0-b07a-b08e35735006:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIC89"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIC"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:25:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:26:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T09:25:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:26:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIC89"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:44:05.307Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-22-3d0aa5ef-df3b-455c-b7ee-bec8f4eea583:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::3d0aa5ef-df3b-455c-b7ee-bec8f4eea583:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI80"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:27:00.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:27:20.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 22,
+         "AimedArrivalTime": "2026-10-18T09:22:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:23:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI80"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T08:44:14.818Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-21-3dd8ba36-2004-411a-8d7d-cac225572e10:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::3dd8ba36-2004-411a-8d7d-cac225572e10:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SORI82"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SORI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:28:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:29:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 21,
+         "AimedArrivalTime": "2026-10-18T09:28:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:29:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SORI82"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:06.761Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-a0367c0b-6cde-4875-b442-e27a18278f62:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::a0367c0b-6cde-4875-b442-e27a18278f62:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILOT93"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILOT"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:34:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:35:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T09:34:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:35:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILOT93"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:12.820Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-ac0e5a8e-af86-46d1-abe1-c17eadfb254e:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ac0e5a8e-af86-46d1-abe1-c17eadfb254e:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI86"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:37:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:38:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T09:37:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:38:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI86"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:25.882Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-87d87995-8437-44e5-812d-06dc49e753e8:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::87d87995-8437-44e5-812d-06dc49e753e8:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIC95"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIC"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:40:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:41:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T09:40:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:41:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIC95"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:40.085Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-9f5241db-6eca-494b-89ee-4fc55daf44b5:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::9f5241db-6eca-494b-89ee-4fc55daf44b5:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SORI88"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SORI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:43:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:44:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T09:43:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:44:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SORI88"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:08.082Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-296992d4-5f1c-4f11-a9e1-234a840c8410:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::296992d4-5f1c-4f11-a9e1-234a840c8410:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILOT99"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILOT"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:49:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:50:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T09:49:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:50:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILOT99"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:09.450Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-e730d0fe-7627-471e-8029-1e84f6b5c8cf:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::e730d0fe-7627-471e-8029-1e84f6b5c8cf:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI92"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:52:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:53:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T09:52:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:53:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI92"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:55.752Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-5d36f8cd-957c-4713-ad87-c32179e62a97:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::5d36f8cd-957c-4713-ad87-c32179e62a97:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO01"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:55:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:56:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T09:55:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T09:56:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO01"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:34.867Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-13d94062-2dc4-4f3e-94c5-9802049727a0:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::13d94062-2dc4-4f3e-94c5-9802049727a0:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SORI94"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SORI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T09:58:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T09:59:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T09:58:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T09:59:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SORI94"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:30:52.718Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-cda7e6d5-a007-449e-9a5d-eaa0f738d288:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::cda7e6d5-a007-449e-9a5d-eaa0f738d288:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS05"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:04:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:05:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T10:04:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:05:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS05"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:09.521Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-2ac1f095-1ca3-45b5-b466-203201d76d20:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::2ac1f095-1ca3-45b5-b466-203201d76d20:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KARI98"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KARI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:07:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:08:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T10:07:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:08:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KARI98"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:57.498Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-1737a9da-fd23-4155-bfeb-4f58dff8b4d8:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::1737a9da-fd23-4155-bfeb-4f58dff8b4d8:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO07"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:10:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:11:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T10:10:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:11:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO07"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:48.221Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-8e06092a-d752-4458-b1be-a6aaf7f9e6ad:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8e06092a-d752-4458-b1be-a6aaf7f9e6ad:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO02"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:13:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:14:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T10:13:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:14:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO02"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:30:46.391Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-0c5edadd-fb95-424a-954b-1bfa2b57c16b:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::0c5edadd-fb95-424a-954b-1bfa2b57c16b:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS11"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:19:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:20:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T10:19:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:20:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS11"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:16.272Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-8a0f60ba-4dc9-4757-899c-c872394d4212:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8a0f60ba-4dc9-4757-899c-c872394d4212:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI06"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:22:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:23:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T10:22:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:23:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI06"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:54.972Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-f9abb5a5-54b5-48b4-9281-165f6e6c8aff:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::f9abb5a5-54b5-48b4-9281-165f6e6c8aff:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO13"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:25:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:26:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T10:25:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:26:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO13"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:53.718Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-1440fed0-f9a2-4542-bf9c-af6ad9c36d37:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::1440fed0-f9a2-4542-bf9c-af6ad9c36d37:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO08"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:28:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:29:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T10:28:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:29:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO08"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:30:48.205Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-e0ddbc3a-b217-427d-a801-151b3be73a63:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::e0ddbc3a-b217-427d-a801-151b3be73a63:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS17"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:34:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:35:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T10:34:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:35:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS17"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:14.290Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-f5f4ff1a-1e62-4f3e-8b78-a99cd2ef1ae1:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::f5f4ff1a-1e62-4f3e-8b78-a99cd2ef1ae1:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI12"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:37:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:38:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T10:37:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:38:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI12"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:55.549Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-57e86032-3db2-4604-a5ba-cef09875b61d:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::57e86032-3db2-4604-a5ba-cef09875b61d:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO19"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:40:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:41:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T10:40:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:41:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO19"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:56.071Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-8b0e5ab7-85be-4114-9b14-34f0fa673479:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::8b0e5ab7-85be-4114-9b14-34f0fa673479:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO14"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:43:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:44:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T10:43:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:44:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO14"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:39.140Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-e1ec0a6a-16c0-4997-8078-c88e6332b187:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::e1ec0a6a-16c0-4997-8078-c88e6332b187:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS23"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:49:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:50:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T10:49:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:50:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS23"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:15.169Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-9b80a195-b579-4f03-9910-0b11b283a52b:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::9b80a195-b579-4f03-9910-0b11b283a52b:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI18"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:52:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:53:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T10:52:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:53:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI18"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:48.753Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-0641ac4e-0764-4b85-9be2-a0cafa1f47ef:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::0641ac4e-0764-4b85-9be2-a0cafa1f47ef:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO25"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:55:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:56:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T10:55:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T10:56:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO25"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:51.351Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-c7304c36-d2d0-4c65-88bf-2ed5d785c013:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c7304c36-d2d0-4c65-88bf-2ed5d785c013:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO20"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T10:58:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T10:59:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T10:58:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T10:59:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO20"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:37.408Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-d08ce648-fa36-4860-a96e-0a68f1133014:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::d08ce648-fa36-4860-a96e-0a68f1133014:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS29"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:04:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:05:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T11:04:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:05:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS29"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:22.461Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-c9480702-7aba-4f3e-a0de-9cf52b130d4f:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::c9480702-7aba-4f3e-a0de-9cf52b130d4f:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI24"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:07:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:08:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T11:07:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T11:08:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI24"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:47.801Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-9255aff7-14eb-4351-a746-a268119df18a:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::9255aff7-14eb-4351-a746-a268119df18a:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO31"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:10:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:11:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T11:10:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:11:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO31"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:33:52.109Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-018928ae-77c7-48d3-917f-b351a4c8fb98:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::018928ae-77c7-48d3-917f-b351a4c8fb98:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO26"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:13:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:14:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T11:13:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T11:14:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO26"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:34.342Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-88bb17be-ee0b-40bf-9024-7de009ddf71e:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::88bb17be-ee0b-40bf-9024-7de009ddf71e:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS35"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:19:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:20:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T11:19:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:20:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS35"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:17.968Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-50746964-e289-4c6b-b3d9-b0ed681e2a9a:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::50746964-e289-4c6b-b3d9-b0ed681e2a9a:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI30"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:22:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:23:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T11:22:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T11:23:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI30"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:47.826Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-e23bfef2-1d81-4a0c-90d5-f845621113af:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::e23bfef2-1d81-4a0c-90d5-f845621113af:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO37"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:25:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:26:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T11:25:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:26:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO37"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:32:29.281Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-43-ec8dbd18-a9c4-4552-bcd9-d5dba19e2b76:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::ec8dbd18-a9c4-4552-bcd9-d5dba19e2b76:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43186:"
+        },
+        "DestinationName": [
+         {
+          "value": "Robinson"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "SOSO32"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "SOSO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Robinson"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:28:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:29:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 43,
+         "AimedArrivalTime": "2026-10-18T11:28:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T11:29:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "SOSO32"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:36.419Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-33-145b9c13-d0a3-46c9-8aab-d2882473e3cb:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::145b9c13-d0a3-46c9-8aab-d2882473e3cb:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:43164:"
+        },
+        "DestinationName": [
+         {
+          "value": "Mitry - Claye"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ILUS41"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ILUS"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Mitry - Claye"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:34:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:35:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 33,
+         "AimedArrivalTime": "2026-10-18T11:34:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:35:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ILUS41"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:17.969Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-49-808eeb50-f9dd-4336-ad58-fdc7d8aebd1a:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::808eeb50-f9dd-4336-ad58-fdc7d8aebd1a:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:58774:"
+        },
+        "DestinationName": [
+         {
+          "value": "Massy-Palaiseau"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "KALI36"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "KALI"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Massy-Palaiseau"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473957:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:37:59.000Z",
+         "DeparturePlatformName": {
+          "value": "1"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:38:19.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 49,
+         "AimedArrivalTime": "2026-10-18T11:37:59.000Z",
+         "ArrivalPlatformName": {
+          "value": "1"
+         },
+         "AimedDepartureTime": "2026-10-18T11:38:29.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "KALI36"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Aller"
+        }
+       }
+      },
+      {
+       "RecordedAtTime": "2026-10-18T02:31:45.544Z",
+       "ItemIdentifier": "SNCF_MAGENTA_PRD:Item::45877-42-652f46b0-7928-4d81-b6ac-10ee83ad002c:",
+       "MonitoringRef": {
+        "value": "STIF:StopArea:SP:45877:"
+       },
+       "MonitoredVehicleJourney": {
+        "LineRef": {
+         "value": "STIF:Line::C01743:"
+        },
+        "OperatorRef": {},
+        "FramedVehicleJourneyRef": {
+         "DataFrameRef": {
+          "value": "any"
+         },
+         "DatedVehicleJourneyRef": "SNCF_MAGENTA_PRD:VehicleJourney::652f46b0-7928-4d81-b6ac-10ee83ad002c:LOC"
+        },
+        "DirectionName": [],
+        "DestinationRef": {
+         "value": "STIF:StopArea:SP:473364:"
+        },
+        "DestinationName": [
+         {
+          "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+         }
+        ],
+        "VehicleJourneyName": [
+         {
+          "value": "ERIO43"
+         }
+        ],
+        "JourneyNote": [
+         {
+          "value": "ERIO"
+         }
+        ],
+        "MonitoredCall": {
+         "StopPointName": [
+          {
+           "value": "Gentilly"
+          }
+         ],
+         "VehicleAtStop": false,
+         "DestinationDisplay": [
+          {
+           "value": "Aéroport Charles de Gaulle 2 (Terminal 2)"
+          }
+         ],
+         "ArrivalStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "DepartureStopAssignment": {
+          "ExpectedQuayRef": {
+           "value": "STIF:StopPoint:Q:473956:"
+          }
+         },
+         "ExpectedArrivalTime": "2026-10-18T11:40:46.000Z",
+         "DeparturePlatformName": {
+          "value": "2"
+         },
+         "ExpectedDepartureTime": "2026-10-18T11:41:06.000Z",
+         "DepartureStatus": "onTime",
+         "Order": 42,
+         "AimedArrivalTime": "2026-10-18T11:40:46.000Z",
+         "ArrivalPlatformName": {
+          "value": "2"
+         },
+         "AimedDepartureTime": "2026-10-18T11:41:16.000Z",
+         "ArrivalStatus": "onTime"
+        },
+        "TrainNumbers": {
+         "TrainNumberRef": [
+          {
+           "value": "ERIO43"
+          }
+         ]
+        },
+        "VehicleFeatureRef": [
+         "longTrain"
+        ],
+        "DirectionRef": {
+         "value": "Retour"
+        }
+       }
+      }
+     ],
+     "StopLineNotice": [],
+     "ServiceException": []
+    }
+   ]
+  }
+ }
+}

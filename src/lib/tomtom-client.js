@@ -27,11 +27,16 @@ const SAFE_MESSAGES = {
 };
 
 /**
- * @param {Array<{lat:number,lng:number}>} locations  origin, via points, destination
+ * @param {Array<{lat:number,lng:number}>} locations  origin and destination (or more waypoints)
+ * @param {Object} [options]
+ * @param {Array<{lat:number,lng:number}>} [options.supportingPoints]
+ *        A path to follow, origin first and destination last. TomTom then
+ *        reconstructs that exact route instead of choosing the fastest one,
+ *        and computes its travel time with live traffic.
  */
 export async function fetchRouteWithTraffic(
   locations,
-  { apiKey = getTrafficApiKey(), timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch } = {}
+  { apiKey = getTrafficApiKey(), supportingPoints = null, timeoutMs = UPSTREAM_TIMEOUT_MS, fetchImpl = fetch } = {}
 ) {
   if (!apiKey) {
     throw new TrafficApiError('TOMTOM_API_KEY is not configured', {
@@ -49,10 +54,20 @@ export async function fetchRouteWithTraffic(
   url.searchParams.set('computeTravelTimeFor', 'all');
   url.searchParams.set('sectionType', 'traffic');
 
+  const reconstruct = Array.isArray(supportingPoints) && supportingPoints.length >= 2;
+
   let response;
   try {
     response = await fetchImpl(url, {
-      headers: { Accept: 'application/json' },
+      method: reconstruct ? 'POST' : 'GET',
+      headers: reconstruct
+        ? { Accept: 'application/json', 'Content-Type': 'application/json' }
+        : { Accept: 'application/json' },
+      body: reconstruct
+        ? JSON.stringify({
+            supportingPoints: supportingPoints.map(({ lat, lng }) => ({ latitude: lat, longitude: lng })),
+          })
+        : undefined,
       cache: 'no-store',
       signal: AbortSignal.timeout(timeoutMs),
     });

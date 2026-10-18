@@ -9,8 +9,11 @@ const INITIAL = { response: null, error: null, loading: true, lastUpdated: null 
  * response replayed from the offline cache shows its real age.
  */
 function responseTime(response) {
-  const time = response?.timestamp ? new Date(response.timestamp) : null;
-  return time && !Number.isNaN(time.getTime()) ? time : new Date();
+  const now = Date.now();
+  const time = response?.timestamp ? Date.parse(response.timestamp) : NaN;
+  // Never in the future: a device clock slightly behind the server's would
+  // otherwise read "Mis à jour dans moins d'une minute".
+  return new Date(Number.isNaN(time) ? now : Math.min(time, now));
 }
 
 /**
