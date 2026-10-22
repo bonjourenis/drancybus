@@ -257,6 +257,18 @@ describe('getVehicles', () => {
   });
 });
 
+describe('stop ETAs', () => {
+  it('keeps the wait at every stop a vehicle was seen from, the nearest one included', async () => {
+    const result = await getVehicles(vehicleOptions());
+    for (const vehicle of result.vehicles) {
+      expect(vehicle.stopEtas[vehicle.nextStopId]).toBe(vehicle.minutesUntil);
+      for (const minutes of Object.values(vehicle.stopEtas)) {
+        expect(minutes).toBeGreaterThanOrEqual(vehicle.minutesUntil);
+      }
+    }
+  });
+});
+
 describe('connections (towards)', () => {
   it('tags each vehicle with the connection of the stop line it was matched on', async () => {
     const result = await getVehicles(vehicleOptions());

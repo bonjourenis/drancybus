@@ -1,7 +1,7 @@
 # DrancyBus
 
 Real-time departures and a live map for the public transport around Drancy
-(bus 148, bus 146, métro 5, RER B), built on the Île-de-France Mobilités
+(bus 148, bus 146, bus 248, métro 5, RER B), built on the Île-de-France Mobilités
 PRIM API.
 
 ## Getting started
@@ -36,14 +36,15 @@ else works.
 
 Everything the app shows is driven by [`src/config/favorites.json`](src/config/favorites.json):
 
-- **`profiles`**: one tab each, "Aller" and "Retour". `defaultHours`
+- **`profiles`**: one tab each, "Aller", "Retour" and "Favoris". `defaultHours`
   (`{ "from": 0, "to": 12 }`) picks the tab that opens by default, in
-  `settings.timeZone` (Paris). `/#aller` or `/#retour` forces a tab. A
-  profile has:
+  `settings.timeZone` (Paris); a profile without it never opens by default.
+  `/#aller`, `/#retour` or `/#favoris` forces a tab. A profile has:
   - **`stops`**: the stops to display. Each entry has a PRIM `MonitoringRef`
     (`STIF:StopPoint:Q:…:` for one platform, `STIF:StopArea:SP:…:` for a
-    whole station), a display name, coordinates for the map, and the lines
-    to show there. A line entry may restrict directions:
+    whole station), a display name, an optional `heading` shown in the card
+    title (`Danton → Bobigny - Pablo Picasso`), coordinates for the map, and
+    the lines to show there. A line entry may restrict directions:
     - `direction` / `excludeDirection`: substring match on the destination
       name. Case, accents and punctuation are ignored, so `"Le Bourget RER"`
       matches the feed's `"Le Bourget <RER>"`.
@@ -58,9 +59,11 @@ Everything the app shows is driven by [`src/config/favorites.json`](src/config/f
 - **`trackedLines`**: lines shared by all profiles, with name, mode (`bus`,
   `tram`, `metro`, `rer`) and colour. They appear in the line status table;
   a line only produces vehicles if a stop of the active profile lists it.
-- **`settings`**: time zone, refresh intervals, departures per stop, map
-  centre and zoom, and `vehicleHorizonMinutes`, the furthest-out departure
-  turned into a marker.
+- **`settings`**: time zone, refresh intervals, departures per stop, and
+  `vehicleHorizonMinutes`, the furthest-out departure turned into a marker.
+
+Clicking a stop's card opens a map of that stop and the vehicles heading to
+it; vehicle positions are only polled while that map is open.
 
 After changing `trackedLines`, run `npm run lines:update` so the route traces
 and stop lists for the new lines are available.
@@ -70,7 +73,7 @@ and stop lists for the new lines are available.
 | Endpoint | Returns |
 | --- | --- |
 | `GET /api/idfm/departures?profile=aller` | Next departures per stop of the profile |
-| `GET /api/idfm/vehicles?profile=aller` | Estimated vehicle positions, with `towards` |
+| `GET /api/idfm/vehicles?profile=aller` | Estimated vehicle positions, with `towards` and `stopEtas` (minutes to each stop) |
 | `GET /api/idfm/disruptions` | Status of every tracked line: active and upcoming (7 days) disruptions |
 | `GET /api/traffic?profile=aller` | Car travel time with live traffic vs free flow on the profile's routes |
 

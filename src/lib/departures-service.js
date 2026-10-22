@@ -43,6 +43,7 @@ export async function getDepartures({
       const summary = {
         id: stop.id,
         name: stop.name,
+        heading: stop.heading ?? null,
         lines: stop.lines,
         coordinates: stop.coordinates ?? null,
       };

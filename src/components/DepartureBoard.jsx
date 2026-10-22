@@ -15,6 +15,7 @@ export default function DepartureBoard({
   refresh,
   lineColors,
   lineTypes,
+  onOpenMap,
 }) {
   const hasData = stops.length > 0;
 
@@ -56,6 +57,7 @@ export default function DepartureBoard({
             error={stopError}
             lineColors={lineColors}
             lineTypes={lineTypes}
+            onOpenMap={onOpenMap}
           />
         ))}
       </div>

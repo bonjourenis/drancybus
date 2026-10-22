@@ -24,7 +24,7 @@ describe('time helpers', () => {
 
 describe('profiles', () => {
   it('lists the configured profiles', () => {
-    expect(listProfiles(favorites).map((p) => p.id)).toEqual(['aller', 'retour']);
+    expect(listProfiles(favorites).map((p) => p.id)).toEqual(['aller', 'retour', 'favoris']);
   });
 
   it('finds a profile by id, defaults to the first, rejects unknown ids', () => {
@@ -67,6 +67,7 @@ describe('profiles', () => {
   it('lists only the connections a profile uses', () => {
     expect(profileConnections(favorites, getProfile(favorites, 'aller')).map((c) => c.id)).toEqual(['metro-5', 'rer-b']);
     expect(profileConnections(favorites, getProfile(favorites, 'retour'))).toEqual([]);
+    expect(profileConnections(favorites, getProfile(favorites, 'favoris'))).toEqual([]);
   });
 
   it('every towards in the config names a defined connection', () => {

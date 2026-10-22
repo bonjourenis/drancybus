@@ -52,3 +52,8 @@ body {
   background-color: var(--screen-navy);
   color: rgb(255 255 255 / 0.4);
 }
+
+/* No page scrolling behind an open modal (the stop map). */
+html:has(dialog[open]:modal) {
+  overflow: hidden;
+}

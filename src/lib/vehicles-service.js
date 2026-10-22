@@ -12,7 +12,8 @@
  * the stop's line entry in favorites.json, so the map can colour it.
  *
  * Vehicles are identified by their SIRI dated journey reference so the same
- * bus seen from two stops is one marker.
+ * bus seen from two stops is one marker. `stopEtas` keeps its wait at each
+ * stop it was seen from, so a single stop's map can show it too.
  */
 import favorites from '@/config/favorites.json';
 import lineDataFile from '@/data/line-data.json';
@@ -107,7 +108,10 @@ export async function getVehicles({
 
       // Keep the sighting closest to a stop: it is the most accurate one.
       const existing = vehicles.get(id);
-      if (existing && existing.minutesUntil <= departure.minutesUntil) continue;
+      if (existing && existing.minutesUntil <= departure.minutesUntil) {
+        existing.stopEtas[stop.id] = departure.minutesUntil;
+        continue;
+      }
 
       const prepared = getPreparedLine(lineData?.lines?.[departure.lineRef]);
       const monitoredStop = prepared
@@ -146,7 +150,8 @@ export async function getVehicles({
       }
 
       if (!position) {
-        if (!existing) unplaced += 1;
+        if (existing) existing.stopEtas[stop.id] = departure.minutesUntil;
+        else unplaced += 1;
         continue;
       }
 
@@ -164,6 +169,7 @@ export async function getVehicles({
         vehicleAtStop: departure.vehicleAtStop,
         nextStopId: stop.id,
         nextStopName: stop.name,
+        stopEtas: { ...existing?.stopEtas, [stop.id]: departure.minutesUntil },
         position: { lat: position.lat, lng: position.lng },
         positionMethod: position.method,
         atTerminus: Boolean(position.atTerminus),

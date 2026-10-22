@@ -6,10 +6,9 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import { MAP_TILES, DEFAULT_LINE_COLOR } from '@/lib/constants';
-import { groupStopsById } from '@/lib/config-utils';
 import { SCREEN, SCREEN_FONT } from '@/lib/screen-theme';
 import LineBadge from './LineBadge';
-import ScreenCard, { ScreenMessage } from './ScreenCard';
+import { ScreenMessage } from './ScreenCard';
 
 const BUS_PATH =
   'M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z';
@@ -30,6 +29,8 @@ const STOP_ICON = L.divIcon({
 // amber on black like the screens, green when imminent.
 const BADGE_IMMINENT = SCREEN.ok;
 const BADGE_DEFAULT = '#000000';
+
+const STOP_ZOOM = 15;
 
 function badgeColorFor(vehicle) {
   if (vehicle.towards?.color) return vehicle.towards.color;
@@ -72,22 +73,28 @@ function createVehicleIcon(color, type, minutesUntil, badgeColor) {
 }
 
 /**
- * Frame the configured stops once on mount, then leave the view alone so
+ * The map mounts inside a dialog that only opens after its children have
+ * mounted, so Leaflet first measures a zero-size container: re-measure on the
+ * next frame. Once vehicles are known, frame them with the stop, once, so
  * refreshes never move the map under the user.
  */
-function FitBoundsOnce({ stops }) {
+function FrameStopAndVehicles({ stop, vehicles }) {
   const map = useMap();
-  const fitted = useRef(false);
+  const framed = useRef(false);
 
   useEffect(() => {
-    if (fitted.current) return;
-    const points = stops
-      .filter((stop) => stop.coordinates)
-      .map((stop) => [stop.coordinates.lat, stop.coordinates.lng]);
-    if (points.length < 2) return;
-    fitted.current = true;
-    map.fitBounds(L.latLngBounds(points), { padding: [50, 50], maxZoom: 15 });
-  }, [map, stops]);
+    const frame = requestAnimationFrame(() => {
+      map.invalidateSize();
+      if (framed.current || vehicles.length === 0) return;
+      framed.current = true;
+      const points = [
+        [stop.coordinates.lat, stop.coordinates.lng],
+        ...vehicles.map((vehicle) => [vehicle.position.lat, vehicle.position.lng]),
+      ];
+      map.fitBounds(L.latLngBounds(points), { padding: [40, 40], maxZoom: STOP_ZOOM });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [map, stop, vehicles]);
 
   return null;
 }
@@ -175,19 +182,11 @@ function StopPopupContent({ stop, entry, loading, lineColors, lineTypes }) {
   );
 }
 
-export default function TransitMap({
-  lines,
-  stops,
-  connections = [],
-  center,
-  zoom,
-  vehicles: vehicleState,
-  departuresByStop,
-  departuresLoading,
-}) {
-  const { vehicles, loading, error, unplaced } = vehicleState;
-  const uniqueStops = groupStopsById(stops);
-
+/**
+ * One stop and the vehicles heading to it. Renders screen rows, to be placed
+ * in a ScreenCard.
+ */
+export default function TransitMap({ lines, stop, connections = [], vehicles, error, departures, departuresLoading }) {
   const lineColors = {};
   const lineTypes = {};
   for (const line of lines) {
@@ -195,51 +194,32 @@ export default function TransitMap({
     lineTypes[line.lineId] = line.type || 'bus';
   }
 
-  const title = `${vehicles.length} véhicule${vehicles.length !== 1 ? 's' : ''} en approche`;
-
   return (
-    <ScreenCard
-      title={title}
-      aside={
-        loading && (
-          <span className="text-xs font-bold" style={{ color: SCREEN.amber }}>
-            Actualisation...
-          </span>
-        )
-      }
-    >
+    <>
       <div
-        className="ratp-map h-[400px] md:h-[500px] w-full"
+        className="ratp-map h-[55dvh] md:h-[500px] w-full"
         style={{ '--screen-navy': SCREEN.navy, '--screen-amber': SCREEN.amber }}
       >
         <MapTintFilter />
         <MapContainer
-          center={[center.lat, center.lng]}
-          zoom={zoom}
+          center={[stop.coordinates.lat, stop.coordinates.lng]}
+          zoom={STOP_ZOOM}
           style={{ height: '100%', width: '100%', backgroundColor: SCREEN.divider }}
           scrollWheelZoom={true}
         >
           <TileLayer attribution={MAP_TILES.attribution} url={MAP_TILES.url} />
 
-          {uniqueStops
-            .filter((stop) => stop.coordinates)
-            .map((stop) => (
-              <Marker
-                key={stop.id}
-                position={[stop.coordinates.lat, stop.coordinates.lng]}
-                icon={STOP_ICON}
-              >
-                <Popup>
-                  <StopPopupContent
-                    stop={stop}
-                    entry={departuresByStop[stop.id]}
-                    loading={departuresLoading}
-                    lineColors={lineColors}
-                    lineTypes={lineTypes}
-                  />
-                </Popup>
-              </Marker>
-            ))}
+          <Marker position={[stop.coordinates.lat, stop.coordinates.lng]} icon={STOP_ICON}>
+            <Popup>
+              <StopPopupContent
+                stop={stop}
+                entry={departures}
+                loading={departuresLoading}
+                lineColors={lineColors}
+                lineTypes={lineTypes}
+              />
+            </Popup>
+          </Marker>
 
           {vehicles.map((vehicle) => (
             <Marker
@@ -263,7 +243,6 @@ export default function TransitMap({
                       Vers {vehicle.towards.label}
                     </p>
                   )}
-                  <p className="text-sm">Prochain arrêt suivi : {vehicle.nextStopName}</p>
                   <p className="text-sm font-bold mt-1 flex items-center gap-2" style={{ color: SCREEN.navy }}>
                     {vehicle.minutesUntil <= 1 ? (
                       'Arrivée imminente'
@@ -292,18 +271,13 @@ export default function TransitMap({
             </Marker>
           ))}
 
-          <FitBoundsOnce stops={uniqueStops} />
+          <FrameStopAndVehicles stop={stop} vehicles={vehicles} />
         </MapContainer>
       </div>
 
       {error && (
         <ScreenMessage className="py-2 text-sm text-center">
           Impossible d&apos;actualiser les positions des véhicules
-        </ScreenMessage>
-      )}
-      {!error && unplaced > 0 && (
-        <ScreenMessage className="py-2 text-xs text-center">
-          {unplaced} véhicule{unplaced > 1 ? 's' : ''} non localisable{unplaced > 1 ? 's' : ''} sur le tracé
         </ScreenMessage>
       )}
 
@@ -333,6 +307,6 @@ export default function TransitMap({
           </div>
         ))}
       </div>
-    </ScreenCard>
+    </>
   );
 }

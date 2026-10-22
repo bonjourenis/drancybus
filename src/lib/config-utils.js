@@ -28,3 +28,8 @@ export function shortNameFromLineId(lineId) {
   const match = String(lineId ?? '').match(/C0*(\d+)/);
   return match ? match[1] : String(lineId ?? '?');
 }
+
+/** "Danton → Bobigny - Pablo Picasso", or just the name without a heading. */
+export function stopTitle(stop) {
+  return stop.heading ? `${stop.name} → ${stop.heading}` : stop.name;
+}

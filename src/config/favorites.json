@@ -2,6 +2,7 @@
   "trackedLines": [
     { "lineId": "IDFM:C01173", "name": "Bus 148", "type": "bus", "color": "#6e491e" },
     { "lineId": "IDFM:C01171", "name": "Bus 146", "type": "bus", "color": "#E4B4D3" },
+    { "lineId": "IDFM:C01696", "name": "Bus 248", "type": "bus", "color": "#D282BE" },
     { "lineId": "IDFM:C01375", "name": "Metro 5", "type": "metro", "color": "#F68F4B" },
     { "lineId": "IDFM:C01743", "name": "RER B", "type": "rer", "color": "#7BA3DC" }
   ],
@@ -19,6 +20,7 @@
         {
           "id": "STIF:StopPoint:Q:7948:",
           "name": "Danton",
+          "heading": "Bobigny - Pablo Picasso",
           "lines": [
             { "lineId": "IDFM:C01173", "lineName": "148", "towards": "metro-5" },
             { "lineId": "IDFM:C01171", "lineName": "146", "towards": "metro-5" }
@@ -26,8 +28,18 @@
           "coordinates": { "lat": 48.91956075706188, "lng": 2.437957241278171 }
         },
         {
+          "id": "STIF:StopPoint:Q:23526:",
+          "name": "Jean-Pierre Timbaud",
+          "heading": "Le Bourget RER",
+          "lines": [
+            { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Le Bourget RER", "towards": "rer-b" }
+          ],
+          "coordinates": { "lat": 48.923414, "lng": 2.438925 }
+        },
+        {
           "id": "STIF:StopPoint:Q:23530:",
           "name": "Lamartine - François Rude",
+          "heading": "Le Bourget RER",
           "lines": [
             { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Le Bourget RER", "towards": "rer-b" }
           ],
@@ -36,6 +48,7 @@
         {
           "id": "STIF:StopArea:SP:43231:",
           "name": "Le Bourget RER",
+          "heading": "Paris",
           "lines": [
             { "lineId": "IDFM:C01743", "lineName": "RER B", "excludeDirection": ["Aéroport", "Mitry"] }
           ],
@@ -61,6 +74,7 @@
         {
           "id": "STIF:StopPoint:Q:479720:",
           "name": "Cheminots",
+          "heading": "Danton",
           "lines": [
             { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Les Bosquets" }
           ],
@@ -69,6 +83,7 @@
         {
           "id": "STIF:StopArea:SP:463865:",
           "name": "Bobigny - Pablo Picasso",
+          "heading": "Danton",
           "lines": [
             { "lineId": "IDFM:C01171", "lineName": "146", "direction": "Le Bourget" },
             { "lineId": "IDFM:C01173", "lineName": "148", "excludeDirection": "Pablo Picasso" }
@@ -85,6 +100,31 @@
           "alongLine": "IDFM:C01173"
         }
       ]
+    },
+    {
+      "id": "favoris",
+      "label": "Favoris",
+      "description": "Bus 248",
+      "stops": [
+        {
+          "id": "STIF:StopPoint:Q:420058:",
+          "name": "Faidherbe - Danton",
+          "heading": "Cité de la Résistance",
+          "lines": [
+            { "lineId": "IDFM:C01696", "lineName": "248", "direction": "Fort d'Aubervilliers" }
+          ],
+          "coordinates": { "lat": 48.921434, "lng": 2.432765 }
+        },
+        {
+          "id": "STIF:StopArea:SP:57384:",
+          "name": "Cité de la Résistance",
+          "heading": "Faidherbe - Danton",
+          "lines": [
+            { "lineId": "IDFM:C01696", "lineName": "248", "direction": "Gare de Drancy" }
+          ],
+          "coordinates": { "lat": 48.918684, "lng": 2.419041 }
+        }
+      ]
     }
   ],
   "settings": {
@@ -94,8 +134,6 @@
     "trafficRefreshInterval": 180000,
     "disruptionsRefreshInterval": 120000,
     "maxDeparturesPerStop": 5,
-    "vehicleHorizonMinutes": 30,
-    "mapCenter": { "lat": 48.92, "lng": 2.45 },
-    "mapZoom": 14
+    "vehicleHorizonMinutes": 30
   }
 }

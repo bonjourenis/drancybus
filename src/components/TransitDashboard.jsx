@@ -1,22 +1,20 @@
 'use client';
 
+import { useState } from 'react';
 import { useDepartures } from '@/hooks/useDepartures';
-import { useVehicles } from '@/hooks/useVehicles';
-import { profileConnections } from '@/lib/profiles';
 import DepartureBoard from './DepartureBoard';
-import ErrorBoundary from './ErrorBoundary';
-import RefreshIndicator from './RefreshIndicator';
+import StopMapDialog from './StopMapDialog';
 import TrafficCard from './TrafficCard';
-import TransitMapLoader from './TransitMapLoader';
 
 /**
- * One profile's view. Owns the polling hooks so departures are fetched once
- * and shared by the board and the map popups.
+ * One profile's view. Owns the departures polling so departures are fetched
+ * once and shared by the board and the map popups. Clicking a stop's card
+ * opens its map.
  */
 export default function TransitDashboard({ profile, config }) {
   const { settings, trackedLines } = config;
   const departures = useDepartures(profile.id, settings.departureRefreshInterval);
-  const vehicles = useVehicles(profile.id, settings.vehicleRefreshInterval);
+  const [mapStop, setMapStop] = useState(null);
 
   const lineColors = Object.fromEntries(trackedLines.map((line) => [line.lineId, line.color]));
   const lineTypes = Object.fromEntries(trackedLines.map((line) => [line.lineId, line.type]));
@@ -35,6 +33,7 @@ export default function TransitDashboard({ profile, config }) {
           refresh={departures.refresh}
           lineColors={lineColors}
           lineTypes={lineTypes}
+          onOpenMap={setMapStop}
         />
       </section>
 
@@ -42,29 +41,17 @@ export default function TransitDashboard({ profile, config }) {
         <TrafficCard profileId={profile.id} refreshInterval={settings.trafficRefreshInterval} />
       )}
 
-      <section className="space-y-3">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">Carte des véhicules</h2>
-          <RefreshIndicator
-            lastUpdated={vehicles.lastUpdated}
-            onRefresh={vehicles.refresh}
-            loading={vehicles.loading}
-            stale={vehicles.stale}
-          />
-        </div>
-        <ErrorBoundary fallbackMessage="La carte n'a pas pu être affichée.">
-          <TransitMapLoader
-            lines={trackedLines}
-            stops={profile.stops}
-            connections={profileConnections(config, profile)}
-            center={settings.mapCenter}
-            zoom={settings.mapZoom}
-            vehicles={vehicles}
-            departuresByStop={departures.byStop}
-            departuresLoading={departures.loading && departures.stops.length === 0}
-          />
-        </ErrorBoundary>
-      </section>
+      {mapStop?.coordinates && (
+        <StopMapDialog
+          key={mapStop.id}
+          stop={mapStop}
+          profileId={profile.id}
+          config={config}
+          departures={departures.byStop[mapStop.id]}
+          departuresLoading={departures.loading && departures.stops.length === 0}
+          onClose={() => setMapStop(null)}
+        />
+      )}
     </>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useDisruptions } from '@/hooks/useDisruptions';
 import { SCREEN, SCREEN_FONT } from '@/lib/screen-theme';
 import LineBadge from './LineBadge';
@@ -77,7 +77,7 @@ function LineTile({ line, selected, onSelect }) {
           'aria-controls': PANEL_ID,
           'aria-pressed': selected,
         })}
-        className={`relative flex items-center justify-center w-16 h-16 rounded-lg bg-white ${
+        className={`relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-white ${
           mark === 'blocked' || mark === 'disrupted' ? 'border-4' : 'border-2'
         } ${selected ? 'outline-2 outline-offset-2 outline-white' : ''}`}
         style={{ borderColor }}
@@ -124,7 +124,12 @@ function DisruptionMessage({ item }) {
   );
 }
 
+/**
+ * A line's messages sit side by side in a scroll-snapping strip: swipe
+ * between them on touch screens, or use the dots.
+ */
 function TrafficPanel({ lines, selection, onSelect, onPage }) {
+  const strip = useRef(null);
   const selected = lines.find((line) => line.lineId === selection.lineId) ?? mostSevere(lines);
 
   if (!selected) {
@@ -139,6 +144,16 @@ function TrafficPanel({ lines, selection, onSelect, onPage }) {
 
   const items = [...selected.active, ...selected.upcoming];
   const page = selection.lineId === selected.lineId ? Math.min(selection.index, items.length - 1) : 0;
+
+  const onScroll = (event) => {
+    const { scrollLeft, clientWidth } = event.currentTarget;
+    const index = Math.round(scrollLeft / clientWidth);
+    if (index !== page) onPage(selected.lineId, index);
+  };
+
+  const scrollToPage = (index) => {
+    strip.current?.scrollTo({ left: index * strip.current.clientWidth, behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -167,16 +182,28 @@ function TrafficPanel({ lines, selection, onSelect, onPage }) {
         })}
       </div>
 
-      <div id={PANEL_ID} role="tabpanel" className="flex flex-1 flex-col bg-white p-5">
-        <DisruptionMessage item={items[page]} />
+      <div id={PANEL_ID} role="tabpanel" className="flex flex-1 flex-col bg-white py-5">
+        {/* Keyed by line so a newly selected line starts on its first message. */}
+        <div
+          key={selected.lineId}
+          ref={strip}
+          onScroll={onScroll}
+          className="flex items-start snap-x snap-mandatory overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map((item, index) => (
+            <div key={item.id} aria-hidden={index !== page} className="w-full shrink-0 snap-start px-5">
+              <DisruptionMessage item={item} />
+            </div>
+          ))}
+        </div>
 
         {items.length > 1 && (
-          <div className="mt-auto flex justify-center gap-2 pt-5">
+          <div className="mt-auto flex justify-center gap-2 px-5 pt-5">
             {items.map((item, index) => (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => onPage(selected.lineId, index)}
+                onClick={() => scrollToPage(index)}
                 aria-label={`Message ${index + 1} sur ${items.length}`}
                 aria-current={index === page}
                 className="w-3.5 h-3.5 rounded-full"
@@ -221,12 +248,16 @@ export default function LineStatusTable({ refreshInterval }) {
           className="overflow-hidden rounded-xl shadow-md md:flex text-sm"
           style={{ backgroundColor: SCREEN.trafficBackground, fontFamily: SCREEN_FONT }}
         >
-          <div className="flex flex-1 items-start gap-4 p-5">
-            <div className="flex-1 space-y-4">
+          {/* The clock floats so only the rows beside it narrow: lower rows use the full width. */}
+          <div className="flex-1 p-4 sm:p-5">
+            <div className="float-right mb-3 ml-3 sm:ml-4">
+              <ScreenClock />
+            </div>
+            <div className="space-y-4">
               {groups.map(([type, modeLines]) => (
-                <div key={type} className="flex items-center gap-4">
+                <div key={type} className="flex items-center gap-3 sm:gap-4">
                   <ModeIcon type={type} className="text-white" />
-                  <ul aria-label={MODE_LABELS[type] ?? type} className="flex flex-wrap gap-3">
+                  <ul aria-label={MODE_LABELS[type] ?? type} className="flex flex-wrap gap-2.5 sm:gap-3">
                     {modeLines.map((line) => (
                       <LineTile
                         key={line.lineId}
@@ -239,7 +270,6 @@ export default function LineStatusTable({ refreshInterval }) {
                 </div>
               ))}
             </div>
-            <ScreenClock />
           </div>
 
           <div className="flex flex-col md:w-[45%] md:flex-none">

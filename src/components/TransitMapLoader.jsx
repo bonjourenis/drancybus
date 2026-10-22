@@ -8,7 +8,7 @@ import LoadingSpinner from './LoadingSpinner';
 const TransitMap = dynamic(() => import('./TransitMap'), {
   loading: () => (
     <div
-      className="h-[400px] md:h-[500px] w-full rounded-xl flex items-center justify-center"
+      className="h-[55dvh] md:h-[500px] w-full flex items-center justify-center"
       style={{ backgroundColor: SCREEN.background }}
     >
       <LoadingSpinner message="Chargement de la carte..." />
